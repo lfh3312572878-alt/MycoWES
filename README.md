@@ -18,7 +18,7 @@ Code acquisition location: [GitHub repository](https://github.com/lfh3312572878-
 
 ## Reference download and preparation
 
-Reference download location / Zenodo version DOI: **TO BE FILLED BY THE AUTHORS**.
+Reference database (v0.28): [Zenodo DOI: 10.5281/zenodo.23776490](https://doi.org/10.5281/zenodo.23776490) (reserved DOI; private preview available for peer review).
 
 Verify the reference archive against its supplied SHA256, then extract it into `resources/`:
 
