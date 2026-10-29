@@ -14,7 +14,7 @@ conda activate mycowes
 python3 mycowes.py --version
 ```
 
-Code acquisition location: **TO BE FILLED BY THE AUTHORS**.
+Code acquisition location: [GitHub repository](https://github.com/lfh3312572878-alt/MycoWES).
 
 ## Reference download and preparation
 
