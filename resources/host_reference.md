@@ -13,6 +13,6 @@ An available historical source identity, `MycoWES_GRCh38_v1`, reports:
 | Sequence identity SHA256 | 283229c8ad1bb1844f9419a9f5667827002405a8d557bf04d3c9615d4c08f66c |
 | Source index SHA256 | 701f1a449a88fe4bf4b6c265bb663abfd6f0330761ab16d22b8aa53eb19b3587 |
 
-Identifiers include UCSC-style primary chromosomes and alternate/unplaced records (for example chr1, chr11_KI270721v1_random and chr14_GL000009v2_random). The recorded count is not a complete per-contig inventory and does not independently establish GRCh38.p14, a source download URL or that every paper run used this identity. The source identity came from `reference_metadata/host_ref/identity.tsv` in the preserved supervisor source export. Missing assembly/patch provenance must be supplied by the authors; do not substitute current defaults.
+Identifiers include UCSC-style primary chromosomes and alternate/unplaced records (for example chr1, chr11_KI270721v1_random and chr14_GL000009v2_random); these examples are not an exhaustive contig list. The identity is recorded in `reference_metadata/host_ref/identity.tsv` in the preserved source export. Bind a run to its recorded FASTA and local index identity rather than inferring a patch level from the filename or substituting a current default reference.
 
 When building a local index, retain the FASTA acquisition/accession and `.fai`, minimap2 version/command, and the actual resulting index identity. A historical source-index hash is not proof that a locally rebuilt `.mmi` is byte-identical.
