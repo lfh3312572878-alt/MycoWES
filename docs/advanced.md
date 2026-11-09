@@ -27,7 +27,7 @@ An explicit reference mode must agree with the preset; missing resources do not 
 
 The full entry uses Cutadapt for paired adapter trimming and a 50-base minimum read length; either short mate rejects the pair. It does not implement fastp, poly-G removal or Q20 trimming. Host subtraction uses minimap2 `-ax sr` against the configured human index, then samtools `-f 12 -F 2304` to retain both-unmapped pairs and exclude secondary/supplementary records. It does not silently add CHM13 or use BWA/85%-query-coverage rules.
 
-A historical host identity records 455 UCSC-style contigs and 3,209,286,105 bases, including primary chromosomes and alternate/unplaced records. This alone does not establish a GRCh38 patch/acquisition URL for every paper run. See `resources/host_reference.md` and each run's actual index identity.
+A historical host identity records 455 UCSC-style contigs and 3,209,286,105 bases, including primary chromosomes and alternate/unplaced records. See `resources/host_reference.md`; each new run records its actual local index identity.
 
 ## BAM conversion
 
@@ -43,6 +43,6 @@ Record the source BAM identity and samtools version. Samtools restores sequencer
 
 ## Historical resource construction
 
-`reproduce/historical/reference/build_one_rep_reference.py` accepts selection manifest, taxonomy, FASTA and output directory; it refuses existing output files. The supplied selection manifest's SHA256 matches the recorded profile hash and selects the same 18 accessions as its distributed taxonomy. This audits membership, not the date on which ranks were decided.
+`reproduce/historical/reference/build_one_rep_reference.py` accepts selection manifest, taxonomy, FASTA and output directory; it refuses existing output files. The supplied selection manifest's SHA256 matches the recorded profile hash and selects the same 18 accessions as its distributed taxonomy.
 
 Other historical drivers retain absolute project paths and additional dependencies. They are preserved for source review only and must not be launched unattended. The safe common entry is the saved-summary validator, not a queue restart.
