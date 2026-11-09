@@ -10,7 +10,7 @@ Repository: https://github.com/lfh3312572878-alt/MycoWES
 
 Reference identifier: https://doi.org/10.5281/zenodo.23776490
 
-Authenticated repository inspection on 2026-11-09 confirmed Private visibility, main commit ae1f1d4b9f0e33baf05944540b8c5b9bfd59268a and no published release. The reference DOI was reserved for a draft in the last verified reference record; its current publication state has not been authenticated. It is not a published software archive DOI. Review access must be arranged by the authors. This revision does not publish resources or change visibility.
+Authenticated inspection on 2026-11-09 confirmed Private repository visibility, unchanged main commit ae1f1d4b9f0e33baf05944540b8c5b9bfd59268a and no published software release. The reviewed corrective engine is fixed at [commit 802200ba32e01fbb0a8e86ccb2fd304d97b31ca8](https://github.com/lfh3312572878-alt/MycoWES/commit/802200ba32e01fbb0a8e86ccb2fd304d97b31ca8) on the private `remediation/20261109` branch. Authenticated Zenodo inspection confirmed the reference dataset version 0.28 as an unpublished Draft. Its DOI is reserved and will be registered only on publication. It does not yet identify a published reference archive and is not a software archive DOI. Review access must be arranged by the authors. This revision does not publish resources or change visibility.
 
 No code license has been selected. The copyright holder must supply the applicable license before public distribution; the reference record's CC BY metadata does not license this code. See [resource provenance and redistribution](resources/README_v028.md).
 
