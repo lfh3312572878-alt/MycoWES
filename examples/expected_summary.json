@@ -1,0 +1,38 @@
+{
+  "seed": 20261109,
+  "cases": {
+    "normal": {
+      "target_starts": [100, 600, 1100, 1600, 2100, 2600],
+      "filter_counts": {"target_candidate": 9, "PRIMARY": 8, "STRICT": 7, "HIGH_CAPTURE_DF2": 1},
+      "branches": {
+        "PRIMARY": {"dispersion_tier": "strong", "exact_dedup_fragments": 7, "coordinate_dedup_fragments": 7, "anchor_retention_fraction": 1.0},
+        "STRICT_DF2": {"dispersion_tier": "strong", "exact_dedup_fragments": 6, "coordinate_dedup_fragments": 6, "anchor_retention_fraction": 1.0}
+      }
+    },
+    "fmax_half": {
+      "target_starts": [130, 140, 150, 630, 1130, 1630],
+      "filter_counts": {"PRIMARY": 6, "STRICT": 6},
+      "branches": {"PRIMARY": {"dispersion_tier": "strong", "largest_bin_fraction": 0.5}, "STRICT_DF2": {"dispersion_tier": "strong", "largest_bin_fraction": 0.5}}
+    },
+    "fmax_two_thirds": {
+      "target_starts": [110, 210, 630],
+      "filter_counts": {"PRIMARY": 3, "STRICT": 3},
+      "branches": {"PRIMARY": {"dispersion_tier": "supportive", "largest_bin_fraction": 0.6666666666666666, "bin_size_bp": 250, "occupied_bins": 2}, "STRICT_DF2": {"dispersion_tier": "supportive", "largest_bin_fraction": 0.6666666666666666, "bin_size_bp": 250, "occupied_bins": 2}}
+    },
+    "bin_100": {
+      "target_starts": [110, 210, 630],
+      "bin_size": 100,
+      "filter_counts": {"PRIMARY": 3, "STRICT": 3},
+      "branches": {"PRIMARY": {"dispersion_tier": "supportive", "largest_bin_fraction": 0.3333333333333333, "bin_size_bp": 100, "occupied_bins": 3}, "STRICT_DF2": {"dispersion_tier": "supportive", "largest_bin_fraction": 0.3333333333333333, "bin_size_bp": 100, "occupied_bins": 3}}
+    },
+    "anchor_fail": {
+      "target_starts": [100, 600, 1100],
+      "filter_counts": {"PRIMARY": 3, "STRICT": 3},
+      "branches": {"PRIMARY": {"dispersion_tier": "ANCHOR_FAIL", "anchor_retention_fraction": 0.0, "coordinate_dedup_fragments": "NA"}, "STRICT_DF2": {"dispersion_tier": "ANCHOR_FAIL", "anchor_retention_fraction": 0.0, "coordinate_dedup_fragments": "NA"}}
+    },
+    "zero_candidate": {
+      "filter_counts": {"target_candidate": 0, "PRIMARY": 0, "STRICT": 0},
+      "branches": {"PRIMARY": {"dispersion_tier": "None"}, "STRICT_DF2": {"dispersion_tier": "None"}}
+    }
+  }
+}

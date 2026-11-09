@@ -1,0 +1,628 @@
+assembly_accession	species_taxid	species_name	reference_class	role	group	contig_records	quality_rank_within_species_v0.8	assembly_level	refseq_category	checkm_completeness	checkm_contamination	contig_n50	n_contigs	cluster_id_v0.11	formal_retained_v0.21
+GCF_025780085.1	1042321	Ureaplasma_miroungigenitalium	COMPETITOR	C_broad_mycoplasma_background	C	13	1	Contig	reference genome	90.15	2.97	426482	13		YES
+GCF_041021905.1	106654	Acinetobacter_nosocomialis	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_022879615.1	1071679	Caballeronia_grimmiae	COMPETITOR	E_external	E	8									NOT_APPLICABLE_COMPETITOR
+GCF_029026145.1	1071983	Legionella_cardiaca	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_039619325.1	107400	Methylobacterium_fujisawaense	COMPETITOR	E_external	E	9									NOT_APPLICABLE_COMPETITOR
+GCF_000499665.2	109232	Rickettsia_monacensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000283995.1	1105106	Rickettsia_philipii	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000273375.1	111504	Bartonella_birtlesii	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_900660705.1	114880	Mycoplasmopsis_columbinasalis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	95.77		849456	1		YES
+GCF_900660685.1	114881	Mycoplasmopsis_columbina	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	95.4		776661	1		YES
+GCF_000687815.1	114882	Mycoplasma_elephantis	COMPETITOR	C_broad_mycoplasma_background	C	25	1	Contig	reference genome	99.22	1.13	60754	25		YES
+GCF_024498255.1	114883	Mycoplasmopsis_equigenitalium	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	96.24		806532	1		YES
+GCF_000686585.1	114884	Mycoplasmopsis_lipofaciens	COMPETITOR	C_broad_mycoplasma_background	C	6	1	Scaffold	reference genome	95.69		139000	7		YES
+GCF_900660665.1	114885	Mycoplasmopsis_maculosa	COMPETITOR	C_broad_mycoplasma_background	C	2	1	Complete Genome	reference genome	97.41		909262	2		YES
+GCF_000712185.1	114886	Mycoplasmopsis_opalescens	COMPETITOR	C_broad_mycoplasma_background	C	14	1	Scaffold	reference genome	96.39		144672	16		YES
+GCF_030586915.1	1177238	'Vigna_radiata'_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	53	1	Scaffold		82.79	2.69	17492	60		YES
+GCF_029677705.1	1179777	Mycoplasma_feriruminatoris	COMPETITOR	C_broad_mycoplasma_background	C	2	1	Complete Genome	reference genome	100	0.38	1016818	2		YES
+GCF_004214875.1	1193712	'Catharanthus_roseus'_aster_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Complete Genome		98.09		600116	2		YES
+GCF_000300695.1	1196420	Italian_clover_phyllody_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	197	1	Contig		90.68	0.44	12309	197		YES
+GCF_964030655.1	1209220	Spiroplasma_endosymbiont_of_Poecilobothrus_nobilitatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.08	1.32	1434273	1		YES
+GCF_036985165.1	1225349	Rhus_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	43	1	Contig		99.25		41738	43		YES
+GCF_000013425.1	1280	Staphylococcus_aureus	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_024925465.1	1310165	Ralstonia_pseudosolanacearum	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_048074525.1	1312741	Mycoplasma_aquilae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	98.09		941164	1		YES
+GCF_001281405.1	1318743	Bartonella_ancashensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000961515.1	134537	Paraburkholderia_fungorum	COMPETITOR	E_external	E	4									NOT_APPLICABLE_COMPETITOR
+GCF_001642675.1	1355477	Bradyrhizobium_diazoefficiens	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_003640545.1	135727	Candidatus_Phytoplasma_ziziphi	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	89.83	1.27	750803	1		YES
+GCF_016027095.1	13689	Sphingomonas_paucimobilis	COMPETITOR	E_external	E	4									NOT_APPLICABLE_COMPETITOR
+GCF_000309465.1	138647	Poinsettia_branch-inducing_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	185	1	Contig		94.69	0.29	8188	185		YES
+GCF_002441935.1	138853	Mesoplasma_lactucae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.32	1.75	837471	1		YES
+GCF_000008445.1	1392	Bacillus_anthracis	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_006094295.1	1396	Bacillus_cereus	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_002214625.1	142058	Anaplasma_ovis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000009045.1	1423	Bacillus_subtilis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_003383595.3	142649	Metamycoplasma_phocicerebrale	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	94.83		740800	1		YES
+GCF_004216495.1	142650	Mycoplasmopsis_phocirhinis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	97.13		865472	1		YES
+GCF_003332325.1	142651	[Mycoplasma]_phocae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	93.97		814478	1		YES
+GCF_046245125.2	1461000	Bartonella_heixiaziensis	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_001866375.1	146897	Rice_orange_leaf_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	8	1	Contig		98.09		163230	8		YES
+GCF_902712995.1	1494318	Candidatus_Mycoplasma_haematohominis	COMPETITOR	C_broad_mycoplasma_background	C	38	1	Contig	reference genome	76.32	3.38	106535	38		YES
+GCF_000744065.1	1520703	'Chrysanthemum_coronarium'_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	170	1	Contig		90.68	1.44	10878	170		YES
+GCF_016064815.1	1530123	Acinetobacter_seifertii	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000755705.1	1541959	Candidatus_Izimoplasma_sp._HR1	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome		96.39	1.72	1878735	1		YES
+GCF_000384965.1	155194	Bartonella_bovis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_002888635.2	1609546	endosymbiont_DhMRE_of_Dentiscutata_heterogama	COMPETITOR	C_broad_mycoplasma_background	C	3	1	Chromosome		55.7	0.79	648879	3		YES
+GCF_016082235.1	1609976	Spiroplasma_sp._hyd1	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	143	1	Scaffold		95.93	1.1	18555	144		YES
+GCF_014068355.1	1612150	Mycoplasma_tullyi	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.97		867815	1		YES
+GCF_907164955.1	1656159	Coxiella_endosymbiont_of_Dermacentor_marginatus	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_039555305.1	165694	Bartonella_schoenbuchensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_001199495.1	1664275	Mycoplasma_sp._HU2014	COMPETITOR	C_broad_mycoplasma_background	C	75	1	Scaffold		99.62	1.13	19952	76		YES
+GCF_003285065.1	171279	Mycoplasmopsis_anatis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	95.53		956094	1		YES
+GCF_000733865.1	171280	Mycoplasma_buteonis	COMPETITOR	C_broad_mycoplasma_background	C	12	1	Scaffold	reference genome	99.97		110168	13		YES
+GCF_900660645.1	171281	Mycoplasmopsis_citelli	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	91.93		1242365	1		YES
+GCF_900660675.1	171282	Mycoplasmopsis_columboralis	COMPETITOR	C_broad_mycoplasma_background	C	2	1	Complete Genome	reference genome	96.94		949548	2		YES
+GCF_000526955.1	171283	Mycoplasmopsis_cricetuli	COMPETITOR	C_broad_mycoplasma_background	C	45	1	Contig	reference genome	96.39	0.86	50546	45		YES
+GCF_000328725.1	171284	Mycoplasmopsis_cynos	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	95.53		998123	1		YES
+GCF_900660605.1	171285	Mycoplasmopsis_glycophila	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	96.39		973410	1		YES
+GCF_029854295.1	171286	Mesomycoplasma_lagogenitalium	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	96.55		973223	1		YES
+GCF_045276915.1	171287	Mesomycoplasma_moatsii	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	90.36		737137	1		YES
+GCF_024918955.1	171288	Mesomycoplasma_molare	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	96.55		869728	1		YES
+GCF_004365095.1	171289	Mycoplasmopsis_mustelae	COMPETITOR	C_broad_mycoplasma_background	C	7	1	Scaffold	reference genome	95.53		548660	8		YES
+GCF_033546915.1	171291	Mycoplasmopsis_verecunda	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	96.39		946797	1		YES
+GCF_000508245.1	171632	Mycoplasma_ovis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	67.17	2.18	702511	1		YES
+GCF_006739385.1	1747	Cutibacterium_acnes	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_001484045.1	1749074	Mycoplasma_sp._(ex_Biomphalaria_glabrata)	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		90.35	1.16	647830	1		YES
+GCF_005774685.2	176709	Texas_Phoenix_palm_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	18	1	Contig		91.76	1.89	69355	18		YES
+GCF_029215875.1	180282	Delftia_tsuruhatensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_030587225.1	180978	Candidatus_Phytoplasma_citri	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	105	1	Scaffold	reference genome	83.25	0.67	8578	106		YES
+GCF_016876135.2	1848402	Candidatus_Phytoplasma_meliae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	21	1	Contig	reference genome	97.69	12.56	53850	21		YES
+GCF_023935825.1	185951	Sphingomonas_aerolata	COMPETITOR	E_external	E	4									NOT_APPLICABLE_COMPETITOR
+GCF_020714625.1	186171	Mulberry_dwarf_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome		99.25		622358	1		YES
+GCF_002240035.1	1867846	Legionella_clemsonensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_001792795.1	1898044	Spiroplasma_sp._TU-14	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome		99.78	1.88	1199640	1		YES
+GCF_025486335.1	191287	Mycoplasma_zalophi	COMPETITOR	C_broad_mycoplasma_background	C	11	1	Contig	reference genome	99.22		265254	11		YES
+GCF_001886495.1	1914410	Spiroplasma_sp._NBRC_100390	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome		99.78	1.88	1199621	1		YES
+GCF_016082285.1	1922342	Spiroplasma_sp._Moj	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	174	1	Scaffold		92.98	1.32	9256	180		YES
+GCF_004335975.1	1937190	Mycoplasma_marinum	COMPETITOR	C_broad_mycoplasma_background	C	128	1	Contig	reference genome	99.25	1	34680	128		YES
+GCF_004335995.1	1937191	Mycoplasma_todarodis	COMPETITOR	C_broad_mycoplasma_background	C	84	1	Contig	reference genome	93.22	2.76	24059	84		YES
+GCF_001189415.1	198422	Candidatus_Phytoplasma_phoenicium	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	78	1	Contig	reference genome	67.41	0.15	5782	78		YES
+GCF_049669535.1	2004463	Spiroplasma_endosymbiont_of_Glossina_fuscipes_fuscipes	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	5	1	Complete Genome	reference genome	96.9	1.55	1489281	5		YES
+GCF_001712875.1	202462	Candidatus_Phytoplasma_zeae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.08		576118	1		YES
+GCF_002285055.1	2024899	Candidatus_Izimoplasma_sp._ZiA1	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	34	1	Scaffold		96.39	1.72	162380	36		YES
+GCF_027945135.1	203274	Candidatus_Phytoplasma_oryzae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	91.46	0.29	511268	1		YES
+GCF_003546845.1	2039283	endosymbiont_GvMRE_of_Glomus_versiforme	COMPETITOR	C_broad_mycoplasma_background	C	9	1	Scaffold	reference genome	59.17	113.69	571166	15		YES
+GCF_004011945.1	2048001	Mycoplasma_sp._ATU-Cv-508	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Contig		71.46	4.49	683827	1		YES
+GCF_001077715.1	2054173	Candidatus_Coxiella_mudrowiae	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_050916135.1	2056121	'Prunus_avium'_virescence_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome		85.68	1.99	775344	1		YES
+GCF_000309485.1	208434	Milkweed_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	158	1	Contig		97.32	0.87	7972	158		YES
+GCF_003550015.1	2088	Anaeroplasma_bactoclasticum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	58	1	Scaffold	reference genome	97.3	4.76	74656	60		YES
+GCF_028622335.1	208962	Escherichia_albertii	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000518285.1	209274	Williamsoniiplasma_lucivorax	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	31	1	Scaffold	reference genome	98.51		56778	32		YES
+GCF_000319365.1	209446	Candidatus_Mycoplasma_haematominutum	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Contig	reference genome	67.14		513880	1		YES
+GCF_000025385.1	2096	Mycoplasmoides_gallisepticum	COMPETITOR	C_broad_mycoplasma_background	C	1	3	Complete Genome		99.02	0.08	977612	1	taxid_2096_cluster_002	YES
+GCF_900476085.1	2096	Mycoplasmoides_gallisepticum	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	98.86	0.08	981408	1	taxid_2096_cluster_001	YES
+GCF_000008205.1	2099	Mesomycoplasma_hyopneumoniae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.11		897405	1	taxid_2099_cluster_001	YES
+GCF_000008225.1	2099	Mesomycoplasma_hyopneumoniae	COMPETITOR	C_broad_mycoplasma_background	C	1	3	Complete Genome		99.11		920079	1	taxid_2099_cluster_002	YES
+GCF_900660565.1	2099	Mesomycoplasma_hyopneumoniae	COMPETITOR	C_broad_mycoplasma_background	C	5	2	Complete Genome		99.11	1.06	652273	5	taxid_2099_cluster_003	YES
+GCF_002968355.1	2099885	Spiroplasma_sp._ChiS	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	324	1	Contig		97.13	2.32	14323	324		YES
+GCF_018389705.1	2102	Mycoplasma_mycoides	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	98.29	0.53	1035494	1		YES
+GCF_000183365.1	2105	Mycoplasma_leachii	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	96.79	0.1	1008951	1		YES
+GCF_045276875.1	2106	Mycoplasma_corogypsi	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.97	0.75	862285	1		YES
+GCF_900660575.1	2107	Mycoplasmopsis_pulmonis	COMPETITOR	C_broad_mycoplasma_background	C	2	1	Complete Genome	reference genome	94.67	3.45	951507	2		YES
+GCF_000385095.1	2109	Mycoplasmopsis_synoviae	COMPETITOR	C_broad_mycoplasma_background	C	42	3	Contig		99.59	0.26	46418	42	taxid_2109_cluster_002	YES
+GCF_000969765.1	2109	Mycoplasmopsis_synoviae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.74	0.26	846495	1	taxid_2109_cluster_001	YES
+GCF_900475235.1	2109	Mycoplasmopsis_synoviae	COMPETITOR	C_broad_mycoplasma_background	C	1	2	Complete Genome		97.18	0.26	848181	1	taxid_2109_cluster_001	YES
+GCF_000063605.1	2110	Mycoplasmopsis_agalactiae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	91.43		877438	1		YES
+GCF_900660715.1	2111	Metamycoplasma_arthritidis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	94.51		806209	1		YES
+GCF_900660525.1	2112	Mycoplasmopsis_bovigenitalium	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	96.26		841512	1		YES
+GCF_000695835.1	2113	Mycoplasmopsis_californica	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	97.13		793841	1		YES
+GCF_002930155.1	2114	Entomoplasma_ellychniae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	3	1	Contig	reference genome	86.28	4.63	888009	3		YES
+GCF_900660615.1	2116	Malacoplasma_iowae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	90.49		1278574	1		YES
+GCF_000008365.1	2118	[Mycoplasma]_mobile	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	93.1		777079	1		YES
+GCF_046774425.1	2119	Malacoplasma_muris	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	91.35		1054179	1		YES
+GCF_900660485.1	2120	Mesomycoplasma_neurolyticum	COMPETITOR	C_broad_mycoplasma_background	C	4	1	Complete Genome	reference genome	94.67	0.86	979558	4		YES
+GCF_900476175.1	2123	Mycoplasma_putrefaciens	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	100	1.13	832598	1		YES
+GCF_045276925.1	2125	Metamycoplasma_sualvi	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	87.93		842965	1		YES
+GCF_000701825.1	2127	[Mycoplasma]_collis	COMPETITOR	C_broad_mycoplasma_background	C	43	1	Scaffold	reference genome	92.24		51351	45		YES
+GCF_000815065.1	2128	Mesomycoplasma_flocculare	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	90.52		778866	1		YES
+GCF_001886855.1	2133	Spiroplasma_citri	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	3	1	Complete Genome	reference genome	97.13	1.21	1599709	3		YES
+GCF_003606325.2	2133959	Bartonella_kosoyi	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000236085.2	2134	Spiroplasma_melliferum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	6	1	Contig	reference genome	99.45	0.66	741187	6		YES
+GCF_002865545.1	2136	Spiroplasma_monobiae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	96.81	0.33	891575	1		YES
+GCF_000500935.1	2137	Spiroplasma_apis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	97.41	2.32	1160554	1		YES
+GCF_009866525.1	2138	Spiroplasma_poulsonii	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Chromosome	reference genome	96.93	2.32	144820	21		YES
+GCF_002795265.1	2139	Spiroplasma_clarkii	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	97.54	2.94	1560007	1		YES
+GCF_030316605.1	2141	Spiroplasma_ixodetis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	6	1	Complete Genome	reference genome	90.71	2.49	2040288	6		YES
+GCF_004379335.1	2143	Spiroplasma_gladiatoris	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	97.87	1.57	1164642	1		YES
+GCF_001029245.1	2144	Spiroplasma_mirum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	96.27	3.05	1160484	1		YES
+GCF_000439435.1	2145	Spiroplasma_taiwanense	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Complete Genome	reference genome	97.03	0.33	1075140	2		YES
+GCF_000018785.1	2148	Acholeplasma_laidlawii	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.18		1496992	1	taxid_2148_cluster_001	YES
+GCF_002803985.1	214888	Williamsoniiplasma_luminosum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.17		1031560	1		YES
+GCF_002749675.1	2149	Mesoplasma_entomophilum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.87	0.43	847967	1		YES
+GCF_000687835.1	2150	Haploplasma_modicum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	10	1	Contig	reference genome	97.44		238812	10		YES
+GCF_000008305.1	2151	Mesoplasma_florum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	100	0.09	793224	1		YES
+GCF_002804005.1	215578	Williamsoniiplasma_somnilux	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.83		868413	1		YES
+GCF_002290085.1	216427	Mesoplasma_chauliocola	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	100		854780	1		YES
+GCF_002930145.1	216874	Mesoplasma_corruscae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	3	1	Contig	reference genome	96.39	1.34	537801	3		YES
+GCF_003363775.1	216931	Spiroplasma_alleghenense	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.21	1.88	1336077	1		YES
+GCF_008086545.1	216932	Spiroplasma_chinense	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	97.38	3.05	1370182	1		YES
+GCF_000400935.1	216933	Spiroplasma_chrysopicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.35	2.41	1123322	1		YES
+GCF_002237575.1	216934	Spiroplasma_corruscae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Complete Genome	reference genome	98.12	1.57	1175400	2		YES
+GCF_000565175.1	216935	Spiroplasma_culicicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	97.38	0.99	1175131	1		YES
+GCF_000439455.1	216936	Spiroplasma_diminutum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	98.8	0.33	945296	1		YES
+GCF_002813555.1	216937	Spiroplasma_floricola	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.4	1.49	1284130	1		YES
+GCF_001715535.1	216938	Spiroplasma_helicoides	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	98.47	0.33	1326546	1		YES
+GCF_001267155.1	216942	Spiroplasma_litorale	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	97.12	1.28	1225519	1		YES
+GCF_000565215.1	216944	Spiroplasma_sabaudiense	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	98.93	1.32	1075953	1		YES
+GCF_000400955.1	216945	Spiroplasma_syrphidicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.68	1.9	1107344	1		YES
+GCF_001262715.1	216946	Spiroplasma_turonicum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	97.45	1.21	1261374	1		YES
+GCF_010365785.1	216963	Spiroplasma_sp._TIUS-1	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome		94.4	0.33	811521	1		YES
+GCF_010365805.1	216964	Spiroplasma_sp._BIUS-1	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome		98.04	0.46	915326	1		YES
+GCF_000701525.1	217215	Mesoplasma_grammopterae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	8	1	Scaffold	reference genome	99.04	0.15	179396	9		YES
+GCF_000702725.1	217731	Mesoplasma_photuris	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	10	1	Contig	reference genome	99.76		115941	10		YES
+GCF_002804025.1	219745	Mesoplasma_tabanidae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	98.97	0.28	846907	1		YES
+GCF_000019945.1	223967	Methylorubrum_populi	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_002843565.1	225999	Mesoplasma_syrphidae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.94	0.25	908214	1		YES
+GCF_003606345.3	2267275	Bartonella_krasnovii	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000012225.1	229545	Aster_yellows_witches'-broom_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	5	1	Complete Genome		97.96		706569	5		YES
+GCF_018274325.1	2358428	'Fragaria_x_ananassa'_phyllody_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	33	1	Contig		99.22	0.29	82058	33		YES
+GCF_036985185.1	238673	Hydrangea_phyllody_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	34	1	Contig		99.25		140653	34		YES
+GCF_000803325.1	238674	Chrysanthemum_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	252	1	Contig		96.2		6555	252		YES
+GCF_007989425.1	238800	Rickettsia_asiatica	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_004362335.1	244584	Mycoplasma_testudineum	COMPETITOR	C_broad_mycoplasma_background	C	17	1	Contig	reference genome	98.09	0.38	131303	17		YES
+GCF_003987485.1	2478537	Spiroplasma_endosymbiont_of_Megaselia_nigra	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	329	1	Contig	reference genome	95.3	1.32	7570	329		YES
+GCF_009883795.1	2487929	Coxiella_endosymbiont_of_Amblyomma_sculptum	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_004011965.1	2498595	Mycoplasma_sp._ATU-Cv-703	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Scaffold		97.46		353646	5		YES
+GCF_025779955.1	2499220	Mycoplasma_enhydrae	COMPETITOR	C_broad_mycoplasma_background	C	30	1	Contig	reference genome	100		103139	30		YES
+GCF_030060925.1	2570468	Spiroplasma_sp._SV19	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome		99.68	3.6	1456516	1		YES
+GCF_027594465.1	2609813	Candidatus_Phytoplasma_sacchari	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Complete Genome	reference genome	94.18	0.58	538951	2		YES
+GCF_000687735.1	264634	Acholeplasma_equifetale	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	26	1	Contig	reference genome	99.21		124644	26		YES
+GCF_000526235.1	264635	Acholeplasma_granularum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	14	1	Contig	reference genome	99.18		150806	14		YES
+GCF_900660755.1	264636	Acholeplasma_hippikon	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Complete Genome	reference genome	98.01		1456175	2		YES
+GCF_016907055.1	264637	Paracholeplasma_morum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	29	1	Contig	reference genome	95.93	2.27	135712	29		YES
+GCF_000483165.1	264638	Tullyiplasma_multilocale	COMPETITOR	C_broad_mycoplasma_background	C	11	1	Scaffold	reference genome	98.43		183993	12		YES
+GCF_007821455.1	267362	Candidatus_Phytoplasma_pini	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	16	1	Contig	reference genome	91.01	0.29	40003	16		YES
+GCF_009792315.1	2683967	Mycoplasma_sp._NEAQ87857	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		99.97	0.97	1200019	1		YES
+GCF_902809815.1	2691041	Spiroplasma_endosymbiont_of_Danaus_chrysippus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	12	1	Scaffold	reference genome	89.44	1.46	215411	13		YES
+GCF_002554195.1	270520	New_Jersey_aster_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	75	1	Contig		79.35	1.16	21929	75		YES
+GCF_011764505.1	2708020	Legionella_antarctica	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_013745115.1	2725268	Hujiaoplasma_nucleasis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	97.62	3.81	1808583	1		YES
+GCF_012516495.1	2725994	Mycoplasma_sp._1654_15	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		100		923061	1		YES
+GCF_012934885.1	2726117	Mycoplasma_phocoeninasale	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	100		776009	1		YES
+GCF_016865445.1	2735436	Mariniplasma_anaerobium	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Complete Genome	reference genome	97.44	2.56	1885846	2		YES
+GCF_013348745.1	2742195	Mycoplasma_sp._OR1901	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		99.15	0.75	962938	1		YES
+GCF_018107685.1	2749996	Coxiella_endosymbiont_of_Amblyomma_nuttalli	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_024425275.1	2754999	Candidatus_Phytoplasma_australasiaticum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	30	1	Scaffold	reference genome	83.51	1.27	30585	36		YES
+GCF_016743795.2	2761623	Rickettsia_tillamookensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_015100165.3	2763338	Candidatus_Phytoplasma_asiaticum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	82.8	1.98	614574	1		YES
+GCF_015708155.1	2780095	Mycoplasma_sp._'Moose_RK'	COMPETITOR	C_broad_mycoplasma_background	C	3	1	Contig		99.22	3.01	824787	3		YES
+GCF_014023125.1	2782163	Candidatus_Xianfuyuplasma_coldseepsis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	98.1	2.38	1958905	1		YES
+GCF_018831625.1	2792084	Spiroplasma_endosymbiont_of_'Nebria_riversi'	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Complete Genome	reference genome	89.08	3.97	1414935	2		YES
+GCF_019873825.1	2801918	Mycoplasma_sp._E35C	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		99.97		925667	1		YES
+GCF_003176875.1	28082	Legionella_anisa	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_900635815.1	28084	Legionella_cherrii	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_900637685.1	28087	Legionella_sainthelensi	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_037101365.1	28097	Ralstonia_syzygii	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_023612375.1	2810348	Mycoplasma_sp._SG1	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Chromosome		82.08	1.61	622752	1		YES
+GCF_051094275.1	2810479	symbiont_of_Argiope_bruennichi	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	80.71	3.94	575551	1		YES
+GCF_017116845.1	2813824	Mycoplasma_sp._CSL10137	COMPETITOR	C_broad_mycoplasma_background	C	11	1	Contig		99.22		161510	11		YES
+GCF_017116885.1	2813825	Mycoplasma_sp._CSL10166	COMPETITOR	C_broad_mycoplasma_background	C	8	1	Contig		98.46		627157	8		YES
+GCF_000518725.1	28224	Mesoplasma_seiffertii	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	11	1	Scaffold	reference genome	99.9	0.09	284363	13		YES
+GCF_018283495.1	2831467	'Santalum_album'_aster_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	20	1	Contig		99.25	0.39	65478	20		YES
+GCF_034042775.1	283734	Staphylococcus_pseudintermedius	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_030297255.1	28450	Burkholderia_pseudomallei	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_020312115.2	2852100	Candidatus_Phytoplasma_sp._AldY-WA1	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	153	1	Contig		95.88	1.79	18878	153		YES
+GCF_000006765.1	287	Pseudomonas_aeruginosa	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_023566315.1	2878854	Mesoplasma_whartonense	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	6	1	Contig	reference genome	87.92	0.96	545137	6		YES
+GCF_918697755.1	2886375	Spiroplasma_endosymbiont_of_Phyllotreta_cruciferae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Chromosome	reference genome	32.36	2.32	69899	16		YES
+GCF_000183385.1	28903	Mycoplasmopsis_bovis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	96.87	2.64	1003404	1	taxid_28903_cluster_001	YES
+GCF_024396435.1	28903	Mycoplasmopsis_bovis	COMPETITOR	C_broad_mycoplasma_background	C	1	3	Complete Genome		98.8	1.99	1006812	1	taxid_28903_cluster_002	YES
+GCF_050920785.1	28903	Mycoplasmopsis_bovis	COMPETITOR	C_broad_mycoplasma_background	C	1	2	Complete Genome		98.9	6.55	1026579	1	taxid_28903_cluster_003	YES
+GCF_022559585.1	2893471	Bartonella_machadoae	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_023509825.1	2904537	Spiroplasma_attinicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	4	1	Contig	reference genome	87.49	1.1	632388	4		YES
+GCF_024722375.1	292461	Mycoplasma_iguanae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.97	0.75	688439	1		YES
+GCF_023846195.1	2935082	Spiroplasma_endosymbiont_of_Lariophagus_distinguendus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	198	1	Contig	reference genome	90.71	0.79	14219	198		YES
+GCF_040739365.1	29388	Staphylococcus_capitis	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_000512355.1	29423	Legionella_oakridgensis	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_009268075.1	295320	'Cynodon_dactylon'_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	21	1	Scaffold		93.79	0.04	79195	23		YES
+GCF_900660745.1	29552	Haploplasma_axanthum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.72		1883099	1		YES
+GCF_900660515.1	29553	Mycoplasmopsis_bovirhinis	COMPETITOR	C_broad_mycoplasma_background	C	2	1	Complete Genome	reference genome	94.67	3.45	901941	2		YES
+GCF_000828855.1	29554	Metamycoplasma_canadense	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	94.83		693241	1		YES
+GCF_001553195.1	29555	Mycoplasmopsis_canis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	98.59	2.98	897443	1		YES
+GCF_900660495.1	29556	Mycoplasmopsis_gallinacea	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	95.69		1074838	1		YES
+GCF_000621085.1	29557	Mycoplasmopsis_gallinarum	COMPETITOR	C_broad_mycoplasma_background	C	13	1	Scaffold	reference genome	94.51		130347	14		YES
+GCF_045276885.1	29558	Mycoplasmopsis_hyopharyngis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	89.58	0.86	876322	1		YES
+GCF_024297005.1	29559	Metamycoplasma_hyosynoviae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	91.22		889181	1		YES
+GCF_000582535.1	295596	Candidatus_Hepatoplasma_crinochetorum	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	90.61	0.79	657101	1		YES
+GCF_000518305.1	29560	[Mycoplasma]_imitans	COMPETITOR	C_broad_mycoplasma_background	C	24	1	Scaffold	reference genome	93.46		91272	29		YES
+GCF_900660695.1	29561	Mycoplasmopsis_meleagridis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	93.97		644173	1		YES
+GCF_028885435.1	29562	Mesomycoplasma_ovipneumoniae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	92.08		1081520	1		YES
+GCF_024297065.1	2961895	Bartonella_harrusi	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_024338845.1	2963128	Mycoplasma_bradburyae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.93		981938	1		YES
+GCF_024349785.1	296544	Sphingomonas_bisphenolicum	COMPETITOR	E_external	E	6									NOT_APPLICABLE_COMPETITOR
+GCF_024582695.1	2967299	Mycoplasma_sp._1578d	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		99.53	0.75	893515	1		YES
+GCF_024582775.1	2967300	Mycoplasma_sp._3686d	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		99.53	1.5	969795	1		YES
+GCF_024582715.1	2967301	Mycoplasma_sp._2045	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		98.46	0.75	765084	1		YES
+GCF_024582675.1	2967302	Mycoplasma_sp._1018B	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		98.09		687102	1		YES
+GCF_042465095.1	2967972	Spiroplasma_endosymbiont_of_Anurida_maritima	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	95	0.11	801388	1		YES
+GCF_024834065.1	2973942	Mycoplasma_sp._CSL7475-4	COMPETITOR	C_broad_mycoplasma_background	C	29	1	Contig		99.59	0.75	99229	29		YES
+GCF_025209835.1	2976765	Mycoplasma_sp._HS2188	COMPETITOR	C_broad_mycoplasma_background	C	81	1	Contig		99.59		103730	81		YES
+GCF_030586845.1	2982626	Candidatus_Phytoplasma_bonamiae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	59	1	Scaffold	reference genome	83.02	0.23	15953	61		YES
+GCF_030586865.1	2982627	Candidatus_Phytoplasma_crotalariae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	62	1	Scaffold	reference genome	83.57	0.52	15414	63		YES
+GCF_030586805.1	2982628	Candidatus_Phytoplasma_fabacearum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	51	1	Scaffold	reference genome	82.66	0.23	22864	52		YES
+GCF_030586975.1	2982629	Candidatus_Phytoplasma_gossypii	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	81	1	Scaffold	reference genome	84.29	1.23	15975	83		YES
+GCF_030588185.1	2982630	Candidatus_Phytoplasma_melaleucae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	24	1	Scaffold		91.57	2.23	78115	25		YES
+GCF_025780075.1	2984844	Ureaplasma_sp._ES3154-GEN	COMPETITOR	C_broad_mycoplasma_background	C	11	1	Contig		91.85	3.68	139327	11		YES
+GCF_030550815.1	3004105	Candidatus_Mycoplasma_mahonii	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	97.9	0.38	796768	1		YES
+GCF_045277155.1	3004109	Bartonella_gliris	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_021496725.1	301585	Spiroplasma_platyhelix	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.18	0.66	744499	1		YES
+GCF_057808485.1	3020827	Acholeplasma_sp._ORD1043	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	30	1	Contig		98.71	0.88	91962	30		YES
+GCF_030913225.1	3027162	Spiroplasma_sp._AdecLV25b	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	55	1	Contig		85.18	1.55	23759	55		YES
+GCF_000412675.1	303	Pseudomonas_putida	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_030012175.1	3044389	Peloplasma_aerotolerans	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	88	1	Contig	reference genome	97.44	4.26	55334	88		YES
+GCF_001587155.1	305	Ralstonia_solanacearum	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_040940205.1	3050074	Spiroplasma_sp._DGKH1	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	20	1	Contig		99.78	4.97	195749	20		YES
+GCF_964031045.1	3066276	Spiroplasma_endosymbiont_of_Aspidapion_aeneum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	91.38	1.99	1209723	1		YES
+GCF_964030855.1	3066277	Spiroplasma_endosymbiont_of_Cantharis_lateralis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	8	1	Contig	reference genome	98.42	0.99	701480	8		YES
+GCF_964019925.1	3066278	Spiroplasma_endosymbiont_of_Cantharis_nigra	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.11	0.33	1237520	1		YES
+GCF_964019665.1	3066279	Spiroplasma_endosymbiont_of_Cantharis_rufa	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	98.75	0.33	1242918	1		YES
+GCF_964031085.1	3066281	Spiroplasma_endosymbiont_of_Asaphidion_curtum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	86.51	3.97	1313897	1		YES
+GCF_964031115.1	3066282	Spiroplasma_endosymbiont_of_Clivina_fossor	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	84.7	3.93	2045693	1		YES
+GCF_964031155.1	3066283	Spiroplasma_endosymbiont_of_Dromius_quadrimaculatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	91.21	1.55	1343660	1		YES
+GCF_964030895.1	3066284	Spiroplasma_endosymbiont_of_Nebria_brevicollis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	86.71	3.06	1490306	1		YES
+GCF_964030985.1	3066285	Spiroplasma_endosymbiont_of_Notiophilus_biguttatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	91.59	1.66	1383962	1		YES
+GCF_964020035.1	3066286	Spiroplasma_endosymbiont_of_Crioceris_asparagi	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	91.61	0.33	701400	1		YES
+GCF_964019755.1	3066287	Spiroplasma_endosymbiont_of_Polydrusus_cervinus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	86.67	1.88	1120781	1		YES
+GCF_964030965.1	3066288	Spiroplasma_endosymbiont_of_Amphimallon_solstitiale	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.2	1.66	2118897	1		YES
+GCF_964019505.1	3066289	Spiroplasma_endosymbiont_of_Othius_punctulatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	94.22	1.21	822087	1		YES
+GCF_964030865.1	3066290	Spiroplasma_endosymbiont_of_Dioctria_linearis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.08	0.33	1230581	1		YES
+GCF_964020005.1	3066291	Spiroplasma_endosymbiont_of_Atherix_ibis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	95.53	0.99	1072050	1		YES
+GCF_964030685.1	3066292	Spiroplasma_endosymbiont_of_Dilophus_febrilis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	88.41	0.99	1022979	1		YES
+GCF_964030925.1	3066293	Spiroplasma_endosymbiont_of_Villa_modesta	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	91.33	0.66	1970454	1		YES
+GCF_964019735.1	3066294	Spiroplasma_endosymbiont_of_Thecophora_atra	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	92.65	1.79	1513007	1		YES
+GCF_964264785.1	3066295	Spiroplasma_endosymbiont_of_Tipula_paludosa	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.83	6.94	1315956	1		YES
+GCF_964019535.1	3066296	Spiroplasma_endosymbiont_of_Tricholauxania_praeusta	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	92.68	1.25	1495235	1		YES
+GCF_964019715.1	3066297	Spiroplasma_endosymbiont_of_Lonchoptera_lutea	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.44	1.38	1332076	1		YES
+GCF_964019495.1	3066299	Spiroplasma_endosymbiont_of_Dasysyrphus_albostriatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	92.81	1.62	1764474	1		YES
+GCF_964019525.1	3066300	Spiroplasma_endosymbiont_of_Eupeodes_luniger	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	88.49	1.21	1103341	1		YES
+GCF_964019705.1	3066301	Spiroplasma_endosymbiont_of_Panzeria_rudis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.27	2.1	1376578	1		YES
+GCF_964030835.1	3066302	Spiroplasma_endosymbiont_of_Nephrotoma_flavescens	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.77	2.76	1107293	1		YES
+GCF_964019595.1	3066303	Spiroplasma_endosymbiont_of_Sarcophaga_carnaria	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	96.15	5.63	1998896	1		YES
+GCF_965178695.1	3066304	Spiroplasma_endosymbiont_of_Sarcophaga_variegata	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Contig	reference genome	97.34	2.87	1808218	2		YES
+GCF_964019845.1	3066305	Spiroplasma_endosymbiont_of_Labia_minor	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	96.86	1.39	984411	1		YES
+GCF_964031275.1	3066306	Spiroplasma_endosymbiont_of_Acasis_viretata	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	88.89	2.98	1484762	1		YES
+GCF_964020205.1	3066307	Spiroplasma_endosymbiont_of_Apeira_syringaria	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	89.58	2.81	2002988	1		YES
+GCF_964020095.1	3066310	Spiroplasma_endosymbiont_of_Colias_croceus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.38	5.08	2449395	1		YES
+GCF_964031195.1	3066311	Spiroplasma_endosymbiont_of_Phycita_roborella	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	7	1	Contig	reference genome	92.7	0.66	320479	7		YES
+GCF_964019975.1	3066312	Spiroplasma_endosymbiont_of_Monopis_laevigella	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.8	3.82	1381161	1		YES
+GCF_964030805.1	3066313	Spiroplasma_endosymbiont_of_Zeiraphera_isertana	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	89.52	5.06	2363561	1		YES
+GCF_964019765.1	3066314	Spiroplasma_endosymbiont_of_Panorpa_germanica	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.06	1.66	1054068	1		YES
+GCF_964020965.1	3066315	Spiroplasma_endosymbiont_of_Ammophila_pubescens	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	96.58	2.43	1730451	1		YES
+GCF_964019575.1	3066316	Spiroplasma_endosymbiont_of_Andrena_trimmerana	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	92.25	4.55	1656894	1		YES
+GCF_964020065.1	3066319	Spiroplasma_endosymbiont_of_Lasioglossum_malachurum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	89.05	3.22	1299709	1		YES
+GCF_964020195.1	3066320	Spiroplasma_endosymbiont_of_Lasioglossum_villosulum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	92.65	2.12	1512716	1		YES
+GCF_964020235.1	3066321	Spiroplasma_endosymbiont_of_Seladonia_tumulorum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.51	2.23	2137610	1		YES
+GCF_964019625.1	3066322	Spiroplasma_endosymbiont_of_Diplazon_laetatorius	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	97.7	0.33	979438	1		YES
+GCF_964273375.1	3066324	Spiroplasma_endosymbiont_of_Cleonymus_obscurus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	3	1	Contig	reference genome	90.8	2.21	1066981	3		YES
+GCF_964030795.1	3066325	Spiroplasma_endosymbiont_of_Nomada_ruficornis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.46	1.77	1583009	1		YES
+GCF_964020225.1	3066326	Spiroplasma_endosymbiont_of_Tiphia_femorata	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	91.33	4.88	1723414	1		YES
+GCF_964030645.1	3066327	Spiroplasma_endosymbiont_of_Amphibalanus_improvisus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	4	1	Contig	reference genome	89.46	0.93	495601	4		YES
+GCF_045945445.1	3070220	Bartonella_bennetti	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_028595955.1	307134	Columbia_Basin_potato_purple_top_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	71	1	Contig		94.79		78175	71		YES
+GCF_964035735.1	3077929	Spiroplasma_endosymbiont_of_Calodromius_spilotus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Contig	reference genome	91.21	1.55	1192807	2		YES
+GCF_964019485.1	3077930	Spiroplasma_endosymbiont_of_Agriotes_lineatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	79.97	1.32	1243119	1		YES
+GCF_964277355.1	3077933	Spiroplasma_endosymbiont_of_Nomada_rufipes	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	88.9	1.14	1155877	1		YES
+GCF_035609225.1	3108483	Mycoplasma_sp._888	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		98.09		714928	1		YES
+GCF_034863425.1	3108525	Mycoplasma_sp._21DD0573	COMPETITOR	C_broad_mycoplasma_background	C	23	1	Contig		98.09		53521	23		YES
+GCF_034863365.1	3108526	Mycoplasma_sp._1199	COMPETITOR	C_broad_mycoplasma_background	C	5	1	Contig		98.09		203145	5		YES
+GCF_034863345.1	3108527	Mycoplasma_sp._1232	COMPETITOR	C_broad_mycoplasma_background	C	15	1	Contig		98.09		83739	15		YES
+GCF_034863245.1	3108528	Mycoplasma_sp._2248	COMPETITOR	C_broad_mycoplasma_background	C	16	1	Contig		98.09	0.38	117615	16		YES
+GCF_034863285.1	3108529	Mycoplasma_sp._2704	COMPETITOR	C_broad_mycoplasma_background	C	7	1	Contig		98.09		154327	7		YES
+GCF_034863325.1	3108530	Mycoplasma_sp._4404	COMPETITOR	C_broad_mycoplasma_background	C	4	1	Contig		98.09		489205	4		YES
+GCF_034863305.1	3108531	Mycoplasma_sp._744	COMPETITOR	C_broad_mycoplasma_background	C	13	1	Contig		98.09		183314	13		YES
+GCF_002902925.1	311230	Paraburkholderia_terrae	COMPETITOR	E_external	E	4									NOT_APPLICABLE_COMPETITOR
+GCF_051053925.1	3117438	Mycoplasma_sp._06067-C1-B144P-99-0482-3	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		98.87	0.38	1170184	1		YES
+GCF_040369755.1	3119530	Ureaplasma_ceti	COMPETITOR	C_broad_mycoplasma_background	C	13	1	Contig	reference genome	88.17	11.51	216764	13		YES
+GCF_040062715.1	3138068	Mycoplasma_sp._21DD0294	COMPETITOR	C_broad_mycoplasma_background	C	24	1	Contig		98.46		44568	24		YES
+GCF_964264745.1	3139323	Spiroplasma_endosymbiont_of_Virgichneumon_dumeticola	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	88.04	2.06	1499752	1		YES
+GCF_964031175.1	3139324	Spiroplasma_endosymbiont_of_Melieria_omissa	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	91.7	1.24	1620688	1		YES
+GCF_964263245.1	3139326	Spiroplasma_endosymbiont_of_Polydrusus_formosus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	86.39	2.12	1417791	1		YES
+GCF_964030825.1	3139327	Spiroplasma_endosymbiont_of_Polydrusus_pterygomalis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	90.57	0.95	1385709	1		YES
+GCF_964031205.1	3139328	Spiroplasma_endosymbiont_of_Stenodema_calcarata	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	98.43	2.54	1473560	1		YES
+GCF_964031135.1	3139329	Spiroplasma_endosymbiont_of_Aleiodes_alternator	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	88.39	0.66	1229206	1		YES
+GCF_039954865.1	3141789	Rickettsia_oklahomensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_001029265.1	315358	Spiroplasma_eriocheiris	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.78	4.05	1365714	1		YES
+GCF_000019725.1	31998	Methylobacterium_radiotolerans	COMPETITOR	E_external	E	9									NOT_APPLICABLE_COMPETITOR
+GCF_000495255.1	321961	Candidatus_Phytoplasma_tritici	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	6	1	Contig	reference genome	99.25	0.58	345813	6		YES
+GCF_041276565.1	3239192	'Camptotheca_acuminata'_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	57	1	Contig		93.86	0.68	23245	57		YES
+GCF_002804245.1	324078	Mesoplasma_coleopterae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.94	0.43	800407	1		YES
+GCF_009730595.1	324079	Spiroplasma_tabanidicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	97.34	1.43	1284335	1		YES
+GCF_041531585.1	3242468	Candidatus_Izemoplasma_sp._B36	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome		95.69		1940101	1		YES
+GCF_049478495.1	3252900	Mycoplasma_sp._P36-A1	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		96.37	8.47	1966006	1		YES
+GCF_000815025.1	325775	Coxiella_endosymbiont_of_Amblyomma_americanum	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000367205.1	33010	Cutibacterium_avidum	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_030295285.1	33011	Cutibacterium_granulosum	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000022725.1	33045	Bartonella_grahamii	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_023920085.1	33046	Bartonella_taylorii	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_900638635.1	33047	Bartonella_vinsonii	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000960995.1	337	Burkholderia_glumae	COMPETITOR	E_external	E	4									NOT_APPLICABLE_COMPETITOR
+GCF_056242675.1	3374102	Rickettsia_lanei	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_043951795.1	3374570	Liberiplasma_polymorphum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	80	1	Contig	reference genome	97.78	3.33	40033	80		YES
+GCF_002272945.1	33922	Mycoplasmopsis_agassizii	COMPETITOR	C_broad_mycoplasma_background	C	8	1	Scaffold	reference genome	92.95		263651	14		YES
+GCF_034647055.2	33923	Mycoplasmopsis_felis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	96.39		918089	1		YES
+GCF_000687795.1	33924	[Mycoplasma]_testudinis	COMPETITOR	C_broad_mycoplasma_background	C	38	1	Contig	reference genome	91.74		54616	38		YES
+GCF_047785185.1	3398615	Mycoplasma_sp._4079	COMPETITOR	C_broad_mycoplasma_background	C	17	1	Contig		98.09		56259	17		YES
+GCF_048284415.1	3398773	Mycoplasma_paraquilae	COMPETITOR	C_broad_mycoplasma_background	C	8	1	Contig	reference genome	98.84		156104	8		YES
+GCF_048284645.1	3398774	Mycoplasma_haliaeeti	COMPETITOR	C_broad_mycoplasma_background	C	16	1	Contig	reference genome	98.84		66558	16		YES
+GCF_048284715.1	3398775	Mycoplasma_milvi	COMPETITOR	C_broad_mycoplasma_background	C	7	1	Contig	reference genome	98.84		201698	7		YES
+GCF_048076865.1	3398776	Mycoplasma_razini	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	98.84		823238	1		YES
+GCF_002078335.1	33989	Rickettsia_amblyommatis	COMPETITOR	E_external	E	4									NOT_APPLICABLE_COMPETITOR
+GCF_000012385.1	33990	Rickettsia_bellii	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000284175.1	33991	Rickettsia_montanensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_001442475.1	33992	Rickettsia_rhipicephali	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_048381515.1	3400998	Mycoplasma_sp._4463	COMPETITOR	C_broad_mycoplasma_background	C	46	1	Contig		97.34		21163	46		YES
+GCF_051353065.1	3440155	Mycoplasma_sp._480	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		99.97	0.38	1002506	1		YES
+GCF_051200785.1	3440865	Mycoplasma_sp._6243	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		99.22		1124702	1		YES
+GCF_051549845.1	3447505	Mycoplasma_sp._125	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		100		840473	1		YES
+GCF_051549855.1	3447506	Mycoplasma_sp._3341	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		98.46		684838	1		YES
+GCF_006385615.1	344886	Chlamydophila_parapsittaci	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_054343485.1	3452155	Mycoplasma_sp._613B	COMPETITOR	C_broad_mycoplasma_background	C	39	1	Contig		99.97		42792	39		YES
+GCF_054343455.1	3452156	Mycoplasma_sp._1012	COMPETITOR	C_broad_mycoplasma_background	C	43	1	Contig		99.59		37396	43		YES
+GCF_054343435.1	3452157	Mycoplasma_sp._5370	COMPETITOR	C_broad_mycoplasma_background	C	49	1	Contig		99.59		33525	49		YES
+GCF_054343415.1	3452158	Mycoplasma_sp._AC157	COMPETITOR	C_broad_mycoplasma_background	C	45	1	Contig		99.97		39992	45		YES
+GCF_054343395.1	3452159	Mycoplasma_sp._CB776	COMPETITOR	C_broad_mycoplasma_background	C	46	1	Contig		99.59		29845	46		YES
+GCF_054343375.1	3452160	Mycoplasma_sp._Z386	COMPETITOR	C_broad_mycoplasma_background	C	42	1	Contig		99.59		35578	42		YES
+GCF_054353935.1	3453135	Mycoplasma_sp._246B	COMPETITOR	C_broad_mycoplasma_background	C	20	1	Contig		99.97		125578	20		YES
+GCF_054353895.1	3453136	Mycoplasma_sp._394	COMPETITOR	C_broad_mycoplasma_background	C	16	1	Contig		99.97	0.75	103076	16		YES
+GCF_054353875.1	3453137	Mycoplasma_sp._4013	COMPETITOR	C_broad_mycoplasma_background	C	21	1	Contig		99.97		96376	21		YES
+GCF_054353855.1	3453138	Mycoplasma_sp._4423	COMPETITOR	C_broad_mycoplasma_background	C	35	1	Contig		99.97	0.75	51923	35		YES
+GCF_054353835.1	3453139	Mycoplasma_sp._5912	COMPETITOR	C_broad_mycoplasma_background	C	20	1	Contig		99.97		99573	20		YES
+GCF_054353815.1	3453140	Mycoplasma_sp._AC1221	COMPETITOR	C_broad_mycoplasma_background	C	32	1	Contig		99.97		53222	32		YES
+GCF_052378275.1	3458236	Mycoplasma_sp._332	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		100		811576	1		YES
+GCF_053851675.1	3458455	Mycoplasma_sp._1781	COMPETITOR	C_broad_mycoplasma_background	C	29	1	Contig		98.92		49587	29		YES
+GCF_053851635.1	3458456	Mycoplasma_sp._2575	COMPETITOR	C_broad_mycoplasma_background	C	25	1	Contig		100		72950	25		YES
+GCF_053851655.1	3458457	Mycoplasma_sp._327	COMPETITOR	C_broad_mycoplasma_background	C	16	1	Contig		100		78837	16		YES
+GCF_053851615.1	3458458	Mycoplasma_sp._1890	COMPETITOR	C_broad_mycoplasma_background	C	23	1	Contig		100		46092	23		YES
+GCF_053851595.1	3458459	Mycoplasma_sp._527	COMPETITOR	C_broad_mycoplasma_background	C	12	1	Contig		100		211030	12		YES
+GCF_053851575.1	3458460	Mycoplasma_sp._2261	COMPETITOR	C_broad_mycoplasma_background	C	22	1	Contig		100		70949	22		YES
+GCF_053851555.1	3458461	Mycoplasma_sp._3398	COMPETITOR	C_broad_mycoplasma_background	C	18	1	Contig		100		70554	18		YES
+GCF_053851515.1	3458462	Mycoplasma_sp._773	COMPETITOR	C_broad_mycoplasma_background	C	19	1	Contig		100		83909	19		YES
+GCF_053851735.1	3458463	Mycoplasma_sp._128	COMPETITOR	C_broad_mycoplasma_background	C	7	1	Contig		99.22		437757	7		YES
+GCF_053851775.1	3458464	Mycoplasma_sp._1573	COMPETITOR	C_broad_mycoplasma_background	C	4	1	Contig		99.22		376593	4		YES
+GCF_053851755.1	3458465	Mycoplasma_sp._3392	COMPETITOR	C_broad_mycoplasma_background	C	7	1	Contig		99.22		374261	7		YES
+GCF_053851715.1	3458466	Mycoplasma_sp._392	COMPETITOR	C_broad_mycoplasma_background	C	9	1	Contig		99.22		497758	9		YES
+GCF_053851695.1	3458467	Mycoplasma_sp._4044	COMPETITOR	C_broad_mycoplasma_background	C	8	1	Contig		99.22		486511	8		YES
+GCF_055523595.1	3458676	Mycoplasma_sp._6934	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Contig		99.22		1045168	1		YES
+GCF_055523525.1	3458677	Mycoplasma_sp._10961	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Contig		99.22	1.5	1025481	1		YES
+GCF_055523555.1	3458678	Mycoplasma_sp._11548	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Contig		99.22	1.5	1127662	1		YES
+GCF_055523495.1	3458679	Mycoplasma_sp._13536	COMPETITOR	C_broad_mycoplasma_background	C	8	1	Contig		99.22	1.5	1009048	8		YES
+GCF_054170725.1	3472838	Mycoplasma_pogonae	COMPETITOR	C_broad_mycoplasma_background	C	26	1	Contig	reference genome	99.47	1.32	88841	26		YES
+GCF_977110965.1	3473534	Spiroplasma_endosymbiont_of_Dactylopius_coccus	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	89.5	0.99	1888154	1		YES
+GCF_978018445.1	3473538	Spiroplasma_endosymbiont_of_Halictus_nicosiae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	95.81	4.3	2485679	1		YES
+GCF_019720735.1	353851	Mycoplasma_sp._Ms02	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		98.84		924269	1		YES
+GCF_006228185.1	353852	Mycoplasma_nasistruthionis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	98.46	0.75	803230	1		YES
+GCF_900444665.1	35623	Acholeplasma_oculi	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Contig	reference genome	99.17	1.66	1587119	2		YES
+GCF_054456995.1	3568880	Mycoplasma_tracheobuteonis	COMPETITOR	C_broad_mycoplasma_background	C	34	1	Contig	reference genome	98.84		59069	34		YES
+GCF_000687775.1	35768	Mycoplasmopsis_felifaucium	COMPETITOR	C_broad_mycoplasma_background	C	37	1	Contig	reference genome	94.83	1.72	43591	37		YES
+GCF_036352135.1	35769	Metamycoplasma_gateae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	94.83		689432	1		YES
+GCF_000364425.1	35772	Peanut_witches'-broom_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	14	1	Contig		81.73	1.85	71463	14		YES
+GCF_018024475.1	35773	Candidatus_Phytoplasma_luffae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	95.32	6.49	769143	1		YES
+GCF_038024965.1	35780	Candidatus_Phytoplasma_fraxini	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	94.57	0.46	598519	1		YES
+GCF_000023005.1	35788	Rickettsia_africae	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_963970025.1	35789	Rickettsia_helvetica	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000283595.1	35790	Rickettsia_japonica	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000016625.1	35791	Rickettsia_massiliae	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000284195.1	35792	Rickettsia_parkeri	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_042758515.1	35793	Rickettsia_sibirica	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000237845.1	35794	Rickettsia_slovaca	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_051097115.1	35795	Ehrlichia_muris	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_001281045.1	362837	Spiroplasma_cantharicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	98.95	0.33	1179577	1		YES
+GCF_000622205.1	36742	Mycoplasma_leonicaptivi	COMPETITOR	C_broad_mycoplasma_background	C	80	1	Scaffold	reference genome	99.22		15264	91		YES
+GCF_000702705.1	36744	Mycoplasma_simbae	COMPETITOR	C_broad_mycoplasma_background	C	12	1	Contig	reference genome	99.25	0.75	122401	12		YES
+GCF_054963775.1	3683210	Spiroplasma_endosymbiont_of_Tabanus_sp.	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	329	1	Contig	reference genome	95.3	1.32	7570	329		YES
+GCF_057537535.1	3683341	Ureaplasma_sp._TOSA-KAIYU	COMPETITOR	C_broad_mycoplasma_background	C	2	1	Contig		84.09	2.03	427637	2		YES
+GCF_056781225.1	3699019	Mycoplasma_sp._3686h	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		99.97	0.75	956265	1		YES
+GCF_056781245.1	3699021	Mycoplasma_sp._1579d	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		99.59	0.75	893530	1		YES
+GCF_013752735.1	375	Bradyrhizobium_japonicum	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000026205.1	37692	Candidatus_Phytoplasma_mali	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.25	0.29	601943	1		YES
+GCF_019930925.1	38323	Bartonella_henselae	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000341355.1	388640	Bartonella_australis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000968055.1	38986	Acholeplasma_palmae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.87	4.97	1554229	1		YES
+GCF_000701485.1	39047	Mycoplasmopsis_sturni	COMPETITOR	C_broad_mycoplasma_background	C	4	1	Scaffold	reference genome	93.81		297080	5		YES
+GCF_000632845.1	391036	Ehrlichia_japonica	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_019396865.1	39647	Paulownia_witches'-broom_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome		99.06	0.44	891641	1		YES
+GCF_024742155.1	398174	Mycoplasma_zalophidermidis	COMPETITOR	C_broad_mycoplasma_background	C	14	1	Contig	reference genome	98.46		130675	14		YES
+GCF_026821955.1	399025	Candidatus_Phytoplasma_rubi	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	95.48	1.16	762251	1		YES
+GCF_000083545.1	408	Methylorubrum_extorquens	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_018390775.2	420408	Sesame_phyllody_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	60	1	Contig		84.67	1.1	30531	60		YES
+GCF_000712165.1	42092	Ureaplasma_canigenitalium	COMPETITOR	C_broad_mycoplasma_background	C	9	1	Scaffold	reference genome	93.95	1.68	223207	11		YES
+GCF_000941095.1	42094	Ureaplasma_diversum	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Chromosome	reference genome	94.69	6.67	176037	9		YES
+GCF_000012145.1	42862	Rickettsia_felis	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_001645765.1	432608	Candidatus_Mycoplasma_haematobovis	COMPETITOR	C_broad_mycoplasma_background	C	18	1	Contig	reference genome	78.42	0.45	256799	18		YES
+GCF_001941585.1	446	Legionella_pneumophila	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000953655.1	449	Legionella_hackeliae	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000091785.1	450	Legionella_longbeachae	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_900637865.1	45056	Legionella_adelaidensis	COMPETITOR	E_external	E	29									NOT_APPLICABLE_COMPETITOR
+GCF_004766445.2	45065	Legionella_geestiana	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_900187355.1	45067	Legionella_lansingensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000953635.1	451	Legionella_micdadei	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_900186965.1	452	Legionella_spiritensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000026765.1	45361	Mesomycoplasma_conjunctivae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Chromosome	reference genome	86.05		452303	2		YES
+GCF_000524555.1	45362	Mesomycoplasma_bovoculi	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	91.38		760240	1		YES
+GCF_900476125.1	45363	Metamycoplasma_alkalescens	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	94.83	1.72	821059	1		YES
+GCF_007361795.1	454	Legionella_israelensis	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_900637635.1	456	Legionella_jordanis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_006546935.1	458208	Mycoplasmopsis_mucosicanis	COMPETITOR	C_broad_mycoplasma_background	C	57	1	Contig	reference genome	95.4		64609	57		YES
+GCF_009035845.1	470	Acinetobacter_baumannii	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_000215935.2	471825	Haloplasma_contractile	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	34	1	Contig	reference genome	98.1	10.95	347868	34		YES
+GCF_036924415.2	47565	Candidatus_Phytoplasma_prunorum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	16	1	Scaffold	reference genome	98.67	0.46	112565	17		YES
+GCF_046600495.1	47566	Candidatus_Phytoplasma_pyri	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	14	1	Scaffold	reference genome	87.38	0.29	78923	15		YES
+GCF_000021525.1	47589	Rickettsia_peacockii	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000178375.1	47687	Mycoplasmopsis_alligatoris	COMPETITOR	C_broad_mycoplasma_background	C	33	1	Contig	reference genome	94.04		173580	33		YES
+GCF_001274875.1	47834	Spiroplasma_kunkelii	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	4	1	Complete Genome	reference genome	93.42	2.21	1463926	4		YES
+GCF_003339775.1	47835	Spiroplasma_phoeniceum	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	4	1	Complete Genome	reference genome	95.49	0.66	1791576	4		YES
+GCF_055396925.1	47958	Methylorubrum_thiocyanatum	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_013391955.1	479893	Candidatus_Phytoplasma_pruni	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	67	1	Contig	reference genome	97.95	0.29	31273	67		YES
+GCF_006334135.1	48003	Mycoplasmopsis_pullorum	COMPETITOR	C_broad_mycoplasma_background	C	63	1	Scaffold	reference genome	96.39		43034	69		YES
+GCF_000025845.1	50052	Mycoplasma_crocodyli	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	100		934379	1		YES
+GCF_030718845.1	512749	Mycoplasma_seminis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.22		1064223	1		YES
+GCF_045276205.1	51362	Mycoplasmopsis_adleri	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	92.24		1130687	1		YES
+GCF_003253435.1	51363	Metamycoplasma_auris	COMPETITOR	C_broad_mycoplasma_background	C	39	1	Scaffold	reference genome	94.83		101015	40		YES
+GCF_024918975.1	51364	Mycoplasma_cottewii	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	97.12	0.75	1016659	1		YES
+GCF_000875755.1	51365	Mycoplasma_yeatsii	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.62	0.75	895051	1		YES
+GCF_007859615.1	519450	Mycoplasma_anserisalpingitidis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.59		959110	1		YES
+GCF_049942695.1	525886	Mycoplasma_hafezii	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.97		954558	1		YES
+GCF_013388295.1	52764	Bartonella_alsatica	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_900476105.1	53558	Mycoplasmopsis_edwardii	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	95.53		832213	1		YES
+GCF_025515455.1	536372	Mycoplasma_sp._CSL7503-lung	COMPETITOR	C_broad_mycoplasma_background	C	73	1	Contig		99.25	0.75	33390	73		YES
+GCF_003855455.1	538220	Mycoplasma_struthionis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	98.12	2.26	737591	1		YES
+GCF_016925555.1	547987	Mycoplasma_tauri	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.22	0.38	764150	1		YES
+GCF_018913965.1	549718	Mycoplasma_sp._CSL7491-lung	COMPETITOR	C_broad_mycoplasma_background	C	7	1	Contig		99.22		515379	7		YES
+GCF_017052655.1	555393	Acholeplasma_equirhinis	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	7	1	Contig	reference genome	98.68		1309467	7		YES
+GCF_024498215.1	55603	Mycoplasmopsis_caviae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	94.48		1155014	1		YES
+GCF_000702785.1	55604	Mycoplasmopsis_primatum	COMPETITOR	C_broad_mycoplasma_background	C	63	1	Contig	reference genome	92.24		26072	63		YES
+GCF_040267515.1	558537	Delftia_lacustris	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_036350065.1	561067	Mycoplasmopsis_ciconiae	COMPETITOR	C_broad_mycoplasma_background	C	22	1	Contig	reference genome	96.39		84960	22		YES
+GCF_000008865.2	562	Escherichia_coli	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_020097475.1	564	Escherichia_fergusonii	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000253015.1	56426	Bartonella_clarridgeiae	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_017052595.1	568784	Mycoplasma_procyoni	COMPETITOR	C_broad_mycoplasma_background	C	22	1	Contig	reference genome	99.97		109542	22		YES
+GCF_044501185.1	570505	Methylobacterium_bullatum	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000179035.2	57372	Mycoplasma_suis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	69.83	0.15	742431	1		YES
+GCF_036689615.1	587753	Pseudomonas_chlororaphis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_025742995.1	591373	Paracholeplasma_manati	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	28	1	Contig	reference genome	97.06	2.84	326625	28		YES
+GCF_000397185.1	59748	Candidatus_Phytoplasma_australiense	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.25	1.06	959779	1		YES
+GCF_000967915.1	61635	Acholeplasma_brassicae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	96.52	5.23	1877792	1		YES
+GCF_014352955.1	640330	Mycoplasma_sp._Pen4	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome		97.71	1.5	901484	1		YES
+GCF_000277795.1	65123	Mycoplasma_wenyonii	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	67.79	2.56	650228	1		YES
+GCF_900187095.1	66969	Legionella_waltersii	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_025446935.1	69473	Paracholeplasma_vituli	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	43	1	Contig	reference genome	97.06	2.27	111888	43		YES
+GCF_040126175.1	69896	Candidatus_Phytoplasma_solani	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	99.05	1.16	704525	1		YES
+GCF_000092785.1	71667	Waddlia_chondrophila	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_002804205.1	74700	Entomoplasma_freundtii	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	88.45	3.46	838114	1		YES
+GCF_000522545.2	75105	Paraburkholderia_caribensis	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_017084445.1	754514	Mycoplasma_sp._Mirounga_ES2805-ORL	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Chromosome		99.09	0.38	784456	1		YES
+GCF_013008635.1	754515	Mycoplasma_miroungigenitalium	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.22	0.75	815486	1		YES
+GCF_013008815.1	754516	Mycoplasma_miroungirhinis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	99.22		779550	1		YES
+GCF_012934855.1	754517	Mycoplasma_phocoenae	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	98.59		693115	1		YES
+GCF_000402035.1	758793	Caballeronia_insecticola	COMPETITOR	E_external	E	5									NOT_APPLICABLE_COMPETITOR
+GCF_900660635.1	76629	Mycoplasmopsis_gallopavonis	COMPETITOR	C_broad_mycoplasma_background	C	4	1	Complete Genome	reference genome	95.53	3.45	576641	4		YES
+GCF_000701805.1	76630	Mycoplasmopsis_iners	COMPETITOR	C_broad_mycoplasma_background	C	28	1	Scaffold	reference genome	93.52		43698	29		YES
+GCF_000024505.1	769	Anaplasma_centrale	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000020305.1	770	Anaplasma_marginale	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000015445.1	774	Bartonella_bacilliformis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000007765.2	777	Coxiella_burnetii	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000026005.1	779	Ehrlichia_ruminantium	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000007025.1	781	Rickettsia_conorii	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000277165.1	782	Rickettsia_prowazekii	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000018225.1	783	Rickettsia_rickettsii	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_900327255.1	784	Orientia_tsutsugamushi	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000008045.1	785	Rickettsia_typhi	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000701785.1	78580	Mycoplasmoides_alvi	COMPETITOR	C_broad_mycoplasma_background	C	7	1	Scaffold	reference genome	95.53	1.72	190782	9		YES
+GCF_000018205.1	786	Rickettsia_akari	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000284155.1	787	Rickettsia_australis	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000283915.1	788	Rickettsia_canadensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_009936175.1	803	Bartonella_quintana	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_900638615.1	807	Bartonella_elizabethae	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000018665.1	80866	Delftia_acidovorans	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000008725.1	813	Chlamydia_trachomatis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_002804105.1	81459	Mesoplasma_melaleucae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Complete Genome	reference genome	98.65	0.22	845295	1		YES
+GCF_000253035.1	83552	Parachlamydia_acanthamoebae	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000204255.1	83554	Chlamydia_psittaci	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_040235295.1	83555	Chlamydia_abortus	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000009945.1	83556	Chlamydia_felis	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000007605.1	83557	Chlamydia_caviae	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000007205.1	83558	Chlamydia_pneumoniae	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_900149385.2	83559	Chlamydia_suis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000006685.1	83560	Chlamydia_muridarum	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000237205.1	83561	Simkania_negevensis	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_038505995.1	85620	Candidatus_Phytoplasma_asteris	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	2	1	Complete Genome	reference genome	99.25		772691	2		YES
+GCF_046896035.1	85624	Candidatus_Phytoplasma_palmae	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	49	1	Scaffold	reference genome	90.8	0.87	23186	54		YES
+GCF_000309405.1	85642	Vaccinium_witches'-broom_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	272	1	Contig		97.99	1.02	6572	272		YES
+GCF_978563805.1	85647	Brinjal_little_leaf_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	12	1	Contig		94.4		75728	12		YES
+GCF_000196435.1	85701	Bartonella_tribocorum	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_020549965.1	85991	Chlamydia_pecorum	COMPETITOR	E_external	E	2									NOT_APPLICABLE_COMPETITOR
+GCF_000941075.1	86660	Mesomycoplasma_dispar	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	93.97		1084449	1		YES
+GCF_022879815.1	871203	Caballeronia_zhejiangensis	COMPETITOR	E_external	E	7									NOT_APPLICABLE_COMPETITOR
+GCF_006491995.1	872983	Metamycoplasma_neophronis	COMPETITOR	C_broad_mycoplasma_background	C	65	1	Contig	reference genome	94.83		116412	65		YES
+GCF_036352035.1	87883	Burkholderia_multivorans	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_025780055.1	907723	Ureaplasma_zalophigenitalium	COMPETITOR	C_broad_mycoplasma_background	C	48	1	Contig	reference genome	90.29	2.69	111669	48		YES
+GCF_003285045.1	92400	[Mycoplasma]_anseris	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	94.67		750009	1		YES
+GCF_003269445.1	92401	Metamycoplasma_cloacale	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	94.67		659552	1		YES
+GCF_033546855.1	92402	Metamycoplasma_equirhinis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	94.83		706186	1		YES
+GCF_006385795.1	92403	[Mycoplasma]_falconis	COMPETITOR	C_broad_mycoplasma_background	C	39	1	Contig	reference genome	94.83		82367	39		YES
+GCF_037482225.1	92404	[Mycoplasma]_gypis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	96.39		833262	1		YES
+GCF_041026625.1	92406	Metamycoplasma_spumans	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	94.83		751767	1		YES
+GCF_033546815.1	92407	Metamycoplasma_subdolum	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	92.79		654603	1		YES
+GCF_042984175.1	92757	[Mycoplasma]_cavipharyngis	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	90.44		1034253	1		YES
+GCF_024498275.1	92758	Mycoplasmoides_fastidiosum	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	92.01		1221951	1		YES
+GCF_041920595.1	927614	Areca_yellow_leaf_disease_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	D	1	1	Chromosome		14.3	0.42	6533	155		YES
+GCF_002278135.3	931866	Bradyrhizobium_ottawaense	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000012565.1	944	Ehrlichia_canis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000013145.1	945	Ehrlichia_chaffeensis	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000439755.1	948	Anaplasma_phagocytophilum	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_012790675.1	949	Anaplasma_platys	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000013165.1	951	Ehrlichia_sennetsu	COMPETITOR	E_external	E	1									NOT_APPLICABLE_COMPETITOR
+GCF_000953135.1	96230	Legionella_fallonii	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_023921225.1	96232	Legionella_lytica	COMPETITOR	E_external	E	3									NOT_APPLICABLE_COMPETITOR
+GCF_000477415.1	984991	Mycoplasma_parvum	COMPETITOR	C_broad_mycoplasma_background	C	1	1	Complete Genome	reference genome	69.33	0.15	564395	1		YES
+GCF_003953005.1	134821	Ureaplasma_parvum	TARGET	B_human_extended	B	1	3	Complete Genome		97.68		732031	1	taxid_134821_cluster_001	YES
+GCF_006716515.1	134821	Ureaplasma_parvum	TARGET	B_human_extended	B	1	2	Complete Genome		98.46	0.41	741809	1	taxid_134821_cluster_002	YES
+GCF_021460135.1	134821	Ureaplasma_parvum	TARGET	B_human_extended	B	1	1	Complete Genome		98.8		726862	1	taxid_134821_cluster_003	YES
+GCF_037407185.1	134821	Ureaplasma_parvum	TARGET	B_human_extended	B	13	5	Contig		98.86	1.24	173594	13	taxid_134821_cluster_004	YES
+GCF_001547975.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	A	1	1	Complete Genome	reference genome	99.33	1.91	678592	1	taxid_2094_cluster_002	YES
+GCF_026686775.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	A	21	6	Scaffold		99.92	1.18	47068	23	taxid_2094_cluster_001	YES
+GCF_029963895.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	A	199	11	Scaffold		98.74	3.19	46393	200	taxid_2094_cluster_003	YES
+GCF_029963915.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	A	99	7	Scaffold		99.92	1.32	32471	100	taxid_2094_cluster_001	YES
+GCF_029963975.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	A	26	5	Scaffold		99.92	1.18	48509	27	taxid_2094_cluster_001	YES
+GCF_029963995.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	A	59	9	Scaffold		99.33	1.76	36829	60	taxid_2094_cluster_004	YES
+GCF_029964015.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	A	58	8	Scaffold		99.92	1.52	54899	59	taxid_2094_cluster_001	YES
+GCF_041222705.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	A	1	4	Complete Genome		98.71	0.93	665929	1	taxid_2094_cluster_005	YES
+GCF_900660725.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	A	3	2	Complete Genome		99.71	3.47	712140	3	taxid_2094_cluster_007	YES
+GCF_000012765.1	2095	Mycoplasma_capricolum	TARGET	B_human_extended	B	1	3	Complete Genome	reference genome	99	0.38	1010023	1	taxid_2095_cluster_001	YES
+GCF_001005165.1	2095	Mycoplasma_capricolum	TARGET	B_human_extended	B	7	2	Scaffold		100	1.13	157295	13	taxid_2095_cluster_002	YES
+GCF_041021285.1	2095	Mycoplasma_capricolum	TARGET	B_human_extended	B	64	1	Scaffold		100	0.38	93350	76	taxid_2095_cluster_003	YES
+GCF_040556925.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	A	1	1	Complete Genome	reference genome	98		580076	1	taxid_2097_cluster_001	YES
+GCF_054926215.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	A	1	11	Complete Genome		97.61		579545	1	taxid_2097_cluster_002	YES
+GCF_054926235.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	A	1	6	Complete Genome		97.86		579756	1	taxid_2097_cluster_003	YES
+GCF_054926255.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	A	1	9	Complete Genome		97.65		579626	1	taxid_2097_cluster_004	YES
+GCF_054926315.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	A	1	10	Complete Genome		97.61		579659	1	taxid_2097_cluster_005	YES
+GCF_054926555.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	A	1	8	Complete Genome		97.65	0.3	581669	1	taxid_2097_cluster_006	YES
+GCF_056336045.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	A	1	7	Complete Genome		97.86		579658	1	taxid_2097_cluster_007	YES
+GCF_000085865.1	2098	Metamycoplasma_hominis	TARGET	A_core	A	1	2	Complete Genome		99.77	0.09	665445	1	taxid_2098_cluster_001	YES
+GCF_000759375.2	2098	Metamycoplasma_hominis	TARGET	A_core	A	1	7	Complete Genome		99.77	7.84	766228	1	taxid_2098_cluster_002	YES
+GCF_000767725.1	2098	Metamycoplasma_hominis	TARGET	A_core	A	1	1	Complete Genome	reference genome	99.94	0.26	715165	1	taxid_2098_cluster_003	YES
+GCF_000947915.1	2098	Metamycoplasma_hominis	TARGET	A_core	A	1	5	Complete Genome		99.88	5.22	700851	1	taxid_2098_cluster_004	YES
+GCF_013367855.1	2098	Metamycoplasma_hominis	TARGET	A_core	A	1	6	Complete Genome		99.77	7.59	780024	1	taxid_2098_cluster_005	YES
+GCF_013367915.1	2098	Metamycoplasma_hominis	TARGET	A_core	A	1	9	Complete Genome		97.56	0.76	712781	1	taxid_2098_cluster_006	YES
+GCF_013367955.1	2098	Metamycoplasma_hominis	TARGET	A_core	A	1	4	Complete Genome		99.94	2.64	700135	1	taxid_2098_cluster_007	YES
+GCF_013367995.1	2098	Metamycoplasma_hominis	TARGET	A_core	A	1	3	Complete Genome		99.94	0.26	681374	1	taxid_2098_cluster_008	YES
+GCF_013368015.1	2098	Metamycoplasma_hominis	TARGET	A_core	A	1	8	Complete Genome		99.43	0.78	750518	1	taxid_2098_cluster_009	YES
+GCF_054457615.1	2098	Metamycoplasma_hominis	TARGET	A_core	A	1	10	Complete Genome		97.56	0.78	741871	1	taxid_2098_cluster_010	YES
+GCF_000241125.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	A	1	6	Complete Genome		99.3		837480	1	taxid_2100_cluster_002	YES
+GCF_024760345.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	A	1	9	Complete Genome		99.27		866962	1	taxid_2100_cluster_004	YES
+GCF_024760365.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	A	1	3	Complete Genome		99.41		844388	1	taxid_2100_cluster_003	YES
+GCF_051052295.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	A	1	5	Complete Genome		99.31	1.36	846495	1	taxid_2100_cluster_005	YES
+GCF_056783355.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	A	1	8	Complete Genome		99.27	2.31	878803	1	taxid_2100_cluster_006	YES
+GCF_900476065.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	A	1	1	Complete Genome	reference genome	99.34		838863	1	taxid_2100_cluster_001	YES
+GCF_000733995.1	2104	Mycoplasmoides_pneumoniae	TARGET	A_core	A	1	3	Complete Genome		99.64	6.35	857799	1	taxid_2104_cluster_001	YES
+GCF_900660465.1	2104	Mycoplasmoides_pneumoniae	TARGET	A_core	A	2	1	Complete Genome	reference genome	98.31	0.3	817125	2	taxid_2104_cluster_002	YES
+GCF_000148625.1	2115	Mycoplasmopsis_fermentans	TARGET	A_core	A	1	3	Complete Genome		95.02	1.28	977524	1	taxid_2115_cluster_002	YES
+GCF_000186005.1	2115	Mycoplasmopsis_fermentans	TARGET	A_core	A	1	1	Complete Genome	reference genome	98.89	0.94	1118751	1	taxid_2115_cluster_003	YES
+GCF_000209735.1	2115	Mycoplasmopsis_fermentans	TARGET	A_core	A	1	2	Chromosome		97.04	0.94	129169	21	taxid_2115_cluster_004	YES
+GCF_003704075.1	2115	Mycoplasmopsis_fermentans	TARGET	A_core	A	46	4	Contig		95.31	1.7	34057	46	taxid_2115_cluster_001	YES
+GCF_045276895.1	2117	Mycoplasmopsis_lipophila	TARGET	B_human_extended	B	1	1	Complete Genome	reference genome	89.66		811471	1		YES
+GCF_000420105.1	2121	Metamycoplasma_orale	TARGET	A_core	A	21	2	Contig		90.07		43028	21	taxid_2121_cluster_001	YES
+GCF_900660435.1	2121	Metamycoplasma_orale	TARGET	A_core	A	5	1	Complete Genome	reference genome	91.8	6.9	736864	5	taxid_2121_cluster_002	YES
+GCF_000685905.1	2122	Mycoplasmoides_pirum	TARGET	A_core	A	6	1	Contig	reference genome	95.89		600706	6	taxid_2122_cluster_001	YES
+GCF_000686245.1	2122	Mycoplasmoides_pirum	TARGET	A_core	A	9	2	Scaffold		95.89		88932	30	taxid_2122_cluster_001	YES
+GCF_021600285.1	2124	Metamycoplasma_salivarium	TARGET	A_core	A	7	5	Contig		91.22		551285	7	taxid_2124_cluster_002	YES
+GCF_021600305.1	2124	Metamycoplasma_salivarium	TARGET	A_core	A	6	4	Contig		91.22		702908	6	taxid_2124_cluster_003	YES
+GCF_021600325.1	2124	Metamycoplasma_salivarium	TARGET	A_core	A	9	6	Contig		91.22		503089	9	taxid_2124_cluster_004	YES
+GCF_041930575.1	2124	Metamycoplasma_salivarium	TARGET	A_core	A	1	3	Complete Genome		91.22		716796	1	taxid_2124_cluster_005	YES
+GCF_900660445.2	2124	Metamycoplasma_salivarium	TARGET	A_core	A	1	1	Complete Genome	reference genome	91.22		728347	1	taxid_2124_cluster_001	YES
+GCF_003326135.1	2130	Ureaplasma_urealyticum	TARGET	B_human_extended	B	27	5	Scaffold		99.01	0.18	41928	150	taxid_2130_cluster_001	YES
+GCF_006716625.1	2130	Ureaplasma_urealyticum	TARGET	B_human_extended	B	1	2	Complete Genome		99.15	0.18	825366	1	taxid_2130_cluster_002	YES
+GCF_006777105.1	2130	Ureaplasma_urealyticum	TARGET	B_human_extended	B	1	3	Complete Genome		98.82	0.68	853955	1	taxid_2130_cluster_003	YES
+GCF_021460055.1	2130	Ureaplasma_urealyticum	TARGET	B_human_extended	B	1	4	Complete Genome		98.65	0.18	816741	1	taxid_2130_cluster_004	YES
+GCF_022700735.1	2130	Ureaplasma_urealyticum	TARGET	B_human_extended	B	1	1	Complete Genome		99.15	0.18	827615	1	taxid_2130_cluster_005	YES
+GCF_000723365.1	273136	Mycoplasma_amphoriforme	TARGET	B_human_extended	B	1	1	Complete Genome	reference genome	99.14	0.75	1029022	1		YES
+GCF_000011225.1	28227	Malacoplasma_penetrans	TARGET	A_core	A	1	1	Complete Genome	reference genome	91.85		1358633	1	taxid_28227_cluster_001	YES
+GCF_030077835.1	3045839	Mycoplasma_phocimorsus	TARGET	B_human_extended	B	12	2	Contig		98.5	1.13	227869	12	taxid_3045839_cluster_001	YES
+GCF_030077865.1	3045839	Mycoplasma_phocimorsus	TARGET	B_human_extended	B	28	1	Contig	reference genome	98.5	1.13	42579	28	taxid_3045839_cluster_002	YES
+GCF_030077875.1	3045839	Mycoplasma_phocimorsus	TARGET	B_human_extended	B	12	3	Contig		98.5	1.13	225430	12	taxid_3045839_cluster_003	YES
+GCF_046774455.1	55602	Metamycoplasma_buccale	TARGET	B_human_extended	B	1	1	Complete Genome	reference genome	94.67		758899	1		YES
+GCF_045160055.1	56142	Metamycoplasma_faucium	TARGET	B_human_extended	B	1	1	Complete Genome	reference genome	92.95		806567	1		YES

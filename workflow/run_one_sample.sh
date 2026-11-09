@@ -2,6 +2,7 @@
 set -euo pipefail
 
 PKG="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+[ "${MYCOWES_MANAGED_RUN:-0}" = 1 ] || { echo 'ERROR: use python3 mycowes.py run for run identity and transactional outputs' >&2; exit 2; }
 
 usage() {
     echo "Usage:"
@@ -381,8 +382,9 @@ if [ "$PN" -gt 0 ]; then
         "$PRIMARY_OUT" \
         "$CONFIG"
 else
-    echo "PRIMARY=0 -> NO BREADTH RUN"
-    rm -rf "$PRIMARY_OUT"
+    echo "PRIMARY=0 -> NO CANDIDATES"
+    mkdir -p "$PRIMARY_OUT"
+    printf 'species\tanchor_status\tdispersion_tier\tcoordinate_dedup_fragments\nNO_SPECIES_EVIDENCE\tNOT_APPLICABLE\tNone\t0\n' > "$PRIMARY_OUT/07_species_dedup_dispersion_summary.tsv"
 fi
 
 # ============================================================
@@ -408,8 +410,9 @@ if [ "$SN" -gt 0 ]; then
         "$STRICT_OUT" \
         "$CONFIG"
 else
-    echo "STRICT=0 -> NO BREADTH RUN"
-    rm -rf "$STRICT_OUT"
+    echo "STRICT=0 -> NO CANDIDATES"
+    mkdir -p "$STRICT_OUT"
+    printf 'species\tanchor_status\tdispersion_tier\tcoordinate_dedup_fragments\nNO_SPECIES_EVIDENCE\tNOT_APPLICABLE\tNone\t0\n' > "$STRICT_OUT/07_species_dedup_dispersion_summary.tsv"
 fi
 
 # ============================================================

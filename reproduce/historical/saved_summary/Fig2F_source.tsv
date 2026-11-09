@@ -1,0 +1,13 @@
+background_sample	background_depth_group	species	species_display	n_conditions	n_calls	observed_call_fraction	median_coordinate_unique	strain_generalization	background_display	generalization_scope
+SRR28084105	MID	Mesomycoplasma_hyorhinis	M. hyorhinis	35	3	0.0857142857142857	0	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 2 (SRR28084105)	background_and_species_only; strain generalization not evaluated
+SRR28084105	MID	Metamycoplasma_hominis	M. hominis	35	21	0.6	1	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 2 (SRR28084105)	background_and_species_only; strain generalization not evaluated
+SRR28084105	MID	Metamycoplasma_salivarium	M. salivarium	35	19	0.542857142857143	1	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 2 (SRR28084105)	background_and_species_only; strain generalization not evaluated
+SRR28084105	MID	Mycoplasmopsis_arginini	M. arginini	35	5	0.142857142857143	0	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 2 (SRR28084105)	background_and_species_only; strain generalization not evaluated
+SRR28084134	LOW	Mesomycoplasma_hyorhinis	M. hyorhinis	35	3	0.0857142857142857	0	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 1 (SRR28084134)	background_and_species_only; strain generalization not evaluated
+SRR28084134	LOW	Metamycoplasma_hominis	M. hominis	35	21	0.6	1	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 1 (SRR28084134)	background_and_species_only; strain generalization not evaluated
+SRR28084134	LOW	Metamycoplasma_salivarium	M. salivarium	35	19	0.542857142857143	1	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 1 (SRR28084134)	background_and_species_only; strain generalization not evaluated
+SRR28084134	LOW	Mycoplasmopsis_arginini	M. arginini	35	4	0.114285714285714	0	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 1 (SRR28084134)	background_and_species_only; strain generalization not evaluated
+SRR28084168	HIGH	Mesomycoplasma_hyorhinis	M. hyorhinis	35	3	0.0857142857142857	0	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 3 (SRR28084168)	background_and_species_only; strain generalization not evaluated
+SRR28084168	HIGH	Metamycoplasma_hominis	M. hominis	35	21	0.6	1	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 3 (SRR28084168)	background_and_species_only; strain generalization not evaluated
+SRR28084168	HIGH	Metamycoplasma_salivarium	M. salivarium	35	19	0.542857142857143	1	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 3 (SRR28084168)	background_and_species_only; strain generalization not evaluated
+SRR28084168	HIGH	Mycoplasmopsis_arginini	M. arginini	35	6	0.171428571428571	0	NOT_EVALUATED_SINGLE_SOURCE_PER_SPECIES	Background 3 (SRR28084168)	background_and_species_only; strain generalization not evaluated

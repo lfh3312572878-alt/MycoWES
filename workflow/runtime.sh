@@ -158,7 +158,9 @@ identity_value() {
 SOFTWARE_VERSION="$(tr -d '\r\n' < "$MYCOWES_PKG/VERSION")"
 REFERENCE_RELEASE="${MYCOWES_REFERENCE_RELEASE:-$(identity_value "$MICROBIAL_IDENTITY" reference_release)}"
 REFERENCE_PROFILE="${MYCOWES_REFERENCE_PROFILE:-$(identity_value "$MICROBIAL_IDENTITY" reference_profile)}"
-REFERENCE_SHA256="$(identity_value "$MICROBIAL_IDENTITY" joint_mmi_sha256)"
+HISTORICAL_SOURCE_MMI_SHA256="$(identity_value "$MICROBIAL_IDENTITY" joint_mmi_sha256)"
+# Actual local index identity is recorded by the managed CLI, not copied from a source snapshot hash.
+REFERENCE_SHA256="NOT_COMPUTED_SEE_LOCAL_FILE_IDENTITIES"
 REFERENCE_EXCLUSION_MANIFEST="${MYCOWES_REFERENCE_EXCLUSION_MANIFEST:-}"
 EXCLUDED_REFERENCE_ASSEMBLIES=""
 if [ -s "$REFERENCE_EXCLUSION_MANIFEST" ]; then

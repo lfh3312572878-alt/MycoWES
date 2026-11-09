@@ -1,0 +1,129 @@
+species_display	dose_pairs	stage_key	stage	median_fragments	dose
+M. arginini	0	coordinate_unique_spike_fragments	Coordinate-unique	0	0
+M. hominis	0	coordinate_unique_spike_fragments	Coordinate-unique	0	0
+M. hyorhinis	0	coordinate_unique_spike_fragments	Coordinate-unique	0	0
+M. salivarium	0	coordinate_unique_spike_fragments	Coordinate-unique	0	0
+M. arginini	1	coordinate_unique_spike_fragments	Coordinate-unique	0	1
+M. hominis	1	coordinate_unique_spike_fragments	Coordinate-unique	0	1
+M. hyorhinis	1	coordinate_unique_spike_fragments	Coordinate-unique	0	1
+M. salivarium	1	coordinate_unique_spike_fragments	Coordinate-unique	0	1
+M. arginini	2	coordinate_unique_spike_fragments	Coordinate-unique	0	2
+M. hominis	2	coordinate_unique_spike_fragments	Coordinate-unique	0	2
+M. hyorhinis	2	coordinate_unique_spike_fragments	Coordinate-unique	0	2
+M. salivarium	2	coordinate_unique_spike_fragments	Coordinate-unique	0	2
+M. arginini	3	coordinate_unique_spike_fragments	Coordinate-unique	0	3
+M. hominis	3	coordinate_unique_spike_fragments	Coordinate-unique	0	3
+M. hyorhinis	3	coordinate_unique_spike_fragments	Coordinate-unique	0	3
+M. salivarium	3	coordinate_unique_spike_fragments	Coordinate-unique	0	3
+M. arginini	5	coordinate_unique_spike_fragments	Coordinate-unique	0	5
+M. hominis	5	coordinate_unique_spike_fragments	Coordinate-unique	1	5
+M. hyorhinis	5	coordinate_unique_spike_fragments	Coordinate-unique	0	5
+M. salivarium	5	coordinate_unique_spike_fragments	Coordinate-unique	0	5
+M. arginini	10	coordinate_unique_spike_fragments	Coordinate-unique	0	10
+M. hominis	10	coordinate_unique_spike_fragments	Coordinate-unique	1	10
+M. hyorhinis	10	coordinate_unique_spike_fragments	Coordinate-unique	0	10
+M. salivarium	10	coordinate_unique_spike_fragments	Coordinate-unique	0	10
+M. arginini	20	coordinate_unique_spike_fragments	Coordinate-unique	0	20
+M. hominis	20	coordinate_unique_spike_fragments	Coordinate-unique	2	20
+M. hyorhinis	20	coordinate_unique_spike_fragments	Coordinate-unique	0	20
+M. salivarium	20	coordinate_unique_spike_fragments	Coordinate-unique	1	20
+M. arginini	50	coordinate_unique_spike_fragments	Coordinate-unique	1	50
+M. hominis	50	coordinate_unique_spike_fragments	Coordinate-unique	4	50
+M. hyorhinis	50	coordinate_unique_spike_fragments	Coordinate-unique	0	50
+M. salivarium	50	coordinate_unique_spike_fragments	Coordinate-unique	3	50
+M. arginini	0	PRIMARY_same_species_fragments	PRIMARY	0	0
+M. hominis	0	PRIMARY_same_species_fragments	PRIMARY	0	0
+M. hyorhinis	0	PRIMARY_same_species_fragments	PRIMARY	0	0
+M. salivarium	0	PRIMARY_same_species_fragments	PRIMARY	0	0
+M. arginini	1	PRIMARY_same_species_fragments	PRIMARY	0	1
+M. hominis	1	PRIMARY_same_species_fragments	PRIMARY	0	1
+M. hyorhinis	1	PRIMARY_same_species_fragments	PRIMARY	0	1
+M. salivarium	1	PRIMARY_same_species_fragments	PRIMARY	0	1
+M. arginini	2	PRIMARY_same_species_fragments	PRIMARY	0	2
+M. hominis	2	PRIMARY_same_species_fragments	PRIMARY	0	2
+M. hyorhinis	2	PRIMARY_same_species_fragments	PRIMARY	0	2
+M. salivarium	2	PRIMARY_same_species_fragments	PRIMARY	0	2
+M. arginini	3	PRIMARY_same_species_fragments	PRIMARY	0	3
+M. hominis	3	PRIMARY_same_species_fragments	PRIMARY	0	3
+M. hyorhinis	3	PRIMARY_same_species_fragments	PRIMARY	0	3
+M. salivarium	3	PRIMARY_same_species_fragments	PRIMARY	0	3
+M. arginini	5	PRIMARY_same_species_fragments	PRIMARY	0	5
+M. hominis	5	PRIMARY_same_species_fragments	PRIMARY	1	5
+M. hyorhinis	5	PRIMARY_same_species_fragments	PRIMARY	0	5
+M. salivarium	5	PRIMARY_same_species_fragments	PRIMARY	0	5
+M. arginini	10	PRIMARY_same_species_fragments	PRIMARY	0	10
+M. hominis	10	PRIMARY_same_species_fragments	PRIMARY	1	10
+M. hyorhinis	10	PRIMARY_same_species_fragments	PRIMARY	0	10
+M. salivarium	10	PRIMARY_same_species_fragments	PRIMARY	0	10
+M. arginini	20	PRIMARY_same_species_fragments	PRIMARY	0	20
+M. hominis	20	PRIMARY_same_species_fragments	PRIMARY	2	20
+M. hyorhinis	20	PRIMARY_same_species_fragments	PRIMARY	0	20
+M. salivarium	20	PRIMARY_same_species_fragments	PRIMARY	1	20
+M. arginini	50	PRIMARY_same_species_fragments	PRIMARY	1	50
+M. hominis	50	PRIMARY_same_species_fragments	PRIMARY	4	50
+M. hyorhinis	50	PRIMARY_same_species_fragments	PRIMARY	0	50
+M. salivarium	50	PRIMARY_same_species_fragments	PRIMARY	3	50
+M. arginini	0	risk_free_core_fragments	Risk-free core	0	0
+M. hominis	0	risk_free_core_fragments	Risk-free core	0	0
+M. hyorhinis	0	risk_free_core_fragments	Risk-free core	0	0
+M. salivarium	0	risk_free_core_fragments	Risk-free core	0	0
+M. arginini	1	risk_free_core_fragments	Risk-free core	0	1
+M. hominis	1	risk_free_core_fragments	Risk-free core	0	1
+M. hyorhinis	1	risk_free_core_fragments	Risk-free core	0	1
+M. salivarium	1	risk_free_core_fragments	Risk-free core	0	1
+M. arginini	2	risk_free_core_fragments	Risk-free core	0	2
+M. hominis	2	risk_free_core_fragments	Risk-free core	0	2
+M. hyorhinis	2	risk_free_core_fragments	Risk-free core	0	2
+M. salivarium	2	risk_free_core_fragments	Risk-free core	0	2
+M. arginini	3	risk_free_core_fragments	Risk-free core	0	3
+M. hominis	3	risk_free_core_fragments	Risk-free core	0	3
+M. hyorhinis	3	risk_free_core_fragments	Risk-free core	0	3
+M. salivarium	3	risk_free_core_fragments	Risk-free core	0	3
+M. arginini	5	risk_free_core_fragments	Risk-free core	0	5
+M. hominis	5	risk_free_core_fragments	Risk-free core	1	5
+M. hyorhinis	5	risk_free_core_fragments	Risk-free core	0	5
+M. salivarium	5	risk_free_core_fragments	Risk-free core	0	5
+M. arginini	10	risk_free_core_fragments	Risk-free core	0	10
+M. hominis	10	risk_free_core_fragments	Risk-free core	1	10
+M. hyorhinis	10	risk_free_core_fragments	Risk-free core	0	10
+M. salivarium	10	risk_free_core_fragments	Risk-free core	0	10
+M. arginini	20	risk_free_core_fragments	Risk-free core	0	20
+M. hominis	20	risk_free_core_fragments	Risk-free core	2	20
+M. hyorhinis	20	risk_free_core_fragments	Risk-free core	0	20
+M. salivarium	20	risk_free_core_fragments	Risk-free core	1	20
+M. arginini	50	risk_free_core_fragments	Risk-free core	1	50
+M. hominis	50	risk_free_core_fragments	Risk-free core	4	50
+M. hyorhinis	50	risk_free_core_fragments	Risk-free core	0	50
+M. salivarium	50	risk_free_core_fragments	Risk-free core	3	50
+M. arginini	0	same_species_candidates	Same-species candidates	0	0
+M. hominis	0	same_species_candidates	Same-species candidates	0	0
+M. hyorhinis	0	same_species_candidates	Same-species candidates	0	0
+M. salivarium	0	same_species_candidates	Same-species candidates	0	0
+M. arginini	1	same_species_candidates	Same-species candidates	1	1
+M. hominis	1	same_species_candidates	Same-species candidates	1	1
+M. hyorhinis	1	same_species_candidates	Same-species candidates	1	1
+M. salivarium	1	same_species_candidates	Same-species candidates	1	1
+M. arginini	2	same_species_candidates	Same-species candidates	2	2
+M. hominis	2	same_species_candidates	Same-species candidates	2	2
+M. hyorhinis	2	same_species_candidates	Same-species candidates	2	2
+M. salivarium	2	same_species_candidates	Same-species candidates	2	2
+M. arginini	3	same_species_candidates	Same-species candidates	2	3
+M. hominis	3	same_species_candidates	Same-species candidates	3	3
+M. hyorhinis	3	same_species_candidates	Same-species candidates	3	3
+M. salivarium	3	same_species_candidates	Same-species candidates	3	3
+M. arginini	5	same_species_candidates	Same-species candidates	4	5
+M. hominis	5	same_species_candidates	Same-species candidates	5	5
+M. hyorhinis	5	same_species_candidates	Same-species candidates	4	5
+M. salivarium	5	same_species_candidates	Same-species candidates	5	5
+M. arginini	10	same_species_candidates	Same-species candidates	8	10
+M. hominis	10	same_species_candidates	Same-species candidates	10	10
+M. hyorhinis	10	same_species_candidates	Same-species candidates	8	10
+M. salivarium	10	same_species_candidates	Same-species candidates	9	10
+M. arginini	20	same_species_candidates	Same-species candidates	16	20
+M. hominis	20	same_species_candidates	Same-species candidates	20	20
+M. hyorhinis	20	same_species_candidates	Same-species candidates	16	20
+M. salivarium	20	same_species_candidates	Same-species candidates	19	20
+M. arginini	50	same_species_candidates	Same-species candidates	44	50
+M. hominis	50	same_species_candidates	Same-species candidates	48	50
+M. hyorhinis	50	same_species_candidates	Same-species candidates	41	50
+M. salivarium	50	same_species_candidates	Same-species candidates	47	50

@@ -1,0 +1,8 @@
+item	value	detail
+WES backgrounds	3	Host-depleted WES
+Microbial species	4	One source strain per species
+Dose levels	8	0, 1, 2, 3, 5, 10, 20, 50 pairs
+Fixed seeds	5	20260930-20260934
+Labeled conditions	480	Not independent experiments
+Non-zero conditions	420	3 backgrounds x 4 species x 7 non-zero doses x 5 seeds
+Independent blanks	3	D000 labels deduplicated by background

@@ -1,0 +1,10 @@
+parameter	value
+profile_id	R101
+reference	/data/h011/project/ref/MycoWES_Ref_v0.1/13_analysis_references_v0.25/01_target/AB_TARGET_Mycoplasmatota_v0.25.fa
+read_length	101
+window_step	25
+reference_records	805
+reference_bases	52756851
+window_records	2107425
+generated_at	2026-08-04T04:42:46.000057+08:00
+status	window_generation_complete
