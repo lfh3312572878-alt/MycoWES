@@ -2,6 +2,8 @@
 
 `VERSION` and the local Git commit identify this revision. Starting files are the 20-file MycoWES 0.3.0-rc1 snapshot at repository commit ae1f1d4b9f0e33baf05944540b8c5b9bfd59268a, confirmed as the authenticated remote main baseline on 2026-11-09. The source Git objects were unavailable at local import: 573ec03 is an explicit file import, not a reconstructed parent/history. The local remediation history and any remote review branch must be identified separately; no synchronization is inferred from their names.
 
+The reviewed corrective engine is fixed at [remote commit 802200ba32e01fbb0a8e86ccb2fd304d97b31ca8](https://github.com/lfh3312572878-alt/MycoWES/commit/802200ba32e01fbb0a8e86ccb2fd304d97b31ca8) on the private `remediation/20261109` branch. The remote main baseline remains ae1f1d4b9f0e33baf05944540b8c5b9bfd59268a; the review branch is not a published release.
+
 Historical source hashes are in `reproduce/SOURCE_INDEX.tsv`. A 77c4e85 label, including full commit strings inside preserved scripts, is an execution-lineage record, not evidence that its Git object has been recovered or is an ancestor here. New synthetic validation and saved-summary code belong to this revision, not the original paper executable.
 
 | Context | Competitive target | Length bp | MAPQ | NM rate |
@@ -18,4 +20,4 @@ In that table, historical output directories without an absolute prefix are unde
 
 This revision addresses input validation, effective parameter delivery and run/output integrity. Default references, ordered exact-sequence grouping and scientific grade boundaries are retained. Historical analyses were not rerun or silently updated. Missing historical input-integrity evidence or source/output bindings limit conclusions about their impact.
 
-The repository remains private with no published release. Copyright license, review access for third parties, a published software DOI, current reference DOI publication state and final manuscript-to-release acceptance require author confirmation. The reserved reference DOI is not a software DOI.
+The repository remains private with no published software release. Authenticated Zenodo inspection on 2026-11-09 confirmed the reference dataset version 0.28 as an unpublished Draft: DOI 10.5281/zenodo.23776490 is reserved and will be registered only on publication. Copyright license, review access for third parties, a published software DOI and final manuscript-to-release acceptance require author confirmation. The reserved reference DOI is not a software DOI.
