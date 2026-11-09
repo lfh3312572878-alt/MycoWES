@@ -1,19 +1,23 @@
-# Versions and parameters
+# Versions and analysis profiles
 
-Software: MycoWES 0.3.0-rc1. Compatible database: v0.28, with profile identities recorded in configuration and each run. Complete Git commit is unavailable for the preserved runtime snapshot; file SHA256 values identify the release. This packaging version is not claimed to be an unchanged historical manuscript executable.
+`VERSION` identifies the software build; the Git commit identifies the exact repository contents. The release candidate is based on the MycoWES 0.3.0-rc1 source snapshot at ae1f1d4b9f0e33baf05944540b8c5b9bfd59268a. Local commit 573ec03 records the explicit snapshot import. Local and remote commit histories are identified separately.
 
-| Context | Target reference | Minimum aligned bp | Minimum MAPQ | Maximum NM rate |
+The runtime engine is fixed at [remote commit 802200ba32e01fbb0a8e86ccb2fd304d97b31ca8](https://github.com/lfh3312572878-alt/MycoWES/commit/802200ba32e01fbb0a8e86ccb2fd304d97b31ca8) on `remediation/20261109`. Subsequent documentation-only commits do not change the runtime engine or default settings.
+
+Historical source hashes are in `reproduce/SOURCE_INDEX.tsv`. Labels such as 77c4e85 inside preserved scripts identify their execution lineage, separately from this repository's Git history. The synthetic example and saved-summary validator validate the current software and supplied saved data respectively.
+
+| Context | Competitive target | Length bp | MAPQ | NM rate |
 | --- | --- | ---: | ---: | ---: |
-| Release default | one representative per target species | 100 | 20 | 0.08 |
-| Existing optional simple preset | one representative per target species | 60 | 5 | 0.12 |
-| Existing optional multi-genome preset | original multi-genome baseline | 100 | 20 | 0.08 |
-| Frozen manuscript RELAX2 experiments | one-representative development reference | 60 | 5 | 0.12 |
-| Historical pre-Broad baseline records (77c4e85 lineage) | baseline reference defined by that run | 100 | 20 | 0.08 |
+| normal default | one representative per species | 100 | 20 | 0.08 |
+| simple matching recorded RELAX2 choice | one representative per species | 60 | 5 | 0.12 |
+| hard matching multi-target baseline choice | complete target set | 100 | 20 | 0.08 |
 
-The RELAX2 values are supported by the preserved exploration configuration and code-change audit; the default release values come from the existing baseline configuration. They must not be merged into one manuscript parameter claim. No manuscript text, completed analyses or scientific thresholds were changed for this packaging task. Nominal-PE length handling remains as documented in the default README.
+Effective length is min(configured length, nominal PE length). These presets select reference and quality settings; per-experiment commands and input preparation are recorded in the analysis source map.
 
-Shared settings: anchor retention 0.90; 250 bp dispersion bins; Supportive >=3 coordinates in >=2 bins and maximum-bin fraction <0.80; Strong >=5 coordinates in >=3 bins, covered bases >=300 and maximum-bin fraction <=0.50. Exact implementation remains authoritative for other edge states.
+`paper_mapping.tsv` lists the included historical sources, current engine entries and software validation, with their respective configurations, inputs and output locations. Historical and current validation outputs remain distinct.
 
-Default execution resource settings are 4 mapper/trimmer threads and 1 samtools additional thread. They are independent of reference selection. These are execution settings, not biological evidence thresholds. External scheduling must account for all piped processes and other tasks.
+In that table, historical output directories without an absolute prefix are under `/data/h011/project/analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1`; `E` denotes its `Fig3_Fig4_TXT_COMPLETION_EXEC_20261010_v2` subdirectory. These are provenance locators, not public download URLs or instructions to write into the original project. Included code paths are relative to this repository.
 
-License text must be supplied or confirmed by the copyright holder before public release. No new license has been assigned by this packaging work.
+This revision implements input validation, effective parameter delivery and run/output integrity. Default references, ordered exact-sequence grouping and scientific grade boundaries are retained. Historical analyses and their saved outputs are unchanged.
+
+The release candidate remains on a private branch. The reference dataset v0.28 is a Zenodo draft with reserved DOI 10.5281/zenodo.23776490, not a software DOI. Copyright license, publication and third-party access are managed separately by the authors.

@@ -1,0 +1,33 @@
+species_display	dose_pairs	n_conditions	n_calls	observed_call_fraction	dose	denominator_note
+M. arginini	0	3	0	0	0	3 independent background blanks
+M. hominis	0	3	0	0	0	3 independent background blanks
+M. hyorhinis	0	3	0	0	0	3 independent background blanks
+M. salivarium	0	3	0	0	0	3 independent background blanks
+M. arginini	1	15	0	0	1	15 background-by-seed conditions per species and dose
+M. hominis	1	15	0	0	1	15 background-by-seed conditions per species and dose
+M. hyorhinis	1	15	0	0	1	15 background-by-seed conditions per species and dose
+M. salivarium	1	15	6	0.4	1	15 background-by-seed conditions per species and dose
+M. arginini	2	15	0	0	2	15 background-by-seed conditions per species and dose
+M. hominis	2	15	6	0.4	2	15 background-by-seed conditions per species and dose
+M. hyorhinis	2	15	0	0	2	15 background-by-seed conditions per species and dose
+M. salivarium	2	15	6	0.4	2	15 background-by-seed conditions per species and dose
+M. arginini	3	15	0	0	3	15 background-by-seed conditions per species and dose
+M. hominis	3	15	6	0.4	3	15 background-by-seed conditions per species and dose
+M. hyorhinis	3	15	0	0	3	15 background-by-seed conditions per species and dose
+M. salivarium	3	15	6	0.4	3	15 background-by-seed conditions per species and dose
+M. arginini	5	15	0	0	5	15 background-by-seed conditions per species and dose
+M. hominis	5	15	9	0.6	5	15 background-by-seed conditions per species and dose
+M. hyorhinis	5	15	0	0	5	15 background-by-seed conditions per species and dose
+M. salivarium	5	15	6	0.4	5	15 background-by-seed conditions per species and dose
+M. arginini	10	15	0	0	10	15 background-by-seed conditions per species and dose
+M. hominis	10	15	12	0.8	10	15 background-by-seed conditions per species and dose
+M. hyorhinis	10	15	0	0	10	15 background-by-seed conditions per species and dose
+M. salivarium	10	15	6	0.4	10	15 background-by-seed conditions per species and dose
+M. arginini	20	15	4	0.266666666666667	20	15 background-by-seed conditions per species and dose
+M. hominis	20	15	15	1	20	15 background-by-seed conditions per species and dose
+M. hyorhinis	20	15	3	0.2	20	15 background-by-seed conditions per species and dose
+M. salivarium	20	15	12	0.8	20	15 background-by-seed conditions per species and dose
+M. arginini	50	15	11	0.733333333333333	50	15 background-by-seed conditions per species and dose
+M. hominis	50	15	15	1	50	15 background-by-seed conditions per species and dose
+M. hyorhinis	50	15	6	0.4	50	15 background-by-seed conditions per species and dose
+M. salivarium	50	15	15	1	50	15 background-by-seed conditions per species and dose

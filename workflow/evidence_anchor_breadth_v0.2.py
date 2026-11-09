@@ -8,7 +8,22 @@ import subprocess
 from pathlib import Path
 from collections import defaultdict, Counter
 
-BIN=250
+def anchor_status(retention, minimum):
+    return "PASS" if retention >= minimum else "FAIL"
+
+
+def dispersion_tier(coordinates, occupied_bins, physical_span_bp, largest_fraction):
+    """Fixed historical rules; physical span includes the unsequenced insert gap."""
+    if (coordinates >= 5 and occupied_bins >= 3 and physical_span_bp >= 300
+            and largest_fraction <= 0.50):
+        return "strong"
+    if coordinates >= 3 and occupied_bins >= 2 and largest_fraction < 0.80:
+        return "supportive"
+    return "weak"
+
+
+def fragment_bin_start(start, end, bin_size):
+    return (((start + end) // 2) // bin_size) * bin_size
 
 parser=argparse.ArgumentParser()
 
@@ -22,8 +37,14 @@ parser.add_argument("--out",required=True)
 parser.add_argument("--minimap2",required=True)
 parser.add_argument("--samtools",required=True)
 parser.add_argument("--retention",type=float,default=0.90)
+parser.add_argument("--bin-size",type=int,default=250)
 
 args=parser.parse_args()
+if args.bin_size <= 0:
+    parser.error("--bin-size must be a positive integer")
+if not 0 <= args.retention <= 1:
+    parser.error("--retention must be between zero and one")
+BIN=args.bin_size
 
 OUT=Path(args.out)
 OUT.mkdir(parents=True,exist_ok=True)
@@ -610,11 +631,7 @@ for species in sorted(selected):
 
     retention=srow["retention_fraction"]
 
-    anchor_status=(
-        "PASS"
-        if retention >= args.retention
-        else "FAIL"
-    )
+    anchor_state=anchor_status(retention,args.retention)
 
 
     raw_equiv=sum(
@@ -626,7 +643,7 @@ for species in sorted(selected):
     retained_n=len(mappings)
 
 
-    if anchor_status=="FAIL":
+    if anchor_state=="FAIL":
 
         summary_rows.append({
             "species":species,
@@ -635,10 +652,14 @@ for species in sorted(selected):
             "exact_dedup_fragments":exact_n,
             "anchor_retained_fragments":retained_n,
             "anchor_retention_fraction":retention,
+            "anchor_min_retention":args.retention,
             "anchor_status":"FAIL",
             "coordinate_dedup_fragments":"NA",
             "coordinate_duplicate_excess":"NA",
             "covered_bp":"NA",
+            "physical_fragment_span_bp":"NA",
+            "bin_size_bp":BIN,
+            "occupied_bins":"NA",
             "occupied_250bp_bins":"NA",
             "largest_bin_fragments":"NA",
             "largest_bin_fraction":"NA",
@@ -714,9 +735,7 @@ for species in sorted(selected):
             (x["start"],x["end"])
         )
 
-        midpoint=(x["start"]+x["end"])//2
-
-        bstart=(midpoint//BIN)*BIN
+        bstart=fragment_bin_start(x["start"],x["end"],BIN)
 
         bins[(x["rname"],bstart)] += 1
 
@@ -760,32 +779,7 @@ for species in sorted(selected):
         })
 
 
-    # development dispersion tiers
-    if (
-        coord_n >= 5
-        and
-        occupied_bins >= 3
-        and
-        covered_bp >= 300
-        and
-        largest_fraction <= 0.50
-    ):
-
-        tier="strong"
-
-    elif (
-        coord_n >= 3
-        and
-        occupied_bins >= 2
-        and
-        largest_fraction < 0.80
-    ):
-
-        tier="supportive"
-
-    else:
-
-        tier="weak"
+    tier=dispersion_tier(coord_n,occupied_bins,covered_bp,largest_fraction)
 
 
     summary_rows.append({
@@ -795,11 +789,15 @@ for species in sorted(selected):
         "exact_dedup_fragments":exact_n,
         "anchor_retained_fragments":retained_n,
         "anchor_retention_fraction":retention,
+        "anchor_min_retention":args.retention,
         "anchor_status":"PASS",
         "coordinate_dedup_fragments":coord_n,
         "coordinate_duplicate_excess":retained_n-coord_n,
         "covered_bp":covered_bp,
-        "occupied_250bp_bins":occupied_bins,
+        "physical_fragment_span_bp":covered_bp,
+        "bin_size_bp":BIN,
+        "occupied_bins":occupied_bins,
+        "occupied_250bp_bins":occupied_bins if BIN == 250 else "NA",
         "largest_bin_fragments":largest,
         "largest_bin_fraction":largest_fraction,
         "distinct_contigs":len(by_contig),
@@ -890,7 +888,7 @@ with open(OUT/"05_coverage_regions.bed","w") as o:
 
 # bins
 
-with open(OUT/"06_bin_distribution_250bp.tsv","w") as o:
+with open(OUT/f"06_bin_distribution_{BIN}bp.tsv","w") as o:
 
     cols=[
         "species",
@@ -927,10 +925,14 @@ cols=[
     "exact_dedup_fragments",
     "anchor_retained_fragments",
     "anchor_retention_fraction",
+    "anchor_min_retention",
     "anchor_status",
     "coordinate_dedup_fragments",
     "coordinate_duplicate_excess",
     "covered_bp",
+    "physical_fragment_span_bp",
+    "bin_size_bp",
+    "occupied_bins",
     "occupied_250bp_bins",
     "largest_bin_fragments",
     "largest_bin_fraction",
@@ -979,8 +981,9 @@ for x in summary_rows:
         "retention=",x["anchor_retention_fraction"],
         "anchor=",x["anchor_status"],
         "coord=",x["coordinate_dedup_fragments"],
-        "covered_bp=",x["covered_bp"],
-        "bins=",x["occupied_250bp_bins"],
+        "physical_fragment_span_bp=",x["physical_fragment_span_bp"],
+        "bin_size_bp=",x["bin_size_bp"],
+        "bins=",x["occupied_bins"],
         "largest_bin_frac=",x["largest_bin_fraction"],
         "tier=",x["dispersion_tier"]
     )

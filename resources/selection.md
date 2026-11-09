@@ -1,0 +1,7 @@
+# Representative selection and reference exclusion
+
+The preserved `reproduce/historical/metadata/REFERENCE_ARM_ASSEMBLY_MANIFEST.tsv` has SHA256 `88a5f0ea9a7d7b225505107bc44968e29648cd23e8d96f6b3babccf7ab6819a6`, exactly matching `selection_manifest_sha256` in the one-representative identity. It describes 67 target assemblies, 18 selected targets and the complete 560-assembly competitor set. The 18 selected accessions match the distributed one-representative taxonomy. `representatives.tsv` exposes this final selection without requiring large FASTA files.
+
+The original `build_reference_arm_manifest.py` selects the minimum frozen `quality_rank_within_species_v0.8`, then `selection_order_within_species_v0.8`, then accession. Original inventory fields include assembly level, RefSeq category, CheckM completeness/contamination, N50, contig count, cluster membership and the prior retained decision. The file and builder are provided, not rerun to reselect genomes. `build_one_rep_reference.py` filters an explicitly supplied manifest/taxonomy/FASTA and checks the expected 18-target/560-competitor counts.
+
+The baseline exclusion manifest removes GCF_900118515.1 (22 contigs), recorded as an operational reference-attractor exclusion. The original v0.28 builder and source path document this resource selection. This is not a biological-contamination classification of that assembly. `build_one_rep_reference.py` uses the supplied manifest's fixed membership rather than generating new quality ranks. Original exclusion metadata and database bytes remain unchanged.

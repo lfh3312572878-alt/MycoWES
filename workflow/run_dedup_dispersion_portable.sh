@@ -237,7 +237,8 @@ awk 'NR>1 {print $1}' "$GROUP" \
 --out "$OUT" \
 --minimap2 "$MM2" \
 --samtools "$SAMTOOLS" \
---retention 0.90 \
+--retention "$ANCHOR_MIN_RETENTION" \
+--bin-size "$DISPERSION_BIN_BP" \
 | tee "$OUT/07_console_summary.txt"
 
 [ "$?" -eq 0 ] || die "evidence-supported breadth failed"
@@ -270,9 +271,9 @@ MycoWES secondary dedup + genomic dispersion v0.2
 
 6. Anchor QC:
    retained exact-dedup fragments / species exact-dedup fragments
-   must be >= 0.90.
+   must meet the configured minimum (default 0.90).
 
-   If <0.90:
+   If below that minimum:
    breadth is not called and status = ANCHOR_FAIL.
 
 7. Coordinate dedup:
@@ -286,26 +287,29 @@ MycoWES secondary dedup + genomic dispersion v0.2
 8. Dispersion metrics:
    coordinate-unique fragments
    covered bp
-   occupied 250-bp bins
+   occupied bins of the configured size (default 250 bp)
    largest-bin fraction
    distinct contigs.
 
-9. Development tiers:
+9. Fixed evidence tiers:
 
    supportive:
    >=3 coordinate-unique fragments
-   AND >=2 occupied 250-bp bins
+   AND >=2 occupied bins of the configured size
    AND largest-bin fraction <0.80
 
    strong:
    >=5 coordinate-unique fragments
-   AND >=3 occupied 250-bp bins
+   AND >=3 occupied bins of the configured size
    AND covered bp >=300
    AND largest-bin fraction <=0.50
 
-These are development dispersion tiers,
-NOT final sample positivity thresholds.
+covered bp is physical paired-fragment-span union, not aligned-base coverage.
+These evidence tiers do not define clinical diagnosis or sample positivity.
 EOF
+
+printf 'Resolved anchor minimum: %s\nResolved bin size bp: %s\n' \
+    "$ANCHOR_MIN_RETENTION" "$DISPERSION_BIN_BP" >> "$OUT/METHOD_v0.2.txt"
 
 
 echo

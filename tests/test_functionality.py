@@ -13,12 +13,24 @@ import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
+os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
 sys.path.insert(0, str(ROOT))
 import mycowes
 from workflow.reference_profiles import MODES, bindings, validate
 
 
 class Functionality(unittest.TestCase):
+    @staticmethod
+    def mock_complete_engine(command, env):
+        """Transaction fixture only; this does not run or validate native analysis."""
+        attempt = Path(command[command.index('--run-root') + 1])
+        (attempt/'run_manifest.tsv').write_text('status\tCOMPLETE\n')
+        for mode in ('PRIMARY', 'STRICT_DF2'):
+            summary = attempt/'07_breadth'/mode/'07_species_dedup_dispersion_summary.tsv'
+            summary.parent.mkdir(parents=True)
+            summary.write_text('species\tdispersion_tier\nunit_fixture\tweak\n')
+        return subprocess.CompletedProcess(command, 0)
+
     def make_assets(self, root, mode=MODES[0]):
         values = bindings(root, mode)
         for key, value in values.items():
@@ -99,14 +111,17 @@ class Functionality(unittest.TestCase):
                 mode=mycowes.REFERENCE_MODES[difficulty]
                 self.make_assets(p, mode)
                 args=['run','--sample','synthetic','--r1',str(r1),'--r2',str(r2),'--out',str(p/('output_'+difficulty)), '--reference-root',str(p),'--difficulty',difficulty]
-                with patch.dict(os.environ, {'MYCOWES_HOST_MMI':str(host)}), patch.object(mycowes.subprocess,'run') as run:
-                    run.return_value.returncode=0;self.assertEqual(mycowes.main(args),0)
+                with patch.dict(os.environ, {'MYCOWES_HOST_MMI':str(host)}), patch.object(mycowes.subprocess,'run',side_effect=self.mock_complete_engine) as run:
+                    self.assertEqual(mycowes.main(args),0)
                     call=run.call_args;self.assertEqual(call.kwargs['env']['MYCOWES_HOST_MMI'],str(host))
                     self.assertEqual(call.kwargs['env']['MYCOWES_JOINT_MMI'],bindings(p,mode)['MYCOWES_JOINT_MMI'])
                     for key,val in zip(('CORE_MIN_ALIGNED_BP','CORE_MIN_MAPQ','CORE_MAX_NM_RATE'),mycowes.DIFFICULTIES[difficulty]):
                         self.assertEqual(call.kwargs['env'][key],str(val))
                     self.assertNotIn('--host-depleted',call.args[0])
-                    run.return_value.returncode=17;self.assertEqual(mycowes.main(args),17)
+                    failed_args=args.copy()
+                    failed_args[failed_args.index('--out')+1]=str(p/('failed_'+difficulty))
+                    run.side_effect=lambda command,env: subprocess.CompletedProcess(command,17)
+                    self.assertEqual(mycowes.main(failed_args),17)
 
     def test_reusing_output_with_other_profile_rejected(self):
         with tempfile.TemporaryDirectory() as t:
@@ -114,8 +129,8 @@ class Functionality(unittest.TestCase):
             for m in MODES:self.make_assets(p,m)
             for name in ('r1','r2'):(p/name).write_text('test')
             args=['run','--sample','synthetic','--r1',str(p/'r1'),'--r2',str(p/'r2'),'--out',str(p/'out'),'--reference-root',str(p)]
-            with patch.dict(os.environ, {'MYCOWES_HOST_MMI':str(host)}), patch.object(mycowes.subprocess,'run') as run:
-                run.return_value.returncode=0;mycowes.main(args)
+            with patch.dict(os.environ, {'MYCOWES_HOST_MMI':str(host)}), patch.object(mycowes.subprocess,'run',side_effect=self.mock_complete_engine):
+                mycowes.main(args)
                 with contextlib.redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):mycowes.main(args+['--difficulty','hard'])
 
     def test_no_reference_or_analysis_payload(self):

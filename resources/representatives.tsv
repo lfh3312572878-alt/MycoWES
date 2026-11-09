@@ -1,0 +1,19 @@
+assembly_accession	species_taxid	species_name	contig_records	quality_rank_v0.8	selection_reason_one_rep
+GCF_021460135.1	134821	Ureaplasma_parvum	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_001547975.1	2094	Mycoplasmopsis_arginini	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_041021285.1	2095	Mycoplasma_capricolum	64	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_040556925.1	2097	Mycoplasmoides_genitalium	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_000767725.1	2098	Metamycoplasma_hominis	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_900476065.1	2100	Mesomycoplasma_hyorhinis	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_900660465.1	2104	Mycoplasmoides_pneumoniae	2	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_000186005.1	2115	Mycoplasmopsis_fermentans	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_045276895.1	2117	Mycoplasmopsis_lipophila	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_900660435.1	2121	Metamycoplasma_orale	5	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_000685905.1	2122	Mycoplasmoides_pirum	6	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_900660445.2	2124	Metamycoplasma_salivarium	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_022700735.1	2130	Ureaplasma_urealyticum	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_000723365.1	273136	Mycoplasma_amphoriforme	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_000011225.1	28227	Malacoplasma_penetrans	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_030077865.1	3045839	Mycoplasma_phocimorsus	28	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_046774455.1	55602	Metamycoplasma_buccale	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession
+GCF_045160055.1	56142	Metamycoplasma_faucium	1	1	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession

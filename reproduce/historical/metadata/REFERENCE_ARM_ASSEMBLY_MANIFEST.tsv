@@ -1,0 +1,628 @@
+assembly_accession	species_taxid	species_name	reference_class	role	contig_records	include_full_v028	include_one_rep_target	include_multi_nonredundant_target	include_species_aggregated_full	quality_rank_v0.8	cluster_id_v0.11	selection_reason_one_rep	selection_reason_multi
+GCF_025780085.1	1042321	Ureaplasma_miroungigenitalium	COMPETITOR	C_broad_mycoplasma_background	13	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_041021905.1	106654	Acinetobacter_nosocomialis	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_022879615.1	1071679	Caballeronia_grimmiae	COMPETITOR	E_external	8	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_029026145.1	1071983	Legionella_cardiaca	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_039619325.1	107400	Methylobacterium_fujisawaense	COMPETITOR	E_external	9	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000499665.2	109232	Rickettsia_monacensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000283995.1	1105106	Rickettsia_philipii	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000273375.1	111504	Bartonella_birtlesii	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900660705.1	114880	Mycoplasmopsis_columbinasalis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660685.1	114881	Mycoplasmopsis_columbina	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000687815.1	114882	Mycoplasma_elephantis	COMPETITOR	C_broad_mycoplasma_background	25	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024498255.1	114883	Mycoplasmopsis_equigenitalium	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000686585.1	114884	Mycoplasmopsis_lipofaciens	COMPETITOR	C_broad_mycoplasma_background	6	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660665.1	114885	Mycoplasmopsis_maculosa	COMPETITOR	C_broad_mycoplasma_background	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000712185.1	114886	Mycoplasmopsis_opalescens	COMPETITOR	C_broad_mycoplasma_background	14	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_030586915.1	1177238	'Vigna_radiata'_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	53	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_029677705.1	1179777	Mycoplasma_feriruminatoris	COMPETITOR	C_broad_mycoplasma_background	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_004214875.1	1193712	'Catharanthus_roseus'_aster_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000300695.1	1196420	Italian_clover_phyllody_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	197	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030655.1	1209220	Spiroplasma_endosymbiont_of_Poecilobothrus_nobilitatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_036985165.1	1225349	Rhus_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	43	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000013425.1	1280	Staphylococcus_aureus	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_024925465.1	1310165	Ralstonia_pseudosolanacearum	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_048074525.1	1312741	Mycoplasma_aquilae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001281405.1	1318743	Bartonella_ancashensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000961515.1	134537	Paraburkholderia_fungorum	COMPETITOR	E_external	4	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_001642675.1	1355477	Bradyrhizobium_diazoefficiens	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_003640545.1	135727	Candidatus_Phytoplasma_ziziphi	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_016027095.1	13689	Sphingomonas_paucimobilis	COMPETITOR	E_external	4	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000309465.1	138647	Poinsettia_branch-inducing_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	185	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002441935.1	138853	Mesoplasma_lactucae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000008445.1	1392	Bacillus_anthracis	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_006094295.1	1396	Bacillus_cereus	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_002214625.1	142058	Anaplasma_ovis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000009045.1	1423	Bacillus_subtilis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_003383595.3	142649	Metamycoplasma_phocicerebrale	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_004216495.1	142650	Mycoplasmopsis_phocirhinis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003332325.1	142651	[Mycoplasma]_phocae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_046245125.2	1461000	Bartonella_heixiaziensis	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_001866375.1	146897	Rice_orange_leaf_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	8	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_902712995.1	1494318	Candidatus_Mycoplasma_haematohominis	COMPETITOR	C_broad_mycoplasma_background	38	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000744065.1	1520703	'Chrysanthemum_coronarium'_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	170	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_016064815.1	1530123	Acinetobacter_seifertii	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000755705.1	1541959	Candidatus_Izimoplasma_sp._HR1	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000384965.1	155194	Bartonella_bovis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_002888635.2	1609546	endosymbiont_DhMRE_of_Dentiscutata_heterogama	COMPETITOR	C_broad_mycoplasma_background	3	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_016082235.1	1609976	Spiroplasma_sp._hyd1	COMPETITOR	D_other_Mycoplasmatota_outgroup	143	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_014068355.1	1612150	Mycoplasma_tullyi	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_907164955.1	1656159	Coxiella_endosymbiont_of_Dermacentor_marginatus	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_039555305.1	165694	Bartonella_schoenbuchensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_001199495.1	1664275	Mycoplasma_sp._HU2014	COMPETITOR	C_broad_mycoplasma_background	75	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003285065.1	171279	Mycoplasmopsis_anatis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000733865.1	171280	Mycoplasma_buteonis	COMPETITOR	C_broad_mycoplasma_background	12	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660645.1	171281	Mycoplasmopsis_citelli	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660675.1	171282	Mycoplasmopsis_columboralis	COMPETITOR	C_broad_mycoplasma_background	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000526955.1	171283	Mycoplasmopsis_cricetuli	COMPETITOR	C_broad_mycoplasma_background	45	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000328725.1	171284	Mycoplasmopsis_cynos	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660605.1	171285	Mycoplasmopsis_glycophila	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_029854295.1	171286	Mesomycoplasma_lagogenitalium	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_045276915.1	171287	Mesomycoplasma_moatsii	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024918955.1	171288	Mesomycoplasma_molare	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_004365095.1	171289	Mycoplasmopsis_mustelae	COMPETITOR	C_broad_mycoplasma_background	7	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_033546915.1	171291	Mycoplasmopsis_verecunda	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000508245.1	171632	Mycoplasma_ovis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_006739385.1	1747	Cutibacterium_acnes	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_001484045.1	1749074	Mycoplasma_sp._(ex_Biomphalaria_glabrata)	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_005774685.2	176709	Texas_Phoenix_palm_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	18	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_029215875.1	180282	Delftia_tsuruhatensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_030587225.1	180978	Candidatus_Phytoplasma_citri	COMPETITOR	D_other_Mycoplasmatota_outgroup	105	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_016876135.2	1848402	Candidatus_Phytoplasma_meliae	COMPETITOR	D_other_Mycoplasmatota_outgroup	21	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_023935825.1	185951	Sphingomonas_aerolata	COMPETITOR	E_external	4	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_020714625.1	186171	Mulberry_dwarf_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002240035.1	1867846	Legionella_clemsonensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_001792795.1	1898044	Spiroplasma_sp._TU-14	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_025486335.1	191287	Mycoplasma_zalophi	COMPETITOR	C_broad_mycoplasma_background	11	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001886495.1	1914410	Spiroplasma_sp._NBRC_100390	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_016082285.1	1922342	Spiroplasma_sp._Moj	COMPETITOR	D_other_Mycoplasmatota_outgroup	174	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_004335975.1	1937190	Mycoplasma_marinum	COMPETITOR	C_broad_mycoplasma_background	128	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_004335995.1	1937191	Mycoplasma_todarodis	COMPETITOR	C_broad_mycoplasma_background	84	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001189415.1	198422	Candidatus_Phytoplasma_phoenicium	COMPETITOR	D_other_Mycoplasmatota_outgroup	78	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_049669535.1	2004463	Spiroplasma_endosymbiont_of_Glossina_fuscipes_fuscipes	COMPETITOR	D_other_Mycoplasmatota_outgroup	5	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001712875.1	202462	Candidatus_Phytoplasma_zeae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002285055.1	2024899	Candidatus_Izimoplasma_sp._ZiA1	COMPETITOR	D_other_Mycoplasmatota_outgroup	34	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_027945135.1	203274	Candidatus_Phytoplasma_oryzae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003546845.1	2039283	endosymbiont_GvMRE_of_Glomus_versiforme	COMPETITOR	C_broad_mycoplasma_background	9	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_004011945.1	2048001	Mycoplasma_sp._ATU-Cv-508	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001077715.1	2054173	Candidatus_Coxiella_mudrowiae	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_050916135.1	2056121	'Prunus_avium'_virescence_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000309485.1	208434	Milkweed_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	158	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003550015.1	2088	Anaeroplasma_bactoclasticum	COMPETITOR	D_other_Mycoplasmatota_outgroup	58	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_028622335.1	208962	Escherichia_albertii	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000518285.1	209274	Williamsoniiplasma_lucivorax	COMPETITOR	D_other_Mycoplasmatota_outgroup	31	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000319365.1	209446	Candidatus_Mycoplasma_haematominutum	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000025385.1	2096	Mycoplasmoides_gallisepticum	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	3	taxid_2096_cluster_002	competitor unchanged	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_900476085.1	2096	Mycoplasmoides_gallisepticum	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1	taxid_2096_cluster_001	competitor unchanged	Selected representative of a strict near-clone cluster.
+GCF_000008205.1	2099	Mesomycoplasma_hyopneumoniae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1	taxid_2099_cluster_001	competitor unchanged	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000008225.1	2099	Mesomycoplasma_hyopneumoniae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	3	taxid_2099_cluster_002	competitor unchanged	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_900660565.1	2099	Mesomycoplasma_hyopneumoniae	COMPETITOR	C_broad_mycoplasma_background	5	YES	YES	YES	YES	2	taxid_2099_cluster_003	competitor unchanged	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_002968355.1	2099885	Spiroplasma_sp._ChiS	COMPETITOR	D_other_Mycoplasmatota_outgroup	324	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_018389705.1	2102	Mycoplasma_mycoides	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000183365.1	2105	Mycoplasma_leachii	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_045276875.1	2106	Mycoplasma_corogypsi	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660575.1	2107	Mycoplasmopsis_pulmonis	COMPETITOR	C_broad_mycoplasma_background	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000385095.1	2109	Mycoplasmopsis_synoviae	COMPETITOR	C_broad_mycoplasma_background	42	YES	YES	YES	YES	3	taxid_2109_cluster_002	competitor unchanged	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000969765.1	2109	Mycoplasmopsis_synoviae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1	taxid_2109_cluster_001	competitor unchanged	Selected representative of a strict near-clone cluster.
+GCF_900475235.1	2109	Mycoplasmopsis_synoviae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	2	taxid_2109_cluster_001	competitor unchanged	Retained conservatively because 2 residual segment(s) show divergent homology and 0 residual segment(s) lack a meaningful nonself hit; exclusion could remove strain-divergent sequence.
+GCF_000063605.1	2110	Mycoplasmopsis_agalactiae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660715.1	2111	Metamycoplasma_arthritidis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660525.1	2112	Mycoplasmopsis_bovigenitalium	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000695835.1	2113	Mycoplasmopsis_californica	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002930155.1	2114	Entomoplasma_ellychniae	COMPETITOR	D_other_Mycoplasmatota_outgroup	3	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660615.1	2116	Malacoplasma_iowae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000008365.1	2118	[Mycoplasma]_mobile	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_046774425.1	2119	Malacoplasma_muris	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660485.1	2120	Mesomycoplasma_neurolyticum	COMPETITOR	C_broad_mycoplasma_background	4	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900476175.1	2123	Mycoplasma_putrefaciens	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_045276925.1	2125	Metamycoplasma_sualvi	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000701825.1	2127	[Mycoplasma]_collis	COMPETITOR	C_broad_mycoplasma_background	43	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000815065.1	2128	Mesomycoplasma_flocculare	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001886855.1	2133	Spiroplasma_citri	COMPETITOR	D_other_Mycoplasmatota_outgroup	3	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003606325.2	2133959	Bartonella_kosoyi	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000236085.2	2134	Spiroplasma_melliferum	COMPETITOR	D_other_Mycoplasmatota_outgroup	6	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002865545.1	2136	Spiroplasma_monobiae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000500935.1	2137	Spiroplasma_apis	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_009866525.1	2138	Spiroplasma_poulsonii	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002795265.1	2139	Spiroplasma_clarkii	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_030316605.1	2141	Spiroplasma_ixodetis	COMPETITOR	D_other_Mycoplasmatota_outgroup	6	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_004379335.1	2143	Spiroplasma_gladiatoris	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001029245.1	2144	Spiroplasma_mirum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000439435.1	2145	Spiroplasma_taiwanense	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000018785.1	2148	Acholeplasma_laidlawii	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1	taxid_2148_cluster_001	competitor unchanged	Selected representative of a strict near-clone cluster.
+GCF_002803985.1	214888	Williamsoniiplasma_luminosum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002749675.1	2149	Mesoplasma_entomophilum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000687835.1	2150	Haploplasma_modicum	COMPETITOR	D_other_Mycoplasmatota_outgroup	10	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000008305.1	2151	Mesoplasma_florum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002804005.1	215578	Williamsoniiplasma_somnilux	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002290085.1	216427	Mesoplasma_chauliocola	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002930145.1	216874	Mesoplasma_corruscae	COMPETITOR	D_other_Mycoplasmatota_outgroup	3	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003363775.1	216931	Spiroplasma_alleghenense	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_008086545.1	216932	Spiroplasma_chinense	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000400935.1	216933	Spiroplasma_chrysopicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002237575.1	216934	Spiroplasma_corruscae	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000565175.1	216935	Spiroplasma_culicicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000439455.1	216936	Spiroplasma_diminutum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002813555.1	216937	Spiroplasma_floricola	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001715535.1	216938	Spiroplasma_helicoides	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001267155.1	216942	Spiroplasma_litorale	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000565215.1	216944	Spiroplasma_sabaudiense	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000400955.1	216945	Spiroplasma_syrphidicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001262715.1	216946	Spiroplasma_turonicum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_010365785.1	216963	Spiroplasma_sp._TIUS-1	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_010365805.1	216964	Spiroplasma_sp._BIUS-1	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000701525.1	217215	Mesoplasma_grammopterae	COMPETITOR	D_other_Mycoplasmatota_outgroup	8	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000702725.1	217731	Mesoplasma_photuris	COMPETITOR	D_other_Mycoplasmatota_outgroup	10	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002804025.1	219745	Mesoplasma_tabanidae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000019945.1	223967	Methylorubrum_populi	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_002843565.1	225999	Mesoplasma_syrphidae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003606345.3	2267275	Bartonella_krasnovii	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000012225.1	229545	Aster_yellows_witches'-broom_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	5	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_018274325.1	2358428	'Fragaria_x_ananassa'_phyllody_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	33	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_036985185.1	238673	Hydrangea_phyllody_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	34	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000803325.1	238674	Chrysanthemum_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	252	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_007989425.1	238800	Rickettsia_asiatica	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_004362335.1	244584	Mycoplasma_testudineum	COMPETITOR	C_broad_mycoplasma_background	17	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003987485.1	2478537	Spiroplasma_endosymbiont_of_Megaselia_nigra	COMPETITOR	D_other_Mycoplasmatota_outgroup	329	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_009883795.1	2487929	Coxiella_endosymbiont_of_Amblyomma_sculptum	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_004011965.1	2498595	Mycoplasma_sp._ATU-Cv-703	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_025779955.1	2499220	Mycoplasma_enhydrae	COMPETITOR	C_broad_mycoplasma_background	30	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_030060925.1	2570468	Spiroplasma_sp._SV19	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_027594465.1	2609813	Candidatus_Phytoplasma_sacchari	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000687735.1	264634	Acholeplasma_equifetale	COMPETITOR	D_other_Mycoplasmatota_outgroup	26	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000526235.1	264635	Acholeplasma_granularum	COMPETITOR	D_other_Mycoplasmatota_outgroup	14	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660755.1	264636	Acholeplasma_hippikon	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_016907055.1	264637	Paracholeplasma_morum	COMPETITOR	D_other_Mycoplasmatota_outgroup	29	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000483165.1	264638	Tullyiplasma_multilocale	COMPETITOR	C_broad_mycoplasma_background	11	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_007821455.1	267362	Candidatus_Phytoplasma_pini	COMPETITOR	D_other_Mycoplasmatota_outgroup	16	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_009792315.1	2683967	Mycoplasma_sp._NEAQ87857	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_902809815.1	2691041	Spiroplasma_endosymbiont_of_Danaus_chrysippus	COMPETITOR	D_other_Mycoplasmatota_outgroup	12	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002554195.1	270520	New_Jersey_aster_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	75	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_011764505.1	2708020	Legionella_antarctica	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_013745115.1	2725268	Hujiaoplasma_nucleasis	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_012516495.1	2725994	Mycoplasma_sp._1654_15	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_012934885.1	2726117	Mycoplasma_phocoeninasale	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_016865445.1	2735436	Mariniplasma_anaerobium	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_013348745.1	2742195	Mycoplasma_sp._OR1901	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_018107685.1	2749996	Coxiella_endosymbiont_of_Amblyomma_nuttalli	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_024425275.1	2754999	Candidatus_Phytoplasma_australasiaticum	COMPETITOR	D_other_Mycoplasmatota_outgroup	30	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_016743795.2	2761623	Rickettsia_tillamookensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_015100165.3	2763338	Candidatus_Phytoplasma_asiaticum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_015708155.1	2780095	Mycoplasma_sp._'Moose_RK'	COMPETITOR	C_broad_mycoplasma_background	3	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_014023125.1	2782163	Candidatus_Xianfuyuplasma_coldseepsis	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_018831625.1	2792084	Spiroplasma_endosymbiont_of_'Nebria_riversi'	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_019873825.1	2801918	Mycoplasma_sp._E35C	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003176875.1	28082	Legionella_anisa	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900635815.1	28084	Legionella_cherrii	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900637685.1	28087	Legionella_sainthelensi	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_037101365.1	28097	Ralstonia_syzygii	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_023612375.1	2810348	Mycoplasma_sp._SG1	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_051094275.1	2810479	symbiont_of_Argiope_bruennichi	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_017116845.1	2813824	Mycoplasma_sp._CSL10137	COMPETITOR	C_broad_mycoplasma_background	11	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_017116885.1	2813825	Mycoplasma_sp._CSL10166	COMPETITOR	C_broad_mycoplasma_background	8	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000518725.1	28224	Mesoplasma_seiffertii	COMPETITOR	D_other_Mycoplasmatota_outgroup	11	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_018283495.1	2831467	'Santalum_album'_aster_yellows_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	20	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_034042775.1	283734	Staphylococcus_pseudintermedius	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_030297255.1	28450	Burkholderia_pseudomallei	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_020312115.2	2852100	Candidatus_Phytoplasma_sp._AldY-WA1	COMPETITOR	D_other_Mycoplasmatota_outgroup	153	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000006765.1	287	Pseudomonas_aeruginosa	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_023566315.1	2878854	Mesoplasma_whartonense	COMPETITOR	D_other_Mycoplasmatota_outgroup	6	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_918697755.1	2886375	Spiroplasma_endosymbiont_of_Phyllotreta_cruciferae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000183385.1	28903	Mycoplasmopsis_bovis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1	taxid_28903_cluster_001	competitor unchanged	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_024396435.1	28903	Mycoplasmopsis_bovis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	3	taxid_28903_cluster_002	competitor unchanged	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_050920785.1	28903	Mycoplasmopsis_bovis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	2	taxid_28903_cluster_003	competitor unchanged	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_022559585.1	2893471	Bartonella_machadoae	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_023509825.1	2904537	Spiroplasma_attinicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	4	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024722375.1	292461	Mycoplasma_iguanae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_023846195.1	2935082	Spiroplasma_endosymbiont_of_Lariophagus_distinguendus	COMPETITOR	D_other_Mycoplasmatota_outgroup	198	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_040739365.1	29388	Staphylococcus_capitis	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000512355.1	29423	Legionella_oakridgensis	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_009268075.1	295320	'Cynodon_dactylon'_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	21	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660745.1	29552	Haploplasma_axanthum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660515.1	29553	Mycoplasmopsis_bovirhinis	COMPETITOR	C_broad_mycoplasma_background	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000828855.1	29554	Metamycoplasma_canadense	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001553195.1	29555	Mycoplasmopsis_canis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660495.1	29556	Mycoplasmopsis_gallinacea	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000621085.1	29557	Mycoplasmopsis_gallinarum	COMPETITOR	C_broad_mycoplasma_background	13	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_045276885.1	29558	Mycoplasmopsis_hyopharyngis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024297005.1	29559	Metamycoplasma_hyosynoviae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000582535.1	295596	Candidatus_Hepatoplasma_crinochetorum	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000518305.1	29560	[Mycoplasma]_imitans	COMPETITOR	C_broad_mycoplasma_background	24	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900660695.1	29561	Mycoplasmopsis_meleagridis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_028885435.1	29562	Mesomycoplasma_ovipneumoniae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024297065.1	2961895	Bartonella_harrusi	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_024338845.1	2963128	Mycoplasma_bradburyae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024349785.1	296544	Sphingomonas_bisphenolicum	COMPETITOR	E_external	6	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_024582695.1	2967299	Mycoplasma_sp._1578d	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024582775.1	2967300	Mycoplasma_sp._3686d	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024582715.1	2967301	Mycoplasma_sp._2045	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024582675.1	2967302	Mycoplasma_sp._1018B	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_042465095.1	2967972	Spiroplasma_endosymbiont_of_Anurida_maritima	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024834065.1	2973942	Mycoplasma_sp._CSL7475-4	COMPETITOR	C_broad_mycoplasma_background	29	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_025209835.1	2976765	Mycoplasma_sp._HS2188	COMPETITOR	C_broad_mycoplasma_background	81	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_030586845.1	2982626	Candidatus_Phytoplasma_bonamiae	COMPETITOR	D_other_Mycoplasmatota_outgroup	59	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_030586865.1	2982627	Candidatus_Phytoplasma_crotalariae	COMPETITOR	D_other_Mycoplasmatota_outgroup	62	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_030586805.1	2982628	Candidatus_Phytoplasma_fabacearum	COMPETITOR	D_other_Mycoplasmatota_outgroup	51	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_030586975.1	2982629	Candidatus_Phytoplasma_gossypii	COMPETITOR	D_other_Mycoplasmatota_outgroup	81	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_030588185.1	2982630	Candidatus_Phytoplasma_melaleucae	COMPETITOR	D_other_Mycoplasmatota_outgroup	24	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_025780075.1	2984844	Ureaplasma_sp._ES3154-GEN	COMPETITOR	C_broad_mycoplasma_background	11	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_030550815.1	3004105	Candidatus_Mycoplasma_mahonii	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_045277155.1	3004109	Bartonella_gliris	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_021496725.1	301585	Spiroplasma_platyhelix	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_057808485.1	3020827	Acholeplasma_sp._ORD1043	COMPETITOR	D_other_Mycoplasmatota_outgroup	30	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_030913225.1	3027162	Spiroplasma_sp._AdecLV25b	COMPETITOR	D_other_Mycoplasmatota_outgroup	55	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000412675.1	303	Pseudomonas_putida	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_030012175.1	3044389	Peloplasma_aerotolerans	COMPETITOR	D_other_Mycoplasmatota_outgroup	88	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001587155.1	305	Ralstonia_solanacearum	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_040940205.1	3050074	Spiroplasma_sp._DGKH1	COMPETITOR	D_other_Mycoplasmatota_outgroup	20	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964031045.1	3066276	Spiroplasma_endosymbiont_of_Aspidapion_aeneum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030855.1	3066277	Spiroplasma_endosymbiont_of_Cantharis_lateralis	COMPETITOR	D_other_Mycoplasmatota_outgroup	8	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019925.1	3066278	Spiroplasma_endosymbiont_of_Cantharis_nigra	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019665.1	3066279	Spiroplasma_endosymbiont_of_Cantharis_rufa	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964031085.1	3066281	Spiroplasma_endosymbiont_of_Asaphidion_curtum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964031115.1	3066282	Spiroplasma_endosymbiont_of_Clivina_fossor	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964031155.1	3066283	Spiroplasma_endosymbiont_of_Dromius_quadrimaculatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030895.1	3066284	Spiroplasma_endosymbiont_of_Nebria_brevicollis	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030985.1	3066285	Spiroplasma_endosymbiont_of_Notiophilus_biguttatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964020035.1	3066286	Spiroplasma_endosymbiont_of_Crioceris_asparagi	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019755.1	3066287	Spiroplasma_endosymbiont_of_Polydrusus_cervinus	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030965.1	3066288	Spiroplasma_endosymbiont_of_Amphimallon_solstitiale	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019505.1	3066289	Spiroplasma_endosymbiont_of_Othius_punctulatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030865.1	3066290	Spiroplasma_endosymbiont_of_Dioctria_linearis	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964020005.1	3066291	Spiroplasma_endosymbiont_of_Atherix_ibis	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030685.1	3066292	Spiroplasma_endosymbiont_of_Dilophus_febrilis	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030925.1	3066293	Spiroplasma_endosymbiont_of_Villa_modesta	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019735.1	3066294	Spiroplasma_endosymbiont_of_Thecophora_atra	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964264785.1	3066295	Spiroplasma_endosymbiont_of_Tipula_paludosa	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019535.1	3066296	Spiroplasma_endosymbiont_of_Tricholauxania_praeusta	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019715.1	3066297	Spiroplasma_endosymbiont_of_Lonchoptera_lutea	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019495.1	3066299	Spiroplasma_endosymbiont_of_Dasysyrphus_albostriatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019525.1	3066300	Spiroplasma_endosymbiont_of_Eupeodes_luniger	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019705.1	3066301	Spiroplasma_endosymbiont_of_Panzeria_rudis	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030835.1	3066302	Spiroplasma_endosymbiont_of_Nephrotoma_flavescens	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019595.1	3066303	Spiroplasma_endosymbiont_of_Sarcophaga_carnaria	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_965178695.1	3066304	Spiroplasma_endosymbiont_of_Sarcophaga_variegata	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019845.1	3066305	Spiroplasma_endosymbiont_of_Labia_minor	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964031275.1	3066306	Spiroplasma_endosymbiont_of_Acasis_viretata	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964020205.1	3066307	Spiroplasma_endosymbiont_of_Apeira_syringaria	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964020095.1	3066310	Spiroplasma_endosymbiont_of_Colias_croceus	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964031195.1	3066311	Spiroplasma_endosymbiont_of_Phycita_roborella	COMPETITOR	D_other_Mycoplasmatota_outgroup	7	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019975.1	3066312	Spiroplasma_endosymbiont_of_Monopis_laevigella	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030805.1	3066313	Spiroplasma_endosymbiont_of_Zeiraphera_isertana	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019765.1	3066314	Spiroplasma_endosymbiont_of_Panorpa_germanica	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964020965.1	3066315	Spiroplasma_endosymbiont_of_Ammophila_pubescens	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019575.1	3066316	Spiroplasma_endosymbiont_of_Andrena_trimmerana	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964020065.1	3066319	Spiroplasma_endosymbiont_of_Lasioglossum_malachurum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964020195.1	3066320	Spiroplasma_endosymbiont_of_Lasioglossum_villosulum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964020235.1	3066321	Spiroplasma_endosymbiont_of_Seladonia_tumulorum	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019625.1	3066322	Spiroplasma_endosymbiont_of_Diplazon_laetatorius	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964273375.1	3066324	Spiroplasma_endosymbiont_of_Cleonymus_obscurus	COMPETITOR	D_other_Mycoplasmatota_outgroup	3	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030795.1	3066325	Spiroplasma_endosymbiont_of_Nomada_ruficornis	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964020225.1	3066326	Spiroplasma_endosymbiont_of_Tiphia_femorata	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030645.1	3066327	Spiroplasma_endosymbiont_of_Amphibalanus_improvisus	COMPETITOR	D_other_Mycoplasmatota_outgroup	4	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_045945445.1	3070220	Bartonella_bennetti	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_028595955.1	307134	Columbia_Basin_potato_purple_top_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	71	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964035735.1	3077929	Spiroplasma_endosymbiont_of_Calodromius_spilotus	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964019485.1	3077930	Spiroplasma_endosymbiont_of_Agriotes_lineatus	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964277355.1	3077933	Spiroplasma_endosymbiont_of_Nomada_rufipes	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_035609225.1	3108483	Mycoplasma_sp._888	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_034863425.1	3108525	Mycoplasma_sp._21DD0573	COMPETITOR	C_broad_mycoplasma_background	23	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_034863365.1	3108526	Mycoplasma_sp._1199	COMPETITOR	C_broad_mycoplasma_background	5	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_034863345.1	3108527	Mycoplasma_sp._1232	COMPETITOR	C_broad_mycoplasma_background	15	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_034863245.1	3108528	Mycoplasma_sp._2248	COMPETITOR	C_broad_mycoplasma_background	16	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_034863285.1	3108529	Mycoplasma_sp._2704	COMPETITOR	C_broad_mycoplasma_background	7	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_034863325.1	3108530	Mycoplasma_sp._4404	COMPETITOR	C_broad_mycoplasma_background	4	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_034863305.1	3108531	Mycoplasma_sp._744	COMPETITOR	C_broad_mycoplasma_background	13	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002902925.1	311230	Paraburkholderia_terrae	COMPETITOR	E_external	4	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_051053925.1	3117438	Mycoplasma_sp._06067-C1-B144P-99-0482-3	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_040369755.1	3119530	Ureaplasma_ceti	COMPETITOR	C_broad_mycoplasma_background	13	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_040062715.1	3138068	Mycoplasma_sp._21DD0294	COMPETITOR	C_broad_mycoplasma_background	24	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964264745.1	3139323	Spiroplasma_endosymbiont_of_Virgichneumon_dumeticola	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964031175.1	3139324	Spiroplasma_endosymbiont_of_Melieria_omissa	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964263245.1	3139326	Spiroplasma_endosymbiont_of_Polydrusus_formosus	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964030825.1	3139327	Spiroplasma_endosymbiont_of_Polydrusus_pterygomalis	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964031205.1	3139328	Spiroplasma_endosymbiont_of_Stenodema_calcarata	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_964031135.1	3139329	Spiroplasma_endosymbiont_of_Aleiodes_alternator	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_039954865.1	3141789	Rickettsia_oklahomensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_001029265.1	315358	Spiroplasma_eriocheiris	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000019725.1	31998	Methylobacterium_radiotolerans	COMPETITOR	E_external	9	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000495255.1	321961	Candidatus_Phytoplasma_tritici	COMPETITOR	D_other_Mycoplasmatota_outgroup	6	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_041276565.1	3239192	'Camptotheca_acuminata'_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	57	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002804245.1	324078	Mesoplasma_coleopterae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_009730595.1	324079	Spiroplasma_tabanidicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_041531585.1	3242468	Candidatus_Izemoplasma_sp._B36	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_049478495.1	3252900	Mycoplasma_sp._P36-A1	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000815025.1	325775	Coxiella_endosymbiont_of_Amblyomma_americanum	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000367205.1	33010	Cutibacterium_avidum	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_030295285.1	33011	Cutibacterium_granulosum	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000022725.1	33045	Bartonella_grahamii	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_023920085.1	33046	Bartonella_taylorii	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900638635.1	33047	Bartonella_vinsonii	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000960995.1	337	Burkholderia_glumae	COMPETITOR	E_external	4	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_056242675.1	3374102	Rickettsia_lanei	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_043951795.1	3374570	Liberiplasma_polymorphum	COMPETITOR	D_other_Mycoplasmatota_outgroup	80	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002272945.1	33922	Mycoplasmopsis_agassizii	COMPETITOR	C_broad_mycoplasma_background	8	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_034647055.2	33923	Mycoplasmopsis_felis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000687795.1	33924	[Mycoplasma]_testudinis	COMPETITOR	C_broad_mycoplasma_background	38	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_047785185.1	3398615	Mycoplasma_sp._4079	COMPETITOR	C_broad_mycoplasma_background	17	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_048284415.1	3398773	Mycoplasma_paraquilae	COMPETITOR	C_broad_mycoplasma_background	8	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_048284645.1	3398774	Mycoplasma_haliaeeti	COMPETITOR	C_broad_mycoplasma_background	16	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_048284715.1	3398775	Mycoplasma_milvi	COMPETITOR	C_broad_mycoplasma_background	7	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_048076865.1	3398776	Mycoplasma_razini	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002078335.1	33989	Rickettsia_amblyommatis	COMPETITOR	E_external	4	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000012385.1	33990	Rickettsia_bellii	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000284175.1	33991	Rickettsia_montanensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_001442475.1	33992	Rickettsia_rhipicephali	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_048381515.1	3400998	Mycoplasma_sp._4463	COMPETITOR	C_broad_mycoplasma_background	46	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_051353065.1	3440155	Mycoplasma_sp._480	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_051200785.1	3440865	Mycoplasma_sp._6243	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_051549845.1	3447505	Mycoplasma_sp._125	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_051549855.1	3447506	Mycoplasma_sp._3341	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_006385615.1	344886	Chlamydophila_parapsittaci	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_054343485.1	3452155	Mycoplasma_sp._613B	COMPETITOR	C_broad_mycoplasma_background	39	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054343455.1	3452156	Mycoplasma_sp._1012	COMPETITOR	C_broad_mycoplasma_background	43	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054343435.1	3452157	Mycoplasma_sp._5370	COMPETITOR	C_broad_mycoplasma_background	49	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054343415.1	3452158	Mycoplasma_sp._AC157	COMPETITOR	C_broad_mycoplasma_background	45	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054343395.1	3452159	Mycoplasma_sp._CB776	COMPETITOR	C_broad_mycoplasma_background	46	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054343375.1	3452160	Mycoplasma_sp._Z386	COMPETITOR	C_broad_mycoplasma_background	42	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054353935.1	3453135	Mycoplasma_sp._246B	COMPETITOR	C_broad_mycoplasma_background	20	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054353895.1	3453136	Mycoplasma_sp._394	COMPETITOR	C_broad_mycoplasma_background	16	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054353875.1	3453137	Mycoplasma_sp._4013	COMPETITOR	C_broad_mycoplasma_background	21	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054353855.1	3453138	Mycoplasma_sp._4423	COMPETITOR	C_broad_mycoplasma_background	35	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054353835.1	3453139	Mycoplasma_sp._5912	COMPETITOR	C_broad_mycoplasma_background	20	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054353815.1	3453140	Mycoplasma_sp._AC1221	COMPETITOR	C_broad_mycoplasma_background	32	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_052378275.1	3458236	Mycoplasma_sp._332	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851675.1	3458455	Mycoplasma_sp._1781	COMPETITOR	C_broad_mycoplasma_background	29	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851635.1	3458456	Mycoplasma_sp._2575	COMPETITOR	C_broad_mycoplasma_background	25	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851655.1	3458457	Mycoplasma_sp._327	COMPETITOR	C_broad_mycoplasma_background	16	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851615.1	3458458	Mycoplasma_sp._1890	COMPETITOR	C_broad_mycoplasma_background	23	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851595.1	3458459	Mycoplasma_sp._527	COMPETITOR	C_broad_mycoplasma_background	12	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851575.1	3458460	Mycoplasma_sp._2261	COMPETITOR	C_broad_mycoplasma_background	22	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851555.1	3458461	Mycoplasma_sp._3398	COMPETITOR	C_broad_mycoplasma_background	18	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851515.1	3458462	Mycoplasma_sp._773	COMPETITOR	C_broad_mycoplasma_background	19	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851735.1	3458463	Mycoplasma_sp._128	COMPETITOR	C_broad_mycoplasma_background	7	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851775.1	3458464	Mycoplasma_sp._1573	COMPETITOR	C_broad_mycoplasma_background	4	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851755.1	3458465	Mycoplasma_sp._3392	COMPETITOR	C_broad_mycoplasma_background	7	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851715.1	3458466	Mycoplasma_sp._392	COMPETITOR	C_broad_mycoplasma_background	9	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_053851695.1	3458467	Mycoplasma_sp._4044	COMPETITOR	C_broad_mycoplasma_background	8	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_055523595.1	3458676	Mycoplasma_sp._6934	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_055523525.1	3458677	Mycoplasma_sp._10961	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_055523555.1	3458678	Mycoplasma_sp._11548	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_055523495.1	3458679	Mycoplasma_sp._13536	COMPETITOR	C_broad_mycoplasma_background	8	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054170725.1	3472838	Mycoplasma_pogonae	COMPETITOR	C_broad_mycoplasma_background	26	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_977110965.1	3473534	Spiroplasma_endosymbiont_of_Dactylopius_coccus	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_978018445.1	3473538	Spiroplasma_endosymbiont_of_Halictus_nicosiae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_019720735.1	353851	Mycoplasma_sp._Ms02	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_006228185.1	353852	Mycoplasma_nasistruthionis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900444665.1	35623	Acholeplasma_oculi	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054456995.1	3568880	Mycoplasma_tracheobuteonis	COMPETITOR	C_broad_mycoplasma_background	34	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000687775.1	35768	Mycoplasmopsis_felifaucium	COMPETITOR	C_broad_mycoplasma_background	37	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_036352135.1	35769	Metamycoplasma_gateae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000364425.1	35772	Peanut_witches'-broom_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	14	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_018024475.1	35773	Candidatus_Phytoplasma_luffae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_038024965.1	35780	Candidatus_Phytoplasma_fraxini	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000023005.1	35788	Rickettsia_africae	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_963970025.1	35789	Rickettsia_helvetica	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000283595.1	35790	Rickettsia_japonica	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000016625.1	35791	Rickettsia_massiliae	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000284195.1	35792	Rickettsia_parkeri	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_042758515.1	35793	Rickettsia_sibirica	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000237845.1	35794	Rickettsia_slovaca	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_051097115.1	35795	Ehrlichia_muris	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_001281045.1	362837	Spiroplasma_cantharicola	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000622205.1	36742	Mycoplasma_leonicaptivi	COMPETITOR	C_broad_mycoplasma_background	80	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000702705.1	36744	Mycoplasma_simbae	COMPETITOR	C_broad_mycoplasma_background	12	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_054963775.1	3683210	Spiroplasma_endosymbiont_of_Tabanus_sp.	COMPETITOR	D_other_Mycoplasmatota_outgroup	329	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_057537535.1	3683341	Ureaplasma_sp._TOSA-KAIYU	COMPETITOR	C_broad_mycoplasma_background	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_056781225.1	3699019	Mycoplasma_sp._3686h	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_056781245.1	3699021	Mycoplasma_sp._1579d	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_013752735.1	375	Bradyrhizobium_japonicum	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000026205.1	37692	Candidatus_Phytoplasma_mali	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_019930925.1	38323	Bartonella_henselae	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000341355.1	388640	Bartonella_australis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000968055.1	38986	Acholeplasma_palmae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000701485.1	39047	Mycoplasmopsis_sturni	COMPETITOR	C_broad_mycoplasma_background	4	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000632845.1	391036	Ehrlichia_japonica	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_019396865.1	39647	Paulownia_witches'-broom_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024742155.1	398174	Mycoplasma_zalophidermidis	COMPETITOR	C_broad_mycoplasma_background	14	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_026821955.1	399025	Candidatus_Phytoplasma_rubi	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000083545.1	408	Methylorubrum_extorquens	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_018390775.2	420408	Sesame_phyllody_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	60	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000712165.1	42092	Ureaplasma_canigenitalium	COMPETITOR	C_broad_mycoplasma_background	9	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000941095.1	42094	Ureaplasma_diversum	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000012145.1	42862	Rickettsia_felis	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_001645765.1	432608	Candidatus_Mycoplasma_haematobovis	COMPETITOR	C_broad_mycoplasma_background	18	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001941585.1	446	Legionella_pneumophila	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000953655.1	449	Legionella_hackeliae	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000091785.1	450	Legionella_longbeachae	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900637865.1	45056	Legionella_adelaidensis	COMPETITOR	E_external	29	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_004766445.2	45065	Legionella_geestiana	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900187355.1	45067	Legionella_lansingensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000953635.1	451	Legionella_micdadei	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900186965.1	452	Legionella_spiritensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000026765.1	45361	Mesomycoplasma_conjunctivae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000524555.1	45362	Mesomycoplasma_bovoculi	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900476125.1	45363	Metamycoplasma_alkalescens	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_007361795.1	454	Legionella_israelensis	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900637635.1	456	Legionella_jordanis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_006546935.1	458208	Mycoplasmopsis_mucosicanis	COMPETITOR	C_broad_mycoplasma_background	57	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_009035845.1	470	Acinetobacter_baumannii	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000215935.2	471825	Haloplasma_contractile	COMPETITOR	D_other_Mycoplasmatota_outgroup	34	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_036924415.2	47565	Candidatus_Phytoplasma_prunorum	COMPETITOR	D_other_Mycoplasmatota_outgroup	16	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_046600495.1	47566	Candidatus_Phytoplasma_pyri	COMPETITOR	D_other_Mycoplasmatota_outgroup	14	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000021525.1	47589	Rickettsia_peacockii	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000178375.1	47687	Mycoplasmopsis_alligatoris	COMPETITOR	C_broad_mycoplasma_background	33	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_001274875.1	47834	Spiroplasma_kunkelii	COMPETITOR	D_other_Mycoplasmatota_outgroup	4	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003339775.1	47835	Spiroplasma_phoeniceum	COMPETITOR	D_other_Mycoplasmatota_outgroup	4	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_055396925.1	47958	Methylorubrum_thiocyanatum	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_013391955.1	479893	Candidatus_Phytoplasma_pruni	COMPETITOR	D_other_Mycoplasmatota_outgroup	67	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_006334135.1	48003	Mycoplasmopsis_pullorum	COMPETITOR	C_broad_mycoplasma_background	63	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000025845.1	50052	Mycoplasma_crocodyli	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_030718845.1	512749	Mycoplasma_seminis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_045276205.1	51362	Mycoplasmopsis_adleri	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003253435.1	51363	Metamycoplasma_auris	COMPETITOR	C_broad_mycoplasma_background	39	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024918975.1	51364	Mycoplasma_cottewii	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000875755.1	51365	Mycoplasma_yeatsii	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_007859615.1	519450	Mycoplasma_anserisalpingitidis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_049942695.1	525886	Mycoplasma_hafezii	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_013388295.1	52764	Bartonella_alsatica	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900476105.1	53558	Mycoplasmopsis_edwardii	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_025515455.1	536372	Mycoplasma_sp._CSL7503-lung	COMPETITOR	C_broad_mycoplasma_background	73	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003855455.1	538220	Mycoplasma_struthionis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_016925555.1	547987	Mycoplasma_tauri	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_018913965.1	549718	Mycoplasma_sp._CSL7491-lung	COMPETITOR	C_broad_mycoplasma_background	7	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_017052655.1	555393	Acholeplasma_equirhinis	COMPETITOR	D_other_Mycoplasmatota_outgroup	7	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024498215.1	55603	Mycoplasmopsis_caviae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000702785.1	55604	Mycoplasmopsis_primatum	COMPETITOR	C_broad_mycoplasma_background	63	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_040267515.1	558537	Delftia_lacustris	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_036350065.1	561067	Mycoplasmopsis_ciconiae	COMPETITOR	C_broad_mycoplasma_background	22	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000008865.2	562	Escherichia_coli	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_020097475.1	564	Escherichia_fergusonii	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000253015.1	56426	Bartonella_clarridgeiae	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_017052595.1	568784	Mycoplasma_procyoni	COMPETITOR	C_broad_mycoplasma_background	22	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_044501185.1	570505	Methylobacterium_bullatum	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000179035.2	57372	Mycoplasma_suis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_036689615.1	587753	Pseudomonas_chlororaphis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_025742995.1	591373	Paracholeplasma_manati	COMPETITOR	D_other_Mycoplasmatota_outgroup	28	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000397185.1	59748	Candidatus_Phytoplasma_australiense	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000967915.1	61635	Acholeplasma_brassicae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_014352955.1	640330	Mycoplasma_sp._Pen4	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000277795.1	65123	Mycoplasma_wenyonii	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_900187095.1	66969	Legionella_waltersii	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_025446935.1	69473	Paracholeplasma_vituli	COMPETITOR	D_other_Mycoplasmatota_outgroup	43	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_040126175.1	69896	Candidatus_Phytoplasma_solani	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000092785.1	71667	Waddlia_chondrophila	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_002804205.1	74700	Entomoplasma_freundtii	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000522545.2	75105	Paraburkholderia_caribensis	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_017084445.1	754514	Mycoplasma_sp._Mirounga_ES2805-ORL	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_013008635.1	754515	Mycoplasma_miroungigenitalium	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_013008815.1	754516	Mycoplasma_miroungirhinis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_012934855.1	754517	Mycoplasma_phocoenae	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000402035.1	758793	Caballeronia_insecticola	COMPETITOR	E_external	5	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900660635.1	76629	Mycoplasmopsis_gallopavonis	COMPETITOR	C_broad_mycoplasma_background	4	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000701805.1	76630	Mycoplasmopsis_iners	COMPETITOR	C_broad_mycoplasma_background	28	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000024505.1	769	Anaplasma_centrale	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000020305.1	770	Anaplasma_marginale	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000015445.1	774	Bartonella_bacilliformis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000007765.2	777	Coxiella_burnetii	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000026005.1	779	Ehrlichia_ruminantium	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000007025.1	781	Rickettsia_conorii	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000277165.1	782	Rickettsia_prowazekii	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000018225.1	783	Rickettsia_rickettsii	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900327255.1	784	Orientia_tsutsugamushi	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000008045.1	785	Rickettsia_typhi	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000701785.1	78580	Mycoplasmoides_alvi	COMPETITOR	C_broad_mycoplasma_background	7	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000018205.1	786	Rickettsia_akari	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000284155.1	787	Rickettsia_australis	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000283915.1	788	Rickettsia_canadensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_009936175.1	803	Bartonella_quintana	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900638615.1	807	Bartonella_elizabethae	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000018665.1	80866	Delftia_acidovorans	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000008725.1	813	Chlamydia_trachomatis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_002804105.1	81459	Mesoplasma_melaleucae	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000253035.1	83552	Parachlamydia_acanthamoebae	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000204255.1	83554	Chlamydia_psittaci	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_040235295.1	83555	Chlamydia_abortus	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000009945.1	83556	Chlamydia_felis	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000007605.1	83557	Chlamydia_caviae	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000007205.1	83558	Chlamydia_pneumoniae	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_900149385.2	83559	Chlamydia_suis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000006685.1	83560	Chlamydia_muridarum	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000237205.1	83561	Simkania_negevensis	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_038505995.1	85620	Candidatus_Phytoplasma_asteris	COMPETITOR	D_other_Mycoplasmatota_outgroup	2	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_046896035.1	85624	Candidatus_Phytoplasma_palmae	COMPETITOR	D_other_Mycoplasmatota_outgroup	49	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000309405.1	85642	Vaccinium_witches'-broom_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	272	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_978563805.1	85647	Brinjal_little_leaf_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	12	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000196435.1	85701	Bartonella_tribocorum	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_020549965.1	85991	Chlamydia_pecorum	COMPETITOR	E_external	2	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000941075.1	86660	Mesomycoplasma_dispar	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_022879815.1	871203	Caballeronia_zhejiangensis	COMPETITOR	E_external	7	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_006491995.1	872983	Metamycoplasma_neophronis	COMPETITOR	C_broad_mycoplasma_background	65	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_036352035.1	87883	Burkholderia_multivorans	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_025780055.1	907723	Ureaplasma_zalophigenitalium	COMPETITOR	C_broad_mycoplasma_background	48	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003285045.1	92400	[Mycoplasma]_anseris	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003269445.1	92401	Metamycoplasma_cloacale	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_033546855.1	92402	Metamycoplasma_equirhinis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_006385795.1	92403	[Mycoplasma]_falconis	COMPETITOR	C_broad_mycoplasma_background	39	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_037482225.1	92404	[Mycoplasma]_gypis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_041026625.1	92406	Metamycoplasma_spumans	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_033546815.1	92407	Metamycoplasma_subdolum	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_042984175.1	92757	[Mycoplasma]_cavipharyngis	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_024498275.1	92758	Mycoplasmoides_fastidiosum	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_041920595.1	927614	Areca_yellow_leaf_disease_phytoplasma	COMPETITOR	D_other_Mycoplasmatota_outgroup	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_002278135.3	931866	Bradyrhizobium_ottawaense	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000012565.1	944	Ehrlichia_canis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000013145.1	945	Ehrlichia_chaffeensis	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000439755.1	948	Anaplasma_phagocytophilum	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_012790675.1	949	Anaplasma_platys	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000013165.1	951	Ehrlichia_sennetsu	COMPETITOR	E_external	1	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000953135.1	96230	Legionella_fallonii	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_023921225.1	96232	Legionella_lytica	COMPETITOR	E_external	3	YES	YES	YES	YES			competitor unchanged	competitor unchanged
+GCF_000477415.1	984991	Mycoplasma_parvum	COMPETITOR	C_broad_mycoplasma_background	1	YES	YES	YES	YES	1		competitor unchanged	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_003953005.1	134821	Ureaplasma_parvum	TARGET	B_human_extended	1	YES	NO	YES	YES	3	taxid_134821_cluster_001	not selected	Selected representative of a strict near-clone cluster.
+GCF_006716515.1	134821	Ureaplasma_parvum	TARGET	B_human_extended	1	YES	NO	YES	YES	2	taxid_134821_cluster_002	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_021460135.1	134821	Ureaplasma_parvum	TARGET	B_human_extended	1	YES	YES	YES	YES	1	taxid_134821_cluster_003	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_037407185.1	134821	Ureaplasma_parvum	TARGET	B_human_extended	13	YES	NO	YES	YES	5	taxid_134821_cluster_004	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_001547975.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	1	YES	YES	YES	YES	1	taxid_2094_cluster_002	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_026686775.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	21	YES	NO	YES	YES	6	taxid_2094_cluster_001	not selected	Member of the chain-linked Mycoplasmopsis arginini review cluster; retained conservatively because the cluster is not a complete near-clone clique.
+GCF_029963895.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	199	YES	NO	YES	YES	11	taxid_2094_cluster_003	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_029963915.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	99	YES	NO	YES	YES	7	taxid_2094_cluster_001	not selected	Member of the chain-linked Mycoplasmopsis arginini review cluster; retained conservatively because the cluster is not a complete near-clone clique.
+GCF_029963975.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	26	YES	NO	YES	YES	5	taxid_2094_cluster_001	not selected	Member of the chain-linked Mycoplasmopsis arginini review cluster; retained conservatively because the cluster is not a complete near-clone clique.
+GCF_029963995.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	59	YES	NO	YES	YES	9	taxid_2094_cluster_004	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_029964015.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	58	YES	NO	YES	YES	8	taxid_2094_cluster_001	not selected	Member of the chain-linked Mycoplasmopsis arginini review cluster; retained conservatively because the cluster is not a complete near-clone clique.
+GCF_041222705.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	1	YES	NO	YES	YES	4	taxid_2094_cluster_005	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_900660725.1	2094	Mycoplasmopsis_arginini	TARGET	A_core	3	YES	NO	YES	YES	2	taxid_2094_cluster_007	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000012765.1	2095	Mycoplasma_capricolum	TARGET	B_human_extended	1	YES	NO	YES	YES	3	taxid_2095_cluster_001	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_001005165.1	2095	Mycoplasma_capricolum	TARGET	B_human_extended	7	YES	NO	YES	YES	2	taxid_2095_cluster_002	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_041021285.1	2095	Mycoplasma_capricolum	TARGET	B_human_extended	64	YES	YES	YES	YES	1	taxid_2095_cluster_003	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_040556925.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	1	YES	YES	YES	YES	1	taxid_2097_cluster_001	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Selected representative of a strict near-clone cluster.
+GCF_054926215.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	1	YES	NO	YES	YES	11	taxid_2097_cluster_002	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_054926235.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	1	YES	NO	YES	YES	6	taxid_2097_cluster_003	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_054926255.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	1	YES	NO	YES	YES	9	taxid_2097_cluster_004	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_054926315.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	1	YES	NO	YES	YES	10	taxid_2097_cluster_005	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_054926555.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	1	YES	NO	YES	YES	8	taxid_2097_cluster_006	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_056336045.1	2097	Mycoplasmoides_genitalium	TARGET	A_core	1	YES	NO	YES	YES	7	taxid_2097_cluster_007	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000085865.1	2098	Metamycoplasma_hominis	TARGET	A_core	1	YES	NO	YES	YES	2	taxid_2098_cluster_001	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000759375.2	2098	Metamycoplasma_hominis	TARGET	A_core	1	YES	NO	YES	YES	7	taxid_2098_cluster_002	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000767725.1	2098	Metamycoplasma_hominis	TARGET	A_core	1	YES	YES	YES	YES	1	taxid_2098_cluster_003	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000947915.1	2098	Metamycoplasma_hominis	TARGET	A_core	1	YES	NO	YES	YES	5	taxid_2098_cluster_004	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_013367855.1	2098	Metamycoplasma_hominis	TARGET	A_core	1	YES	NO	YES	YES	6	taxid_2098_cluster_005	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_013367915.1	2098	Metamycoplasma_hominis	TARGET	A_core	1	YES	NO	YES	YES	9	taxid_2098_cluster_006	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_013367955.1	2098	Metamycoplasma_hominis	TARGET	A_core	1	YES	NO	YES	YES	4	taxid_2098_cluster_007	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_013367995.1	2098	Metamycoplasma_hominis	TARGET	A_core	1	YES	NO	YES	YES	3	taxid_2098_cluster_008	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_013368015.1	2098	Metamycoplasma_hominis	TARGET	A_core	1	YES	NO	YES	YES	8	taxid_2098_cluster_009	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_054457615.1	2098	Metamycoplasma_hominis	TARGET	A_core	1	YES	NO	YES	YES	10	taxid_2098_cluster_010	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000241125.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	1	YES	NO	YES	YES	6	taxid_2100_cluster_002	not selected	Selected representative of a strict near-clone cluster.
+GCF_024760345.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	1	YES	NO	YES	YES	9	taxid_2100_cluster_004	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_024760365.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	1	YES	NO	YES	YES	3	taxid_2100_cluster_003	not selected	Selected representative of a strict near-clone cluster.
+GCF_051052295.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	1	YES	NO	YES	YES	5	taxid_2100_cluster_005	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_056783355.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	1	YES	NO	YES	YES	8	taxid_2100_cluster_006	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_900476065.1	2100	Mesomycoplasma_hyorhinis	TARGET	A_core	1	YES	YES	YES	YES	1	taxid_2100_cluster_001	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Selected representative of a strict near-clone cluster.
+GCF_000733995.1	2104	Mycoplasmoides_pneumoniae	TARGET	A_core	1	YES	NO	YES	YES	3	taxid_2104_cluster_001	not selected	Selected representative of a strict near-clone cluster.
+GCF_900660465.1	2104	Mycoplasmoides_pneumoniae	TARGET	A_core	2	YES	YES	YES	YES	1	taxid_2104_cluster_002	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Selected representative of a strict near-clone cluster.
+GCF_000148625.1	2115	Mycoplasmopsis_fermentans	TARGET	A_core	1	YES	NO	YES	YES	3	taxid_2115_cluster_002	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000186005.1	2115	Mycoplasmopsis_fermentans	TARGET	A_core	1	YES	YES	YES	YES	1	taxid_2115_cluster_003	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000209735.1	2115	Mycoplasmopsis_fermentans	TARGET	A_core	1	YES	NO	YES	YES	2	taxid_2115_cluster_004	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_003704075.1	2115	Mycoplasmopsis_fermentans	TARGET	A_core	46	YES	NO	YES	YES	4	taxid_2115_cluster_001	not selected	Selected representative of a strict near-clone cluster.
+GCF_045276895.1	2117	Mycoplasmopsis_lipophila	TARGET	B_human_extended	1	YES	YES	YES	YES	1		minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000420105.1	2121	Metamycoplasma_orale	TARGET	A_core	21	YES	NO	YES	YES	2	taxid_2121_cluster_001	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_900660435.1	2121	Metamycoplasma_orale	TARGET	A_core	5	YES	YES	YES	YES	1	taxid_2121_cluster_002	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000685905.1	2122	Mycoplasmoides_pirum	TARGET	A_core	6	YES	YES	YES	YES	1	taxid_2122_cluster_001	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Selected representative of a strict near-clone cluster.
+GCF_000686245.1	2122	Mycoplasmoides_pirum	TARGET	A_core	9	YES	NO	YES	YES	2	taxid_2122_cluster_001	not selected	Retained conservatively because 4 residual segment(s) show divergent homology and 1 residual segment(s) lack a meaningful nonself hit; exclusion could remove strain-divergent sequence.
+GCF_021600285.1	2124	Metamycoplasma_salivarium	TARGET	A_core	7	YES	NO	YES	YES	5	taxid_2124_cluster_002	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_021600305.1	2124	Metamycoplasma_salivarium	TARGET	A_core	6	YES	NO	YES	YES	4	taxid_2124_cluster_003	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_021600325.1	2124	Metamycoplasma_salivarium	TARGET	A_core	9	YES	NO	YES	YES	6	taxid_2124_cluster_004	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_041930575.1	2124	Metamycoplasma_salivarium	TARGET	A_core	1	YES	NO	YES	YES	3	taxid_2124_cluster_005	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_900660445.2	2124	Metamycoplasma_salivarium	TARGET	A_core	1	YES	YES	YES	YES	1	taxid_2124_cluster_001	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Selected representative of a strict near-clone cluster.
+GCF_003326135.1	2130	Ureaplasma_urealyticum	TARGET	B_human_extended	27	YES	NO	YES	YES	5	taxid_2130_cluster_001	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_006716625.1	2130	Ureaplasma_urealyticum	TARGET	B_human_extended	1	YES	NO	YES	YES	2	taxid_2130_cluster_002	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_006777105.1	2130	Ureaplasma_urealyticum	TARGET	B_human_extended	1	YES	NO	YES	YES	3	taxid_2130_cluster_003	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_021460055.1	2130	Ureaplasma_urealyticum	TARGET	B_human_extended	1	YES	NO	YES	YES	4	taxid_2130_cluster_004	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_022700735.1	2130	Ureaplasma_urealyticum	TARGET	B_human_extended	1	YES	YES	YES	YES	1	taxid_2130_cluster_005	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_000723365.1	273136	Mycoplasma_amphoriforme	TARGET	B_human_extended	1	YES	YES	YES	YES	1		minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_000011225.1	28227	Malacoplasma_penetrans	TARGET	A_core	1	YES	YES	YES	YES	1	taxid_28227_cluster_001	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Selected representative of a strict near-clone cluster.
+GCF_030077835.1	3045839	Mycoplasma_phocimorsus	TARGET	B_human_extended	12	YES	NO	YES	YES	2	taxid_3045839_cluster_001	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_030077865.1	3045839	Mycoplasma_phocimorsus	TARGET	B_human_extended	28	YES	YES	YES	YES	1	taxid_3045839_cluster_002	minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_030077875.1	3045839	Mycoplasma_phocimorsus	TARGET	B_human_extended	12	YES	NO	YES	YES	3	taxid_3045839_cluster_003	not selected	Assembly is a singleton near-clone cluster within a multi-assembly species and preserves within-species diversity.
+GCF_046774455.1	55602	Metamycoplasma_buccale	TARGET	B_human_extended	1	YES	YES	YES	YES	1		minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is outside the 98-member multi-assembly near-clone review set.
+GCF_045160055.1	56142	Metamycoplasma_faucium	TARGET	B_human_extended	1	YES	YES	YES	YES	1		minimum frozen quality_rank_within_species_v0.8; then selection_order; then accession	Assembly is outside the 98-member multi-assembly near-clone review set.
