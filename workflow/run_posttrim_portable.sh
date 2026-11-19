@@ -125,7 +125,7 @@ else
 # before name sorting.
 "$MM2" \
     -ax sr \
-    -t "$THREADS" \
+    -t "$HOST_THREADS" \
     "$HG38_MMI" \
     "$TRIM_R1" \
     "$TRIM_R2" \
@@ -191,7 +191,7 @@ else
     -N 100 \
     --MD \
     -R "@RG\tID:${RUN}_trimmed\tSM:${RUN}\tPL:ILLUMINA" \
-    -t "$THREADS" \
+    -t "$MICROBIAL_THREADS" \
     "$JOINT_MMI" \
     "$UNMAP_R1" \
     "$UNMAP_R2" \

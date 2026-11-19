@@ -1,0 +1,37 @@
+{
+  "public_name": "MycoWES v1.0.0-beta.1",
+  "default_cpu_profile": "benchmark",
+  "cpu_threads_order": "cutadapt/host_mapper/microbial_mapper/samtools_additional",
+  "cpu_profiles": {
+    "benchmark": [
+      8,
+      32,
+      8,
+      4
+    ],
+    "light": [
+      2,
+      2,
+      2,
+      1
+    ]
+  },
+  "anchor_mapper_threads": 2,
+  "explicit_only_modes": [
+    "strict62",
+    "explore"
+  ],
+  "reference_release": "v0.28",
+  "default_reference_mode": "ONE_REP_TARGET_DEVELOPMENT",
+  "manuscript_reference_mode": "MULTI_TARGET_V028",
+  "manuscript_quality": [
+    100,
+    20,
+    0.08
+  ],
+  "manuscript_mapq_policy": "assembly-top-ties-gap10",
+  "manuscript_risk_policy": "low-complexity-nonrisk180-pair",
+  "code_license": "Not specified by copyright holder",
+  "runtime_version": "MycoWES v1.0.0-beta.1",
+  "canonical_engine_sha256": "d721d824c421b21e4b9f4c04f71b842cda38fff636324106561c78dfcaa4067b"
+}

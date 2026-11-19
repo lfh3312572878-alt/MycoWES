@@ -101,6 +101,7 @@ def parse_record(line, taxonomy):
         "reference_end": reference_end,
         "species": tax.get("reference_species", ""),
         "species_taxid": tax.get("species_taxid", ""),
+        "assembly": tax.get("assembly_accession", ""),
         "genus": tax.get("genus", ""),
         "genus_taxid": tax.get("genus_taxid", ""),
         "family": tax.get("family", ""),
@@ -127,6 +128,38 @@ def get_primary(records, read_end):
         )
 
     return selected[0]
+
+
+def assembly_tie_only(records, primary, top_gap10=False):
+    """Assembly top ties; optionally tolerate alternatives at least ten AS lower."""
+    rr = [r for r in records if r['read_end'] == primary['read_end']]
+    if any(r['supplementary'] for r in rr):
+        return False
+    rr = [r for r in rr if r['mapped']]
+    # At the mapper's reporting cap, unreported alternatives are unknown.
+    if not primary['mapped'] or not rr or len(rr) >= 101:
+        return False
+    species = primary['species_taxid']
+    if not species or any(not r.get('assembly') or not r.get('species_taxid') or
+                          r['AS'] is None or not r.get('reference_class') for r in rr):
+        return False
+    best = max(r['AS'] for r in rr)
+    if primary['AS'] != best:
+        return False
+    if top_gap10:
+        # Lower-scoring alternatives do not invalidate an otherwise species-specific top tie.
+        if any(best-r['AS'] < 10 for r in rr
+               if r['reference_class'] != 'TARGET' or r['species_taxid'] != species):
+            return False
+        rr = [r for r in rr if r['AS'] == best]
+    if any(r['reference_class'] != 'TARGET' or r['species_taxid'] != species for r in rr):
+        return False
+    loci = {}
+    for r in rr:
+        loci.setdefault(r['assembly'], set()).add((r['reference'], r['position'], r['reference_end'], r['reverse']))
+    if any(len(v) != 1 for v in loci.values()):
+        return False
+    return len({r['assembly'] for r in rr if r['AS'] == best}) >= 2
 
 
 def collapse_species(records, reference_class):
@@ -469,6 +502,10 @@ def main():
             fragment_span = right - left + 1
 
         row = {
+            "R1_assembly_tie_only": int(assembly_tie_only(records, r1_primary)),
+            "R2_assembly_tie_only": int(assembly_tie_only(records, r2_primary)),
+            "R1_assembly_top_tie_gap10": int(assembly_tie_only(records, r1_primary, True)),
+            "R2_assembly_top_tie_gap10": int(assembly_tie_only(records, r2_primary, True)),
             "sample_id": args.sample,
             "fragment_id": records[0]["qname"],
             "alignment_records": len(records),

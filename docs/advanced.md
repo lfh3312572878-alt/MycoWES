@@ -4,13 +4,13 @@
 
 | Preset | Competitive target | Competitors | Anchor target | Quality gates |
 | --- | --- | --- | --- | --- |
-| normal default | 18 representatives / 18 species / 118 contigs | 560 assemblies / 553 taxa / 7823 contigs | complete 67-assembly target FASTA | 100 bp / MAPQ20 / NM0.08 |
-| simple | same 18 representatives | same complete set | same 67-assembly target FASTA | 60 bp / MAPQ5 / NM0.12 |
-| hard | 67 assemblies / 18 species / 783 contigs | same complete set | same 67-assembly target FASTA | 100 bp / MAPQ20 / NM0.08 |
+| standard default (legacy normal) | 18 representatives / 18 species / 118 contigs | 560 assemblies / 553 taxa / 7823 contigs | complete 67-assembly target FASTA | 100 bp / MAPQ20 / NM0.08 |
+| relax2 (legacy simple) | same 18 representatives | same complete set | same 67-assembly target FASTA | 60 bp / MAPQ5 / NM0.12 |
+| legacy hard | 67 assemblies / 18 species / 783 contigs | same complete set | same 67-assembly target FASTA | 100 bp / MAPQ20 / NM0.08 |
 
 `hard` changes target multiplicity, not the quality gates relative to normal. PRIMARY and STRICT are produced for every preset; STRICT is not a difficulty level. Actual assemblies per species follow metadata.
 
-Add `--difficulty simple` or `--difficulty hard` to the default command, using a new output directory. Simple requires nominal PE length at least 60. Internal profile keys `ONE_REP_TARGET_DEVELOPMENT` and `MULTI_TARGET_V028` are retained for file compatibility; their paths are resolved in `workflow/reference_profiles.py`.
+Add `--preset relax2` or legacy `--difficulty hard` to the default command, using a new output directory. Relax2 requires nominal PE length at least 60. Explicit `--min-aligned-bp 100 --min-mapq 20 --max-nm-rate 0.08` reproduces standard quality settings. Threshold priority is explicit CLI value, then selected preset; inherited `CORE_*` variables are ignored by the public CLI. Length must be positive, MAPQ 0..255, and NM rate finite/nonnegative. Length is still capped at nominal PE length. Compatible legacy aliases may be supplied together with a preset; conflicting choices are rejected. Internal profile keys `ONE_REP_TARGET_DEVELOPMENT` and `MULTI_TARGET_V028` are retained for file compatibility; their paths are resolved in `workflow/reference_profiles.py`.
 
 ```bash
 minimap2 -x sr -d \

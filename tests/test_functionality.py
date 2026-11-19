@@ -11,6 +11,7 @@ import sys
 import tempfile
 import unittest
 from unittest.mock import patch
+from types import SimpleNamespace
 
 ROOT = Path(__file__).resolve().parents[1]
 os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
@@ -89,9 +90,108 @@ class Functionality(unittest.TestCase):
         row['maximum_primary_NM_rate']='0.0801'
         self.assertNotEqual(risk.core_filter_reason(row,*mycowes.DIFFICULTIES['normal']),'PASS')
 
+    def test_explicit_preset_resolution_and_conflicts(self):
+        base=dict(preset=None,difficulty=None,reference_mode=None,min_aligned_bp=None,min_mapq=None,max_nm_rate=None)
+        resolve=lambda **kw:mycowes.resolve_run_settings(SimpleNamespace(**dict(base,**kw)))
+        self.assertEqual(resolve(),('standard',MODES[0],(100,20,.08)))
+        self.assertEqual(resolve(preset='relax2'),('relax2',MODES[0],(60,5,.12)))
+        self.assertEqual(resolve(difficulty='hard'),('standard',MODES[1],(100,20,.08)))
+        self.assertEqual(resolve(preset='relax2',difficulty='simple')[2],(60,5,.12))
+        for difficulty,preset in [('simple','standard'),('normal','relax2'),('hard','relax2')]:
+            with self.assertRaisesRegex(ValueError,'conflicts'):resolve(preset=preset,difficulty=difficulty)
+        for name,value in [('min_aligned_bp',0),('min_aligned_bp',-1),('min_mapq',-1),('min_mapq',256),
+                           ('max_nm_rate',-.01),('max_nm_rate',float('nan')),('max_nm_rate',float('inf'))]:
+            with self.assertRaises(ValueError):resolve(**{name:value})
+        self.assertEqual(resolve(min_aligned_bp=90,min_mapq=0,max_nm_rate=0)[2],(90,0,0))
+
+    def test_cli_preset_and_overrides_have_recorded_effective_values(self):
+        cases=[([], 'standard',(100,20,.08)),(['--preset','relax2'],'relax2',(60,5,.12)),
+               (['--preset','relax2','--min-aligned-bp','90','--min-mapq','12','--max-nm-rate','0.09'],'relax2',(90,12,.09))]
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);host=root/'host.mmi';host.write_text('test');self.make_assets(root)
+            r1,r2=root/'R1.fq',root/'R2.fq'
+            for r in (r1,r2):r.write_text('@test\nACGT\n+\nIIII\n')
+            for i,(flags,preset,thresholds) in enumerate(cases):
+                out=root/f'out{i}'
+                args=['run','--sample','unit','--r1',str(r1),'--r2',str(r2),'--out',str(out),'--reference-root',str(root),*flags]
+                with patch.dict(os.environ,{'MYCOWES_HOST_MMI':str(host),'CORE_MIN_ALIGNED_BP':'7','CORE_MIN_MAPQ':'1','CORE_MAX_NM_RATE':'0.99'}), \
+                     patch.object(mycowes.subprocess,'run',side_effect=self.mock_complete_engine) as run:
+                    self.assertEqual(mycowes.main(args),0)
+                env=run.call_args.kwargs['env'];selection=json.loads((out/'reference_selection.json').read_text())
+                self.assertEqual(tuple(env[k] for k in ('CORE_MIN_ALIGNED_BP','CORE_MIN_MAPQ','CORE_MAX_NM_RATE')),tuple(map(str,thresholds)))
+                self.assertEqual(selection['preset'],preset);self.assertEqual(selection['effective_min_aligned_bp'],thresholds[0])
+                self.assertEqual(selection['quality_thresholds'],dict(zip(('min_aligned_bp','min_mapq','max_nm_rate'),thresholds)))
+                self.assertEqual(set(selection['config_files_sha256']),{'default.env','relax2.env'})
+                self.assertTrue(run.call_args.args[0][run.call_args.args[0].index('--config')+1].endswith('relax2.env' if preset=='relax2' else 'default.env'))
+
     def test_conflicting_reference_mode_fails_before_output(self):
         with contextlib.redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):
             mycowes.main(['run','--sample','test','--r1','missing','--r2','missing','--out','missing','--difficulty','hard','--reference-mode',MODES[0]])
+
+    def test_cpu_profiles_reach_engine_and_record_actual_settings(self):
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);host=root/'host';host.write_text('test');self.make_assets(root)
+            for mate in ('r1','r2'):(root/mate).write_text('test')
+            for i,(flags,profile) in enumerate([([], 'benchmark'),(['--cpu-profile','light'], 'light')]):
+                out=root/f'cpu{i}'
+                args=['run','--sample','unit','--r1',str(root/'r1'),'--r2',str(root/'r2'),
+                      '--reference-root',str(root),'--out',str(out),*flags]
+                warning=io.StringIO()
+                with patch.dict(os.environ,dict(MYCOWES_HOST_MMI=str(host),THREADS='99',
+                                               **{key:'99' for key in mycowes.CPU_PROFILES[profile]})), \
+                     patch.object(mycowes,'available_cpus',return_value=1), contextlib.redirect_stderr(warning), \
+                     patch.object(mycowes.subprocess,'run',side_effect=self.mock_complete_engine) as run:
+                    self.assertEqual(mycowes.main(args),0)
+                self.assertIn('WARNING',warning.getvalue())
+                selection=json.loads((out/'reference_selection.json').read_text())
+                self.assertEqual(selection['cpu_profile'],profile)
+                for key,value in mycowes.CPU_PROFILES[profile].items():
+                    self.assertEqual(run.call_args.kwargs['env'][key],str(value))
+                    self.assertEqual(selection['execution'][key],str(value))
+                self.assertEqual(selection['execution']['ANCHOR_THREADS'],'2')
+                self.assertEqual(selection['quality_thresholds'],dict(min_aligned_bp=100,min_mapq=20,max_nm_rate=.08))
+                self.assertEqual(selection['mode'],MODES[0])
+                self.assertIsNone(selection['special_mode'])
+                with patch.dict(os.environ,{'MYCOWES_HOST_MMI':str(host)}), \
+                     patch.object(mycowes.subprocess,'run') as run, contextlib.redirect_stderr(io.StringIO()), \
+                     self.assertRaises(SystemExit):
+                    mycowes.main(args+['--cpu-profile','light' if profile=='benchmark' else 'benchmark'])
+                run.assert_not_called()
+
+    def test_special_modes_bind_references_and_rules_without_changing_cpu_profile(self):
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);host=root/'host';host.write_text('test')
+            for mode in MODES:self.make_assets(root,mode)
+            for mate in ('r1','r2'):(root/mate).write_text('test')
+            for name,(preset,difficulty,mode) in mycowes.SPECIAL_MODES.items():
+                out=root/name
+                args=['run','--sample','unit','--r1',str(root/'r1'),'--r2',str(root/'r2'),
+                      '--reference-root',str(root),'--out',str(out),'--nominal-pe-length','150',
+                      '--special-mode',name,'--cpu-profile','light']
+                with patch.dict(os.environ,{'MYCOWES_HOST_MMI':str(host)}), \
+                     patch.object(mycowes.subprocess,'run',side_effect=self.mock_complete_engine) as run:
+                    self.assertEqual(mycowes.main(args),0)
+                selection=json.loads((out/'reference_selection.json').read_text())
+                self.assertEqual(selection['mode'],mode)
+                self.assertEqual(selection['preset'],preset)
+                self.assertEqual(selection['special_mode'],name)
+                self.assertEqual(selection['quality_thresholds'],dict(zip(('min_aligned_bp','min_mapq','max_nm_rate'),mycowes.PRESETS[preset])))
+                self.assertEqual((selection['mapq_policy'],selection['risk_policy']),('native','legacy'))
+                self.assertEqual(run.call_args.kwargs['env']['MYCOWES_SPECIAL_MODE'],name)
+                self.assertEqual(selection['cpu_profile'],'light')
+                for flags in (['--mapq-policy','assembly-top-ties-gap10'],
+                              ['--risk-policy','low-complexity-nonrisk180-pair'],
+                              ['--min-aligned-bp','80'],['--bin-size','100'],['--anchor-min-retention','0.8']):
+                    with patch.object(mycowes.subprocess,'run') as engine, contextlib.redirect_stderr(io.StringIO()), \
+                         self.assertRaises(SystemExit):
+                        mycowes.main(args+flags)
+                    engine.assert_not_called()
+
+    def test_special_modes_are_not_in_regular_help(self):
+        result=subprocess.run([sys.executable,str(ROOT/'mycowes.py'),'run','--help'],capture_output=True,text=True)
+        self.assertEqual(result.returncode,0)
+        for hidden in ('--special-mode','strict62','explore'):
+            self.assertNotIn(hidden,result.stdout)
 
     def test_cli_help_and_version(self):
         for args in (['--help'], ['--version'], ['run', '--help'], ['reference', '--help']):

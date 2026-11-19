@@ -136,7 +136,7 @@ def find_overlaps(reference, start, end, risks):
     return hits
 
 
-def core_filter_reason(row, min_aligned_bp, min_mapq=20, max_nm=0.08):
+def core_filter_reason(row, min_aligned_bp, min_mapq=20, max_nm=0.08, mapq_policy='native'):
     if row["pair_support_class"] != "paired_target_consistent":
         return "PAIR_SUPPORT_NOT_PAIRED_TARGET_CONSISTENT"
 
@@ -157,7 +157,15 @@ def core_filter_reason(row, min_aligned_bp, min_mapq=20, max_nm=0.08):
     if r1_mapq is None or r2_mapq is None:
         return "MAPQ_MISSING"
 
-    if r1_mapq < min_mapq or r2_mapq < min_mapq:
+    species = row.get('R1_primary_species', '')
+    same_species_pair = (bool(species) and ';' not in species and
+        row.get('R1_primary_class') == row.get('R2_primary_class') == 'TARGET' and
+        species == row.get('R2_primary_species') == row.get('R1_best_target_species') == row.get('R2_best_target_species'))
+    exception_field = {'assembly-ties-only': '_assembly_tie_only',
+                       'assembly-top-ties-gap10': '_assembly_top_tie_gap10'}.get(mapq_policy)
+    if any(q < min_mapq and not (exception_field and same_species_pair and
+           str(row.get(end+exception_field, '0')) == '1')
+           for end, q in [('R1', r1_mapq), ('R2', r2_mapq)]):
         return f"MAPQ_LT{min_mapq}"
 
     if max_nm_rate is None or max_nm_rate > max_nm:
@@ -205,6 +213,7 @@ def main():
     parser.add_argument("--min-aligned-bp", type=int, default=100)
     parser.add_argument("--min-mapq", type=int, default=20)
     parser.add_argument("--max-nm-rate", type=float, default=0.08)
+    parser.add_argument('--mapq-policy', choices=('native', 'assembly-ties-only', 'assembly-top-ties-gap10'), default='native')
 
     args = parser.parse_args()
 
@@ -307,7 +316,7 @@ def main():
                 "audit-table effective_min_aligned_bp does not match --min-aligned-bp"
             )
 
-        reason = core_filter_reason(row, args.min_aligned_bp, args.min_mapq, args.max_nm_rate)
+        reason = core_filter_reason(row, args.min_aligned_bp, args.min_mapq, args.max_nm_rate, args.mapq_policy)
         core_reason_counts[reason] += 1
 
         annotated.update({

@@ -2,9 +2,22 @@
 
 import csv
 import sys
+import argparse
 from collections import defaultdict, Counter
+from risk_filter_policy import POLICIES, decision, load_high_cde, load_low_complexity
 
-riskfn, df2bed, outdir = sys.argv[1:]
+parser = argparse.ArgumentParser()
+parser.add_argument('riskfn')
+parser.add_argument('df2bed')
+parser.add_argument('outdir')
+parser.add_argument('--risk-policy', choices=POLICIES, default='legacy')
+parser.add_argument('--risk-bed')
+args = parser.parse_args()
+riskfn, df2bed, outdir = args.riskfn, args.df2bed, args.outdir
+if args.risk_policy in ('paired-high-cde-only', 'low-complexity-nonrisk100-pair', 'low-complexity-nonrisk200-pair', 'low-complexity-nonrisk180-pair') and not args.risk_bed:
+    parser.error(args.risk_policy + ' requires --risk-bed')
+high_cde = load_high_cde(args.risk_bed) if args.risk_policy == 'paired-high-cde-only' else None
+low_complexity = load_low_complexity(args.risk_bed) if args.risk_policy in ('low-complexity-nonrisk100-pair', 'low-complexity-nonrisk200-pair', 'low-complexity-nonrisk180-pair') else None
 
 
 def is_true(v):
@@ -86,6 +99,7 @@ species = defaultdict(Counter)
 core_reasons = Counter()
 
 audit = []
+policy_audit = []
 
 
 with open(riskfn) as f:
@@ -113,9 +127,10 @@ with open(riskfn) as f:
             x.get("exploratory_core_alignment", "")
         )
 
-        riskfree = is_false(
-            x.get("risk_any", "")
-        )
+        policy = decision(x, args.risk_policy, high_cde, low_complexity)
+        riskfree = not policy['Policy_excluded']
+        policy_audit.append(dict(fragment_id=q, risk_categories=x.get('risk_categories', ''),
+            risk_labels=x.get('risk_labels', ''), QUALITY_pass=x.get('exploratory_core_alignment', ''), **policy))
 
         adapterfree = is_false(
             x.get("adapter_core_in_either", "")
@@ -204,6 +219,16 @@ with open(outdir + "/PRIMARY.keep_qnames.txt","w") as o:
 
     for q in sorted(set(primary)):
         o.write(q + "\n")
+
+with open(outdir + '/risk_policy_audit.tsv', 'w', newline='') as o:
+    columns = ['fragment_id', 'risk_categories', 'risk_labels', 'QUALITY_pass',
+               'Risk_policy', 'Legacy_risk_annotation_any', 'Policy_excluded', 'Policy_reason',
+               'R1_aligned_reference_bp', 'R1_high_CDE_covered_bp',
+               'R2_aligned_reference_bp', 'R2_high_CDE_covered_bp',
+               'R1_non_LC_aligned_bp', 'R2_non_LC_aligned_bp']
+    writer = csv.DictWriter(o, fieldnames=columns, delimiter='\t')
+    writer.writeheader()
+    writer.writerows(policy_audit)
 
 
 with open(outdir + "/STRICT_DF2.keep_qnames.txt","w") as o:
