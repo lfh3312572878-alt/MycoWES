@@ -4,7 +4,7 @@ Software: https://github.com/lfh3312572878-alt/MycoWES
 
 Reference DOI: https://doi.org/10.5281/zenodo.23776490
 
-This separate sidecar provides preparation and usage instructions for the unchanged reference archive. The reference dataset v0.28 is a Zenodo draft with reserved DOI 10.5281/zenodo.23776490, separate from the software version. The release-candidate engine is fixed at [commit 802200ba32e01fbb0a8e86ccb2fd304d97b31ca8](https://github.com/lfh3312572878-alt/MycoWES/commit/802200ba32e01fbb0a8e86ccb2fd304d97b31ca8) on the private `remediation/20261109` branch. Publication and review access are managed by the authors.
+Reference v0.28 is a separate Zenodo draft with reserved DOI 10.5281/zenodo.23776490. This guide accompanies MycoWES v1.0.0-beta.1; the reference version is independent of the software version. Review access is managed by the authors.
 
 Original archive: `MycoWES_Reference_v0.28.tar.gz`, 648,693,043 bytes; recorded SHA256 `6f4749795c9455156a6cbcd33aeff41f4c9bdf498df971c131e142c36a9b2936`. Its `SOURCE_RESOURCES.tsv` and `FILES.tsv` identify supplied FASTA/taxonomy/BED assets; `.mmi` indexes are generated locally and are not distributed. Source-index provenance hashes must not be presented as hashes of a user's rebuilt local index.
 

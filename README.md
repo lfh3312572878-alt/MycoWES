@@ -1,22 +1,10 @@
-# MycoWES
+# MycoWES v1.0.0-beta.1
 
-MycoWES evaluates paired-end microbial sequence evidence in human exome libraries through adapter trimming, host subtraction, competitive alignment, fragment quality/risk filtering, deduplication, anchor assessment and spatial grading. PRIMARY and STRICT results remain separate. Evidence grades are not clinical diagnoses.
-
-The default remains one representative per target species for competition, all competitor genomes, and the complete target assembly set for anchor assessment. Software version: `python3 mycowes.py --version`. Reference release: v0.28.
-
-## Access and licensing
-
-Repository: https://github.com/lfh3312572878-alt/MycoWES
-
-Reference identifier: https://doi.org/10.5281/zenodo.23776490
-
-This release candidate is maintained on the private `remediation/20261109` branch. Its runtime engine is fixed at [commit 802200ba32e01fbb0a8e86ccb2fd304d97b31ca8](https://github.com/lfh3312572878-alt/MycoWES/commit/802200ba32e01fbb0a8e86ccb2fd304d97b31ca8). The reference dataset v0.28 is a Zenodo draft with a reserved DOI, separate from the software version. Publication and review access are managed by the authors.
-
-No code license has been selected. The copyright holder must supply the applicable license before public distribution; the reference record's CC BY metadata does not license this code. See [resource provenance and redistribution](resources/README_v028.md).
+MycoWES assesses paired-end microbial sequence evidence in human whole-exome sequencing data through trimming, human-read subtraction, competitive alignment, fragment filtering, exact-sequence deduplication, anchor assessment and spatial grading. PRIMARY and STRICT are separate output branches.
 
 ## Installation
 
-Use Linux or Ubuntu/WSL with Python, Bash, Cutadapt, minimap2, samtools, GNU coreutils, awk and util-linux. Runtime Python uses the standard library. The dependency environment is in `environment.yml`; historical plotting scripts require their own stated libraries.
+Use Linux or Ubuntu/WSL with Python, Bash, Cutadapt, minimap2, samtools and standard Unix utilities.
 
 ```bash
 conda env create -f environment.yml
@@ -24,49 +12,48 @@ conda activate mycowes
 python3 mycowes.py --version
 ```
 
-## Reference preparation
+Obtain the [v0.28 reference resources](https://doi.org/10.5281/zenodo.23776490) separately. Retain internal paths, set `REF` to the extracted `reference` directory and `MYCOWES_HOST_MMI` to your GRCh38 minimap2 index. See [reference preparation and BAM conversion](docs/advanced.md).
 
-Retain the archive's internal paths. The original reference archive is separate and is not modified by this revision.
+## Run
 
-```bash
-mkdir -p resources
-tar -xzf MycoWES_Reference_v0.28.tar.gz -C resources
-export REF="$PWD/resources/reference"
-python3 - "$REF" <<'PY'
-import subprocess, sys
-from workflow.reference_profiles import bindings
-a = bindings(sys.argv[1])
-subprocess.run(['minimap2', '-x', 'sr', '-d', a['MYCOWES_JOINT_MMI'],
-                a['MYCOWES_JOINT_FASTA']], check=True)
-PY
-```
-
-The human reference is not supplied. Build from the exact selected GRCh38 FASTA, preserve its source/accession and contig inventory, and record its local index identity. An unverified index must not be labelled GRCh38.p14 or CHM13.
+The default uses 18 target representatives for competition, the complete competitor set and all 67 target assemblies for anchors. Quality gates are 100 aligned bases, MAPQ 20 and maximum NM rate 0.08.
 
 ```bash
-minimap2 -x sr -d /path/to/hg38.mmi /path/to/hg38.fa
-export MYCOWES_HOST_MMI=/path/to/hg38.mmi
-python3 mycowes.py reference --reference-root "$REF" --validate
-python3 mycowes.py run --sample sample01 \
-  --r1 /path/to/R1.fastq.gz --r2 /path/to/R2.fastq.gz \
-  --out /path/to/output/sample01 --reference-root "$REF" --nominal-pe-length 150
+python3 mycowes.py run --sample sample01 --r1 R1.fastq.gz --r2 R2.fastq.gz \
+  --out output/sample01 --reference-root "$REF" --nominal-pe-length 150
 ```
 
-Use a new output directory when changing inputs, references or scientific configuration. Default gates are 100 aligned bases per mate, MAPQ20 and maximum NM rate 0.08; the effective length gate is the smaller of configured length and nominal PE length. See [rules](docs/rules.md), [presets and BAM conversion](docs/advanced.md), and [versions](docs/versions.md).
+For the complete-target analysis used in the current study:
 
-Historical compartment/profile abbreviations are defined in [terms](docs/terms.md); their resource paths are kept stable.
+```bash
+python3 mycowes.py run --sample sample01 --r1 R1.fastq.gz --r2 R2.fastq.gz \
+  --out output/sample01_complete --reference-root "$REF" --nominal-pe-length 150 \
+  --difficulty hard --min-aligned-bp 100 --min-mapq 20 --max-nm-rate 0.08 \
+  --mapq-policy assembly-top-ties-gap10 \
+  --risk-policy low-complexity-nonrisk180-pair
+```
 
-## Validation and included analysis sources
+`--host-depleted` accepts already trimmed, paired host-unmapped input. Use a new output directory when inputs, references or settings change. Parameter scans retain their per-point gates. See [profiles](docs/versions.md), [evidence rules](docs/rules.md) and [filter policies](docs/filter_policies.md).
 
-Run the small [native synthetic example](examples/README.md). It validates software, not manuscript performance. Unit tests alone do not establish scientific reproducibility.
+## CPU profiles
+
+The default uses 8 / 32 / 8 / 4 threads for Cutadapt / host minimap2 / microbial minimap2 / samtools additional threads. Add `--cpu-profile light` for 2 / 2 / 2 / 1. Anchor minimap2 uses 2 threads. These are per-program settings; overlapping processes and I/O add threads. Light mode reduces concurrency, not index memory requirements. CPU availability produces a warning, without changing scientific settings or automatically retrying.
+
+## Results and verification
+
+Initial assignment, quality-pass fragments, filtered fragments and final independent coordinates are different measurements. Retention is not itself a Supportive/Strong call; unavailable or anchor-failed evidence is not a negative result.
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s tests -v
-for f in workflow/*.sh config/default.env; do bash -n "$f"; done
 python3 examples/native_smoke.py --out /tmp/mycowes-native-example
 python3 reproduce/summarize_saved.py
 ```
 
-The shared saved-output entry validates and summarizes the supplied historical spike-in summary without running a mapper. The [analysis source map](docs/paper_mapping.tsv) lists the included scripts, configurations, inputs and output locations. Historical sources are in `reproduce/historical/`, with byte-level provenance in `reproduce/SOURCE_INDEX.tsv`. Several retain their original project paths: they are source records, not turnkey launchers. Do not run them against the original project tree.
+The [synthetic example](examples/README.md) exercises the native pipeline. [Analysis sources](reproduce/README.md), [figure bindings](docs/current_analysis_profiles.tsv) and [source identities](reproduce/SOURCE_INDEX.tsv) are supplied separately from patient data, reads, BAMs and large indexes.
 
-The code package contains the engine, environment, synthetic example, selected historical scripts, small non-patient summaries and resource/version dictionaries. Reference construction entries operate on explicit supplied inputs. Patient-level tables, clinical correspondence, original reads, BAMs, private access URLs and large indexes are excluded from the code package.
+## Resources and licensing
+
+- Software: [lfh3312572878-alt/MycoWES](https://github.com/lfh3312572878-alt/MycoWES)
+- Reference v0.28: [10.5281/zenodo.23776490](https://doi.org/10.5281/zenodo.23776490), reserved for the reference draft, not a software DOI.
+
+Code licensing remains to be specified by the copyright holder. Reference CC BY metadata does not license the software or override third-party resource terms.

@@ -110,6 +110,25 @@ def collect_case(output):
     return {'filter_counts': filters, 'branches': branches}
 
 
+def comparable_case(observed):
+    return {'filter_counts':observed['filter_counts'], 'branches':{
+        branch:[{key:value for key,value in row.items() if not Path(value).is_absolute()} for row in rows]
+        for branch,rows in observed['branches'].items()}}
+
+
+def managed_quality(output):
+    selection=json.loads((output/'reference_selection.json').read_text())
+    manifest={r['key']:r['value'] for r in table(output/'run_manifest.tsv')}
+    want={'min_aligned_bp':100,'min_mapq':20,'max_nm_rate':.08}
+    assert selection['preset']=='standard' and selection['quality_thresholds']==want
+    assert selection['effective_min_aligned_bp']==100 and set(selection['config_files_sha256'])=={'default.env','relax2.env'}
+    assert (int(manifest['effective_min_aligned_bp']),int(manifest['core_min_mapq']),float(manifest['core_max_nm_rate']))==(100,20,.08)
+    assert manifest['quality_preset']=='standard'
+    return {'preset':selection['preset'],'configured':selection['quality_thresholds'],'effective_min_aligned_bp':100,
+            'native_min_mapq':int(manifest['core_min_mapq']),'native_max_nm_rate':float(manifest['core_max_nm_rate']),
+            'config_files_sha256':selection['config_files_sha256']}
+
+
 def check_case(name, observed, expected):
     filters = observed['filter_counts']
     for key, value in expected.get('filter_counts', {}).items():
@@ -140,7 +159,7 @@ def main():
     tools = {name: shutil.which(name) for name in ('minimap2', 'samtools', 'cutadapt', 'bash')}
     if not all(tools.values()) or sys.platform != 'linux':
         parser.error('Run in Linux/WSL with minimap2, samtools, cutadapt and bash in PATH')
-    engine_files = [ROOT / 'mycowes.py', ROOT / 'config/default.env', ROOT / 'VERSION'] + sorted((ROOT / 'workflow').glob('*.py')) + sorted((ROOT / 'workflow').glob('*.sh'))
+    engine_files = [ROOT / 'mycowes.py', *sorted((ROOT/'config').glob('*.env')), ROOT / 'VERSION'] + sorted((ROOT / 'workflow').glob('*.py')) + sorted((ROOT / 'workflow').glob('*.sh'))
     engine_sha256 = {str(path.relative_to(ROOT)): digest(path) for path in engine_files}
     out.mkdir(parents=True)
     rng = random.Random(SEED)
@@ -154,6 +173,8 @@ def main():
     commands.append(command)
     run_command(command, out / 'host_index.log')
     observations = {}
+    effective_quality = {}
+    equivalence = None
     input_digests = {}
     for name, spec in expected['cases'].items():
         case_dir = out / name
@@ -178,7 +199,7 @@ def main():
             input_digests[str(path.relative_to(out))] = digest(path)
         command = [sys.executable, str(ROOT / 'mycowes.py'), 'run', '--sample', name,
                    '--r1', str(r1), '--r2', str(r2), '--out', str(case_dir / 'run'),
-                   '--reference-root', str(reference), '--nominal-pe-length', '150', '--difficulty', 'normal']
+                   '--reference-root', str(reference), '--nominal-pe-length', '150']
         if 'bin_size' in spec:
             command += ['--bin-size', str(spec['bin_size'])]
         commands.append(command)
@@ -186,6 +207,16 @@ def main():
         run_command(command, case_dir / 'run.log', env)
         observations[name] = collect_case(case_dir / 'run')
         check_case(name, observations[name], spec)
+        effective_quality[name] = managed_quality(case_dir/'run')
+        if name == 'normal':
+            explicit = command.copy();explicit[explicit.index('--out')+1]=str(case_dir/'run_explicit_standard')
+            explicit += ['--preset','standard','--min-aligned-bp','100','--min-mapq','20','--max-nm-rate','0.08']
+            commands.append(explicit);run_command(explicit,case_dir/'run_explicit_standard.log',env)
+            explicit_result=collect_case(case_dir/'run_explicit_standard');check_case(name,explicit_result,spec)
+            assert comparable_case(observations[name])==comparable_case(explicit_result), 'Default/explicit100/20/.08 native results differ'
+            equivalence={'status':'PASS','same_inputs':True,'default':comparable_case(observations[name]),
+                         'explicit':comparable_case(explicit_result),'explicit_quality':managed_quality(case_dir/'run_explicit_standard'),
+                         'comparison':'Exact filter counts and PRIMARY/STRICT branch records, excluding absolute file paths'}
     versions = {}
     for name in ('minimap2', 'samtools', 'cutadapt'):
         text = subprocess.check_output([tools[name], '--version'], text=True).splitlines()
@@ -196,6 +227,7 @@ def main():
                'engine_sha256': engine_sha256,
                'expected_source_sha256': digest(ROOT / 'examples/expected_summary.json'),
                'observed': observations,
+               'managed_quality':effective_quality,'default_standard_equivalence':equivalence,
                'scope': 'Actual tools and current code only; not a historical manuscript rerun.'}
     (out / 'native_validation_summary.json').write_text(json.dumps(summary, indent=2) + '\n')
     print('PASS: ' + str(out / 'native_validation_summary.json'))
