@@ -2,18 +2,21 @@
 import csv, gzip, hashlib, os, random, shutil, subprocess, time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from reproduction_paths import ROOTS as _paths
 
-OUT=Path('/data/h011/project/analysis/MycoWES_Fig3_Fig4_PRE77c4e85_FINAL_20260930T200113Z')
+OUT=_paths.out_dir
 SOFT=OUT/'tmp/software_77c4e85'
-UP=Path('/data/h011/project/analysis/PRJNA1079014_MycoWES_v0.3-beta2_BroadExclusion_FINAL_2ecc63b_ALL69')
+UP=Path(str(_paths.project_root / "analysis/PRJNA1079014_MycoWES_v0.3-beta2_BroadExclusion_FINAL_2ecc63b_Validation62"))
 SEEDS=[20260930,20260931,20260932,20260933,20260934]
 DOSES=[0,1,2,3,5,10,20,50]
 THREADS=8
 SPECIES={
- 'M_arginini':('Mycoplasmopsis_arginini','ERR14129335','GCF_965278885.1',Path('/data/h011/project/analysis/MycoWES_external_spikein_v1/arginini_replacement_v2/raw_WGS/ERR14129335_1.fastq.gz'),Path('/data/h011/project/analysis/MycoWES_external_spikein_v1/arginini_replacement_v2/raw_WGS/ERR14129335_2.fastq.gz')),
- 'M_hominis':('Metamycoplasma_hominis','SRR1655810','NOT_AVAILABLE',Path('/data/h011/project/analysis/MycoWES_external_spikein_v1/raw_WGS/SRR1655810_1.fastq.gz'),Path('/data/h011/project/analysis/MycoWES_external_spikein_v1/raw_WGS/SRR1655810_2.fastq.gz')),
- 'M_hyorhinis':('Mesomycoplasma_hyorhinis','SRR15402804','NOT_AVAILABLE',Path('/data/h011/project/analysis/MycoWES_external_spikein_v1/raw_WGS/SRR15402804_1.fastq.gz'),Path('/data/h011/project/analysis/MycoWES_external_spikein_v1/raw_WGS/SRR15402804_2.fastq.gz')),
- 'M_salivarium':('Metamycoplasma_salivarium','SRR35637520','NOT_AVAILABLE',Path('/data/h011/project/analysis/MycoWES_external_spikein_v1/raw_WGS/SRR35637520_1.fastq.gz'),Path('/data/h011/project/analysis/MycoWES_external_spikein_v1/raw_WGS/SRR35637520_2.fastq.gz')),
+ 'M_arginini':('Mycoplasmopsis_arginini','ERR14129335','GCF_965278885.1',Path(str(_paths.project_root / "analysis/MycoWES_external_spikein_v1/raw_WGS/ERR14129335_1.fastq.gz")),Path(str(_paths.project_root / "analysis/MycoWES_external_spikein_v1/raw_WGS/ERR14129335_2.fastq.gz"))),
+ 'M_hominis':('Metamycoplasma_hominis','SRR1655810','NOT_AVAILABLE',Path(str(_paths.project_root / "analysis/MycoWES_external_spikein_v1/raw_WGS/SRR1655810_1.fastq.gz")),Path(str(_paths.project_root / "analysis/MycoWES_external_spikein_v1/raw_WGS/SRR1655810_2.fastq.gz"))),
+ 'M_hyorhinis':('Mesomycoplasma_hyorhinis','SRR15402804','NOT_AVAILABLE',Path(str(_paths.project_root / "analysis/MycoWES_external_spikein_v1/raw_WGS/SRR15402804_1.fastq.gz")),Path(str(_paths.project_root / "analysis/MycoWES_external_spikein_v1/raw_WGS/SRR15402804_2.fastq.gz"))),
+ 'M_salivarium':('Metamycoplasma_salivarium','SRR35637520','NOT_AVAILABLE',Path(str(_paths.project_root / "analysis/MycoWES_external_spikein_v1/raw_WGS/SRR35637520_1.fastq.gz")),Path(str(_paths.project_root / "analysis/MycoWES_external_spikein_v1/raw_WGS/SRR35637520_2.fastq.gz"))),
 }
 
 def read_tsv(path):
@@ -64,7 +67,7 @@ if len(backgrounds)!=3:raise SystemExit('expected three frozen spike backgrounds
 # Runtime config: identical scientific values, only absolute existing tools and lower engineering concurrency.
 cfg=OUT/'01_spikein_design/runtime_77c4e85_4threads.env'
 base=(SOFT/'config/default.env').read_text()
-cfg.write_text(base+'\nCUTADAPT=/data/h011/project/envs/mycowes_beta3_runtime/bin/cutadapt\nMINIMAP2=/data/h011/project/envs/mycowes_beta3_runtime/bin/minimap2\nSAMTOOLS=/usr/local/bin/samtools\nPYTHON=/usr/bin/python3\nMYCOWES_HOST_MMI=/data/h011/project/ref/human/hg38.mmi\nTHREADS=4\nSAMTOOLS_THREADS=2\n')
+cfg.write_text(base+f'\nCUTADAPT=cutadapt\nMINIMAP2=minimap2\nSAMTOOLS=samtools\nPYTHON={_sys.executable}\nMYCOWES_HOST_MMI={_paths.ref_root / "human/hg38.mmi"}\nTHREADS=4\nSAMTOOLS_THREADS=2\n')
 
 # One scan per source creates five independent fixed-seed selections of up to 50 true pairs.
 spike_dir=OUT/'01_spikein_design/spike_pairs_by_background_v2'

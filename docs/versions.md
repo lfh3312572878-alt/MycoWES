@@ -1,18 +1,16 @@
-# Versions and analysis profiles
+# Version and reference identity
 
-Software: **MycoWES v1.0.0-beta.1**. Reference resources: **v0.28**.
+The software reports `MycoWES 1.0.0`. Reference resources retain version 0.28.
+The engine records its source digest, actual input/reference identities, preset,
+quality thresholds, risk/MAPQ policies and execution settings in every run.
 
-| Profile | Competitive targets | Competitors | Anchor targets | Length / MAPQ / NM |
-| --- | --- | --- | --- | --- |
-| Default standard | 18 representatives | Complete set | 67 assemblies | 100 / 20 / 0.08 |
-| Explicit relax2 | 18 representatives | Complete set | 67 assemblies | 60 / 5 / 0.12 |
-| Current study | 67 assemblies | Complete set | 67 assemblies | 100 / 20 / 0.08 |
-| Parameter scans | Recorded binding | Recorded set | Recorded target set | Per-point settings |
+The manuscript preset uses 67-target competition and 67-target anchor assessment.
+The default standard and fast profiles use 18-target competition and the shared
+67-target anchor pool. All retain the complete competitor set. PRIMARY and STRICT
+do not select reference multiplicity.
 
-The current study selects `--difficulty hard --mapq-policy assembly-top-ties-gap10 --risk-policy low-complexity-nonrisk180-pair`. PRIMARY and STRICT are output branches, not quality presets. See [filter policies](filter_policies.md) for rules and development context.
-
-The default CPU profile is 8 / 32 / 8 / 4; `--cpu-profile light` selects 2 / 2 / 2 / 1. Anchor minimap2 uses 2 threads. CPU profiles do not change scientific settings.
-
-`current_analysis_profiles.tsv` maps analyses to configurations and frozen source tables. `paper_mapping.tsv` and `reproduce/SOURCE_INDEX.tsv` identify earlier sources separately. Saved results retain their actual execution identities; a version-label or packaging change is not a new analysis or timing measurement.
-
-`PACKAGE_IDENTITY.json` and `SHA256SUMS` identify this distribution. The reference DOI and licensing are separate from the software version.
+Source scripts under `reproduce/historical/` retain their original scientific
+design and commit labels. Root-parameter adaptations are listed in
+`reproduce/SOURCE_INDEX.tsv`. Current figure calculations use the separate
+source-data archive. Software-version naming does not replace a recorded analysis
+identity.

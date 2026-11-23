@@ -1,59 +1,57 @@
-# MycoWES v1.0.0-beta.1
+# MycoWES v1.0.0
 
-MycoWES assesses paired-end microbial sequence evidence in human whole-exome sequencing data through trimming, human-read subtraction, competitive alignment, fragment filtering, exact-sequence deduplication, anchor assessment and spatial grading. PRIMARY and STRICT are separate output branches.
+MycoWES evaluates paired-end Mollicutes evidence in human exome libraries through
+trimming, host subtraction, competitive alignment, fragment quality/risk filtering,
+deduplication, anchor assessment and spatial grading.
 
-## Installation
+## Install and run
 
-Use Linux or Ubuntu/WSL with Python, Bash, Cutadapt, minimap2, samtools and standard Unix utilities.
+Linux or WSL requires Python 3, Bash, Cutadapt, minimap2, samtools, GNU coreutils,
+awk and util-linux. Runtime Python uses only the standard library.
 
 ```bash
 conda env create -f environment.yml
 conda activate mycowes
+export MYCOWES_HOST_MMI=/path/to/hg38.sr.mmi
+python3 mycowes.py run --preset manuscript --reference-root /path/to/reference \
+  --sample sample01 --r1 R1.fastq.gz --r2 R2.fastq.gz --out output/sample01 \
+  --nominal-pe-length 150 --threads 4 --samtools-threads 1
+```
+
+Reference resources: v0.28, https://doi.org/10.5281/zenodo.23776490.
+Retain the `baseline_v028/` and `ONE_REP_TARGET_DEVELOPMENT/` directory layout.
+
+`manuscript` selects 67 target assemblies for competition and anchor assessment,
+100 bp / MAPQ20 / NM0.08, assembly-top-ties-gap10, and
+low-complexity-nonrisk180-pair. `fast` uses 18 target representatives in competition
+with the shared 67-assembly anchor pool. The default `standard` preserves the
+single-representative binding, native MAPQ and legacy risk rules. All presets use
+the same complete competitor library, jointly indexed with the selected targets
+for a single competitive alignment. Explicit settings are saved per run.
+
+Initial candidates and quality-filtered evidence are distinct stages. Paired
+target support uses a shared taxonomic lowest common ancestor, not a global
+guarantee of unique species agreement between mates; the low-MAPQ and
+low-complexity exceptions have additional species-agreement requirements. See
+`docs/methods_and_parameters.md` for the exact executed rules. NM0.08 denotes a
+maximum per-mate normalized edit distance NM/L_align of 0.08.
+
+Use `--host-depleted` only for paired reads already trimmed and retained as both
+human-unmapped. PRIMARY and STRICT are separate branches. The final species
+summary reports independent coordinates, anchor retention, tiers and spatial-null
+statistics. See `docs/methods_and_parameters.md` for definitions and BAM conversion
+in `docs/advanced.md`.
+
+## Verify and reproduce
+
+```bash
 python3 mycowes.py --version
+python3 -B -m unittest discover -s tests -v
+python3 examples/native_smoke.py --out /tmp/mycowes-native-smoke
+python3 reproduce/summarize_saved.py --self-test
 ```
 
-Obtain the [v0.28 reference resources](https://doi.org/10.5281/zenodo.23776490) separately. Retain internal paths, set `REF` to the extracted `reference` directory and `MYCOWES_HOST_MMI` to your GRCh38 minimap2 index. See [reference preparation and BAM conversion](docs/advanced.md).
-
-## Run
-
-The default uses 18 target representatives for competition, the complete competitor set and all 67 target assemblies for anchors. Quality gates are 100 aligned bases, MAPQ 20 and maximum NM rate 0.08.
-
-```bash
-python3 mycowes.py run --sample sample01 --r1 R1.fastq.gz --r2 R2.fastq.gz \
-  --out output/sample01 --reference-root "$REF" --nominal-pe-length 150
-```
-
-For the complete-target analysis used in the current study:
-
-```bash
-python3 mycowes.py run --sample sample01 --r1 R1.fastq.gz --r2 R2.fastq.gz \
-  --out output/sample01_complete --reference-root "$REF" --nominal-pe-length 150 \
-  --difficulty hard --min-aligned-bp 100 --min-mapq 20 --max-nm-rate 0.08 \
-  --mapq-policy assembly-top-ties-gap10 \
-  --risk-policy low-complexity-nonrisk180-pair
-```
-
-`--host-depleted` accepts already trimmed, paired host-unmapped input. Use a new output directory when inputs, references or settings change. Parameter scans retain their per-point gates. See [profiles](docs/versions.md), [evidence rules](docs/rules.md) and [filter policies](docs/filter_policies.md).
-
-## CPU profiles
-
-The default uses 8 / 32 / 8 / 4 threads for Cutadapt / host minimap2 / microbial minimap2 / samtools additional threads. Add `--cpu-profile light` for 2 / 2 / 2 / 1. Anchor minimap2 uses 2 threads. These are per-program settings; overlapping processes and I/O add threads. Light mode reduces concurrency, not index memory requirements. CPU availability produces a warning, without changing scientific settings or automatically retrying.
-
-## Results and verification
-
-Initial assignment, quality-pass fragments, filtered fragments and final independent coordinates are different measurements. Retention is not itself a Supportive/Strong call; unavailable or anchor-failed evidence is not a negative result.
-
-```bash
-PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s tests -v
-python3 examples/native_smoke.py --out /tmp/mycowes-native-example
-python3 reproduce/summarize_saved.py
-```
-
-The [synthetic example](examples/README.md) exercises the native pipeline. [Analysis sources](reproduce/README.md), [figure bindings](docs/current_analysis_profiles.tsv) and [source identities](reproduce/SOURCE_INDEX.tsv) are supplied separately from patient data, reads, BAMs and large indexes.
-
-## Resources and licensing
-
-- Software: [lfh3312572878-alt/MycoWES](https://github.com/lfh3312572878-alt/MycoWES)
-- Reference v0.28: [10.5281/zenodo.23776490](https://doi.org/10.5281/zenodo.23776490), reserved for the reference draft, not a software DOI.
-
-Code licensing remains to be specified by the copyright holder. Reference CC BY metadata does not license the software or override third-party resource terms.
+Reference builders and historical analysis sources are described in
+`reproduce/README.md`. Figure workbooks and calculation scripts are distributed
+in the separate source-data archive. Code is MIT licensed; reference and
+third-party resources retain their own terms.

@@ -2,11 +2,65 @@
 
 import argparse
 import csv
+import math
 import os
 import re
 import subprocess
 from pathlib import Path
 from collections import defaultdict, Counter
+
+def exact_spatial_dispersion_stats(
+    c_ind: int,
+    c_max: int,
+    b_obs: int,
+    effective_genome_bp: int,
+    bin_bp: int = 250,
+    background_leakage_rate: float = 0.01,
+) -> dict:
+    """
+    Quantify statistical significance against a single-bin focal artifact null.
+
+    Null model H0 (Localized capture/homology pileup):
+      Off-target capture or unmasked short homology concentrates coordinates in
+      a single focal 250-bp bin (observed maximum-occupancy bin count `c_max`),
+      while each coordinate has at most probability `eps = background_leakage_rate`
+      (default 0.01) of escaping outside that focal bin by chance.
+      The number of non-focal independent coordinates is `k_out = c_ind - c_max`.
+      Under H0, the upper-tail probability of observing >= k_out escaped coordinates is:
+          P(K_out >= k_out | H0) = sum_{j=k_out}^{c_ind} C(c_ind, j) * eps^j * (1 - eps)^(c_ind - j).
+      For any Strong call (c_ind >= 5 and Fmax = c_max / c_ind <= 0.50),
+      k_out >= ceil(c_ind / 2) >= 3, guaranteeing P < 1e-4.
+
+    Uniform reference metric (Multi-locus colonization expectation):
+      Expected occupied bins under uniform genomic shearing across M = ceil(L_eff / bin_bp) bins:
+          E[B | Uniform] = M * (1 - ((M - 1) / M) ** c_ind).
+    """
+    if c_ind <= 0 or b_obs <= 0 or c_max < 0 or c_max > c_ind or effective_genome_bp <= 0:
+        return {
+            "total_effective_bins": "NA",
+            "expected_bins_uniform": "NA",
+            "p_focal_artifact_null": "NA",
+        }
+
+    m_bins = max(2, math.ceil(effective_genome_bp / bin_bp))
+    expected_uniform = m_bins * (1.0 - ((m_bins - 1.0) / m_bins) ** c_ind)
+
+    k_out = c_ind - c_max
+    if k_out <= 0:
+        p_null = 1.0
+    else:
+        eps = background_leakage_rate
+        p_null = sum(
+            math.comb(c_ind, j) * (eps ** j) * ((1.0 - eps) ** (c_ind - j))
+            for j in range(k_out, c_ind + 1)
+        )
+        p_null = min(1.0, max(0.0, p_null))
+
+    return {
+        "total_effective_bins": m_bins,
+        "expected_bins_uniform": round(expected_uniform, 4),
+        "p_focal_artifact_null": float(f"{p_null:.4e}"),
+    }
 
 def anchor_status(retention, minimum):
     return "PASS" if retention >= minimum else "FAIL"
@@ -664,7 +718,10 @@ for species in sorted(selected):
             "largest_bin_fragments":"NA",
             "largest_bin_fraction":"NA",
             "distinct_contigs":"NA",
-            "dispersion_tier":"ANCHOR_FAIL"
+            "dispersion_tier":"ANCHOR_FAIL",
+            "total_effective_bins":"NA",
+            "expected_bins_uniform":"NA",
+            "p_focal_artifact_null":"NA"
         })
 
         continue
@@ -801,7 +858,8 @@ for species in sorted(selected):
         "largest_bin_fragments":largest,
         "largest_bin_fraction":largest_fraction,
         "distinct_contigs":len(by_contig),
-        "dispersion_tier":tier
+        "dispersion_tier":tier,
+        **exact_spatial_dispersion_stats(coord_n,largest,occupied_bins,srow["assembly_bp"],BIN)
     })
 
 
@@ -937,7 +995,10 @@ cols=[
     "largest_bin_fragments",
     "largest_bin_fraction",
     "distinct_contigs",
-    "dispersion_tier"
+    "dispersion_tier",
+    "total_effective_bins",
+    "expected_bins_uniform",
+    "p_focal_artifact_null"
 ]
 
 with open(OUT/"07_species_dedup_dispersion_summary.tsv","w") as o:
@@ -951,7 +1012,9 @@ with open(OUT/"07_species_dedup_dispersion_summary.tsv","w") as o:
         for c in cols:
             v=x[c]
 
-            if isinstance(v,float):
+            if c == "p_focal_artifact_null" and isinstance(v,float):
+                vals.append(str(v))
+            elif isinstance(v,float):
                 vals.append(f"{v:.6f}")
             else:
                 vals.append(str(v))

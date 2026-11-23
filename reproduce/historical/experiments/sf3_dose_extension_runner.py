@@ -4,9 +4,12 @@ import fcntl
 import importlib.util
 import json
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from reproduction_paths import ROOTS as _paths
 
-ROOT = Path('/data/h011/project/analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/Fig3_Fig4_TXT_COMPLETION_EXEC_20261010_v2')
-SOURCE = ROOT / 'scripts/confirmed_branches.py'
+ROOT = _paths.out_dir
+SOURCE = Path(__file__).with_name('confirmed_branches.py')
 DOSES = (1, 2, 3, 5, 10, 20)
 
 

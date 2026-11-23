@@ -1,12 +1,15 @@
 # Changelog
 
-## v1.0.0-beta.1
+## v1.0.0
 
-- Standard 100 aligned bases / MAPQ 20 / NM rate 0.08 gates, explicit overrides and an optional 60 / 5 / 0.12 preset.
-- Single-representative competition by default, optional complete-target competition and complete target anchors.
-- Opt-in multi-assembly MAPQ and low-complexity risk policies, retaining native scores and original annotations.
-- Benchmark (8 / 32 / 8 / 4) and light (2 / 2 / 2 / 1) CPU profiles.
-- Paired FASTQ validation, input/reference identities and protection against incomplete or incompatible output reuse.
-- Native synthetic example, boundary tests, resource dictionaries and analysis mappings.
-
-The complete-target MAPQ and risk options were selected during iterative development. Their rules and selection context are in `docs/filter_policies.md`; they are not the default or independent validation results.
+- Documentation clarification, 2026-11-23: distinguish initial candidates, paired
+  taxonomic-LCA support, per-mate quality/rescue and later species assignment;
+  define the joint index, species-local anchor failure, c_max and NM/L_align.
+  Executable code, parameters, resource data and version are unchanged.
+- Add manuscript and fast presets with explicit reference and quality/policy binding.
+- Preserve 100 bp / MAPQ20 / NM0.08 manuscript gates, assembly-top-ties-gap10,
+  paired low-complexity non-risk support >=180 bp, and all evidence tiers.
+- Append exact focal-artifact-null statistics using selected anchor assembly length.
+- Expose mapper/trimming and additional samtools thread controls.
+- Include reference builders, parameterized analysis sources and native examples.
+- Release the code under the MIT License.

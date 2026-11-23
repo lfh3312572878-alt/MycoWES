@@ -6,20 +6,23 @@ import os
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from reproduction_paths import ROOTS as _paths
 
 
-FORMAL_ROOT = Path("/data/h011/project/ref/MycoWES_Ref_v0.1/25_reference_qc_beta_v0.28")
+FORMAL_ROOT = Path(str(_paths.ref_root / "MycoWES_Ref_v0.1/25_reference_qc_beta_v0.28"))
 FORMAL_TAX = FORMAL_ROOT / "06_metadata/AB_CDE_reference_taxonomy_lineage_map.reference_qc_beta_v0.28.tsv"
 FORMAL_ID = FORMAL_ROOT / "06_metadata/identity.tsv"
 FORMAL_FASTA = FORMAL_ROOT / "01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.fa"
 FORMAL_MMI = FORMAL_ROOT / "01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.sr.mmi"
-SUP = Path("/data/h011/project/analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/FIG345_MISSING_MATERIALS_SUPPLEMENT_20261014T182500/SF1")
+SUP = Path(str(_paths.project_root / "analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/FIG345_MISSING_MATERIALS_SUPPLEMENT_20261014T182500/SF1"))
 RANKING = SUP / "reference_chain/frozen_preANI_selection_v0.8/MycoWES_preANI_candidate_ranking_v0.8.tsv"
 RETAINED = SUP / "reference_chain/frozen_final_AD_assembly_decisions_v0.21/MycoWES_AD_retained_fasta_manifest_v0.21.tsv"
 CLUSTERS = SUP / "reference_chain/frozen_near_clone_clusters_v0.11/MycoWES_near_clone_cluster_membership_v0.11.tsv"
-SOURCE_META = Path("/data/h011/project/analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/Fig3_Fig4_TXT_COMPLETION_20261010_v1/SPIKE_SOURCE_METADATA.tsv")
-SOURCE_PROV = Path("/data/h011/project/analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/Fig3_Fig4_TXT_COMPLETION_20261010_v1/SPIKE_SOURCE_PROVENANCE_UPDATE.tsv")
-STAGE3 = Path("/data/h011/project/analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/MYCOWES_METHOD_RESEARCH_20261015T023520/phase3")
+SOURCE_META = Path(str(_paths.project_root / "analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/Fig3_Fig4_TXT_COMPLETION_20261010_v1/SPIKE_SOURCE_METADATA.tsv"))
+SOURCE_PROV = Path(str(_paths.project_root / "analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/Fig3_Fig4_TXT_COMPLETION_20261010_v1/SPIKE_SOURCE_PROVENANCE_UPDATE.tsv"))
+STAGE3 = Path(str(_paths.project_root / "analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/MYCOWES_METHOD_RESEARCH_20261015T023520/phase3"))
 RUNS = {"ERR14129335", "SRR1655810", "SRR15402804", "SRR35637520"}
 
 
@@ -269,6 +272,4 @@ def main(out_arg):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        raise SystemExit("usage: build_reference_arm_manifest.py OUTPUT_DIR")
-    main(sys.argv[1])
+    main(_paths.out_dir)

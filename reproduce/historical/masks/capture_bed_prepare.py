@@ -1,8 +1,11 @@
 import csv,json,zipfile,hashlib
 from pathlib import Path
-root=Path('/data/h011/project/analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/CAPTURE_BED_REGION_20261013_v1');root.mkdir(exist_ok=True)
-fai=Path('/data/h011/project/ref/human/hg38.fa.fai');lengths={x.split('\t')[0]:int(x.split('\t')[1]) for x in fai.read_text().splitlines()}
-specs=[('Agilent_V6','/data/h011/project/ref/capture_bed/Agilent/S07604514_hg38.zip','S07604514_Regions.bed','target_regions'),('Agilent_V8','/data/h011/project/ref/capture_bed/Agilent/S33266436_hg38.zip','S33266436_Regions.bed','target_regions'),('IDT_xGen_v2','/data/h011/project/ref/Fig4_external_resources_20261008_v1/normalized/IDT_xGen_Exome_v2.targets.hg38.normalized.sorted.bed','', 'target_regions'),('Twist_Exome_2','/data/h011/project/ref/Fig4_external_resources_20261008_v1/normalized/Twist_Exome_2.0_v2.0.2.covered_targets.hg38.normalized.sorted.bed','', 'covered_targets_separate_stratum')]
+import sys as _sys
+_sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from reproduction_paths import ROOTS as _paths
+root=_paths.out_dir;root.mkdir(parents=True,exist_ok=True)
+fai=Path(str(_paths.ref_root / "human/hg38.fa.fai"));lengths={x.split('\t')[0]:int(x.split('\t')[1]) for x in fai.read_text().splitlines()}
+specs=[('Agilent_V6',str(_paths.ref_root / "capture_bed/Agilent/S07604514_hg38.zip"),'S07604514_Regions.bed','target_regions'),('Agilent_V8',str(_paths.ref_root / "capture_bed/Agilent/S33266436_hg38.zip"),'S33266436_Regions.bed','target_regions'),('IDT_xGen_v2',str(_paths.ref_root / "Fig4_external_resources_20261008_v1/normalized/IDT_xGen_Exome_v2.targets.hg38.normalized.sorted.bed"),'', 'target_regions'),('Twist_Exome_2',str(_paths.ref_root / "Fig4_external_resources_20261008_v1/normalized/Twist_Exome_2.0_v2.0.2.covered_targets.hg38.normalized.sorted.bed"),'', 'covered_targets_separate_stratum')]
 rows=[];bad=[]
 for kit,source,member,kind in specs:
     p=Path(source);text=zipfile.ZipFile(p).read(member).decode() if member else p.read_text();intervals=[]

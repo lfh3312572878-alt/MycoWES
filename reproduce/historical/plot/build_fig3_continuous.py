@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Integrate existing post-host-depletion benchmark outputs and draw Fig. 3."""
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from reproduction_paths import ROOTS as _paths
 import csv, json, math, os, shutil, sys, hashlib
 from collections import Counter, defaultdict
 
@@ -10,7 +13,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 
-ROOT = Path("/data/h011/project/analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1")
+ROOT = Path(str(_paths.project_root / "analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1"))
 COND = ROOT / "Batch2_analysis_20261003T173758_296088/conditions_423.tsv"
 AUDIT = ROOT / "Figure3_TXT_INPUTS_20261009_184422_fm7xwg12"
 BRACKEN = ROOT / "Batch2_BRACKEN_y29amrer/Bracken_species_results.tsv"
@@ -504,6 +507,4 @@ def main(out):
     print(json.dumps(summary, ensure_ascii=False))
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        raise SystemExit("usage: build_fig3.py OUTPUT_DIRECTORY")
-    main(sys.argv[1])
+    main(_paths.out_dir)

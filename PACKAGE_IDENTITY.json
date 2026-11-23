@@ -1,37 +1,17 @@
 {
-  "public_name": "MycoWES v1.0.0-beta.1",
-  "default_cpu_profile": "benchmark",
-  "cpu_threads_order": "cutadapt/host_mapper/microbial_mapper/samtools_additional",
-  "cpu_profiles": {
-    "benchmark": [
-      8,
-      32,
-      8,
-      4
-    ],
-    "light": [
-      2,
-      2,
-      2,
-      1
-    ]
-  },
-  "anchor_mapper_threads": 2,
-  "explicit_only_modes": [
-    "strict62",
-    "explore"
-  ],
-  "reference_release": "v0.28",
-  "default_reference_mode": "ONE_REP_TARGET_DEVELOPMENT",
-  "manuscript_reference_mode": "MULTI_TARGET_V028",
-  "manuscript_quality": [
-    100,
-    20,
-    0.08
-  ],
+  "name": "MycoWES",
+  "version": "1.0.0",
+  "engine_sha256": "0069d7e80402ffc8fbe9df10e63d7a4902eaf4668de8976c27298cf373a88172",
+  "license": "MIT",
+  "reference_version": "0.28",
+  "reference_identifier": "10.5281/zenodo.23776490",
+  "software_record": "24090329",
+  "default_preset": "standard",
+  "manuscript_preset": "manuscript",
+  "manuscript_quality": [100, 20, 0.08],
   "manuscript_mapq_policy": "assembly-top-ties-gap10",
   "manuscript_risk_policy": "low-complexity-nonrisk180-pair",
-  "code_license": "Not specified by copyright holder",
-  "runtime_version": "MycoWES v1.0.0-beta.1",
-  "canonical_engine_sha256": "d721d824c421b21e4b9f4c04f71b842cda38fff636324106561c78dfcaa4067b"
+  "documentation_revision": "20261123_R1",
+  "documentation_only": true,
+  "source_archive_sha256": "cf4deae623a7c94d50b0e07b94388184ec1f9456f285fbbdfd53ae2553ee5acf"
 }

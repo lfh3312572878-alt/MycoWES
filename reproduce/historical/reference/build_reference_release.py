@@ -2,10 +2,13 @@
 """Create the independent v0.28 reference-QC beta profile without touching frozen inputs."""
 import csv, hashlib, shutil, sys
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from reproduction_paths import ROOTS as _paths
 
-root = Path("/data/h011/project/ref/MycoWES_Ref_v0.1")
-out = root / "25_reference_qc_beta_v0.28"
-analysis = Path("/data/h011/project/analysis/MycoWES_BAM29_hostdepleted/ablation_GCF_900118515/reference_ablation")
+root = Path(str(_paths.ref_root / "MycoWES_Ref_v0.1"))
+out = _paths.out_dir
+analysis = Path(str(_paths.project_root / "analysis/MycoWES_BAM29_hostdepleted/ablation_GCF_900118515/reference_ablation"))
 excluded = "GCF_900118515.1"
 if out.exists():
     raise SystemExit(f"REF_RELEASE_EXISTS={out}")

@@ -1,7 +1,10 @@
 import csv,json,subprocess,os,fcntl,hashlib,time
 from pathlib import Path
-OUT=Path('/data/h011/project/analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/CAPTURE_BED_REGION_20261013_v1')
-ENV='/data/h011/project/envs/mycowes_beta3_runtime/bin';env=dict(os.environ,PATH=ENV+':/usr/local/bin:/usr/bin:/bin')
+import sys as _sys
+_sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from reproduction_paths import ROOTS as _paths
+OUT=_paths.out_dir
+ENV=str(_paths.project_root / "envs/mycowes_beta3_runtime/bin");env=dict(os.environ,PATH=ENV+':/usr/local/bin:/usr/bin:/bin')
 def save(x): (OUT/'REGION_MAPPING_STATUS.json').write_text(json.dumps(x,indent=2)+'\n')
 def headroom():
     lines=subprocess.check_output(['quota','-v'],text=True).splitlines()
@@ -24,8 +27,8 @@ try:
             for i,line in enumerate(src):dst.write(line.rstrip()+f'\t{kit}_REGION_{i+1}\n')
         start=time.time()
         with (dest/'mapping.log').open('a') as log:
-            subprocess.run(['bedtools','getfasta','-fi','/data/h011/project/ref/human/hg38.fa','-bed',str(named),'-nameOnly','-fo',str(fa)],env=env,stdout=log,stderr=log,check=True)
-            subprocess.run(['nice','-n','15','ionice','-c2','-n7','python3','/data/h011/project/software/MycoWES_v0.3-dev/workflow/prepare_user_probe.py','--probe-fasta',str(fa),'--microbial-index','/data/h011/project/ref/MycoWES_Ref_v0.1/25_reference_qc_beta_v0.28/01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.sr.mmi','--taxonomy','/data/h011/project/ref/MycoWES_Ref_v0.1/25_reference_qc_beta_v0.28/06_metadata/AB_CDE_reference_taxonomy_lineage_map.reference_qc_beta_v0.28.tsv','--candidate-bed',str(bed),'--summary',str(summary),'--threads','2'],env=env,stdout=log,stderr=log,check=True)
+            subprocess.run(['bedtools','getfasta','-fi',str(_paths.ref_root / "human/hg38.fa"),'-bed',str(named),'-nameOnly','-fo',str(fa)],env=env,stdout=log,stderr=log,check=True)
+            subprocess.run(['nice','-n','15','ionice','-c2','-n7','python3',str(Path(__file__).with_name('prepare_user_probe.py')),'--probe-fasta',str(fa),'--microbial-index',str(_paths.ref_root / "MycoWES_Ref_v0.1/25_reference_qc_beta_v0.28/01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.sr.mmi"),'--taxonomy',str(_paths.ref_root / "MycoWES_Ref_v0.1/25_reference_qc_beta_v0.28/06_metadata/AB_CDE_reference_taxonomy_lineage_map.reference_qc_beta_v0.28.tsv"),'--candidate-bed',str(bed),'--summary',str(summary),'--threads','2'],env=env,stdout=log,stderr=log,check=True)
         (dest/'PROVENANCE.json').write_text(json.dumps(dict(resource=r,region_fasta_sha256=hashlib.sha256(fa.read_bytes()).hexdigest(),wall_seconds=time.time()-start,loadavg=os.getloadavg(),mapper_threads=2,interpretation='BEDregion_sequence_similarity_not_commercial_bait'),indent=2)+'\n')
     else:save(dict(status='REGION_MAPPING_COMPLETE',products=4,next='actualreadsassociation_and_maskcomparison_pending'))
 except Exception as e:save(dict(status='FAILED',error=str(e)));raise

@@ -1,6 +1,9 @@
 import csv,json,subprocess,os,fcntl,shutil,hashlib
 from pathlib import Path
-BASE=Path('/data/h011/project/analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1');OUT=BASE/'CAPTURE_BED_REGION_20261013_v1';OLD=Path('/data/h011/project/analysis/MycoWES_Fig3_Fig4_PRE77c4e85_FINAL_20260930T200113Z/02_spikein_runs/work_v2');RT=BASE/'SF4_REAL_WES_LENGTH_10_20261013_v1/runtime'
+import sys as _sys
+_sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from reproduction_paths import ROOTS as _paths
+BASE=Path(str(_paths.project_root / "analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1"));OUT=_paths.out_dir;OLD=Path(str(_paths.project_root / "analysis/MycoWES_Fig3_Fig4_PRE77c4e85_FINAL_20260930T200113Z/02_spikein_runs/work_v2"));RT=BASE/'SF4_REAL_WES_LENGTH_10_20261013_v1/runtime'
 def read(p):
     with p.open() as f:return list(csv.DictReader(f,delimiter='\t'))
 def save(x):(OUT/'MASK_FINAL_STATUS.json').write_text(json.dumps(x,indent=2)+'\n')

@@ -3,9 +3,12 @@
 import csv, datetime, fcntl, gzip, hashlib, json, os, random, shutil, subprocess, sys, time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from reproduction_paths import ROOTS as _paths
 
-P = Path('/data/h011/project')
-ROOT = P/'analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/Fig3_Fig4_TXT_COMPLETION_EXEC_20261010_v2'
+P = Path(str(_paths.project_root))
+ROOT = _paths.out_dir
 OLD = P/'analysis/MycoWES_Fig3_Fig4_PRE77c4e85_FINAL_20260930T200113Z'
 SOFT = OLD/'tmp/software_77c4e85'
 RUNTIME = ROOT/'runtime_confirmed_77c4e85'
@@ -16,7 +19,7 @@ ASM_DIR = P/'analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1/Fig3_Fig4_TXT_COMPLETION_2
 ASM_MAP = ROOT/'TRUTH_CHALLENGE_ASSEMBLY_MAP.tsv'
 SPIKE_WORK = OLD/'02_spikein_runs/work_v2'
 RECOVERED = P/'analysis/PRJNA1079014_MycoWES_PRE_BroadExclusion_77c4e85_RECOVERED'
-UPSTREAM62 = P/'analysis/PRJNA1079014_MycoWES_v0.3-beta2_BroadExclusion_FINAL_2ecc63b_ALL69'
+UPSTREAM62 = P/'analysis/PRJNA1079014_MycoWES_v0.3-beta2_BroadExclusion_FINAL_2ecc63b_Validation62'
 DISC42 = P/'analysis/PRJNA727917_MycoWES_v0.3-beta1_REFERENCE_QC_BETA'
 BASELINE_CAPTURE = P/'ref/MycoWES_Ref_v0.1/25_reference_qc_beta_v0.28/06_capture_bias/panWES.design_family_support_ge2.reference_qc_beta_v0.28.bed'
 TARGET_FASTA = P/'ref/MycoWES_Ref_v0.1/25_reference_qc_beta_v0.28/01_microbe/AB_TARGET.reference_qc_beta_v0.28.fa'
