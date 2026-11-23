@@ -33,14 +33,39 @@ canonical modes are rejected. Internal profile keys `ONE_REP_TARGET_DEVELOPMENT`
 and `MULTI_TARGET_V028` retain file compatibility; their paths are resolved in
 `workflow/reference_profiles.py`.
 
+Download and extract reference v0.28 as described in the main README. Set `REF`
+to the root containing both `baseline_v028/` and `ONE_REP_TARGET_DEVELOPMENT/`.
+The package does not include `.mmi` files. Build the joint competitive index
+once for the selected mode; users do not need both indexes.
+
+For the default `standard` mode:
+
 ```bash
+REF="/path/to/reference"
 minimap2 -x sr -d \
- "$REF/baseline_v028/01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.sr.mmi" \
- "$REF/baseline_v028/01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.fa"
+  "$REF/baseline_v028/01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.sr.mmi" \
+  "$REF/baseline_v028/01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.fa"
 python3 mycowes.py reference --reference-root "$REF" --reference-mode MULTI_TARGET_V028 --validate
+export MYCOWES_HOST_MMI="/path/to/hg38.sr.mmi"
 python3 mycowes.py run --sample sample_multi --r1 R1.fastq.gz --r2 R2.fastq.gz \
- --out output_multi --reference-root "$REF" --nominal-pe-length 150 --difficulty hard
+  --out output_multi --reference-root "$REF" --nominal-pe-length 150 --preset standard
 ```
+
+For `fast`, use this index instead:
+
+```bash
+REF="/path/to/reference"
+minimap2 -x sr -d \
+  "$REF/ONE_REP_TARGET_DEVELOPMENT/ONE_REP_TARGET.AB_CDE_JOINT.sr.mmi" \
+  "$REF/ONE_REP_TARGET_DEVELOPMENT/ONE_REP_TARGET.AB_CDE_JOINT.fa"
+python3 mycowes.py reference --reference-root "$REF" --reference-mode ONE_REP_TARGET_DEVELOPMENT --validate
+export MYCOWES_HOST_MMI="/path/to/hg38.sr.mmi"
+python3 mycowes.py run --sample sample_fast --r1 R1.fastq.gz --r2 R2.fastq.gz \
+  --out output_fast --reference-root "$REF" --nominal-pe-length 150 --preset fast
+```
+
+`MYCOWES_HOST_MMI` must point to a separately prepared human index for the full
+FASTQ workflow. It is independent of either microbial joint index.
 
 An explicit reference mode must agree with the preset; missing resources do not trigger fallback. These choices reproduce resource/quality selections, not every historical input preparation or saved-output rescore.
 

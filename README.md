@@ -12,14 +12,32 @@ awk and util-linux. Runtime Python uses only the standard library.
 ```bash
 conda env create -f environment.yml
 conda activate mycowes
-export MYCOWES_HOST_MMI=/path/to/hg38.sr.mmi
-python3 mycowes.py run --preset standard --reference-root /path/to/reference \
+```
+
+Download and extract `MycoWES_Reference_v0.28.tar.gz` from the
+[v0.28 reference record](https://doi.org/10.5281/zenodo.23776490).
+Set `REF` to the extracted reference root containing both `baseline_v028/` and
+`ONE_REP_TARGET_DEVELOPMENT/`. The reference package supplies FASTA and resource
+files; `.mmi` indexes are built locally, once per selected competitive profile.
+For the default `standard` mode, build the joint index and validate resources
+before running:
+
+```bash
+REF="/path/to/reference"
+minimap2 -x sr -d \
+  "$REF/baseline_v028/01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.sr.mmi" \
+  "$REF/baseline_v028/01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.fa"
+python3 mycowes.py reference --reference-root "$REF" --reference-mode MULTI_TARGET_V028 --validate
+export MYCOWES_HOST_MMI="/path/to/hg38.sr.mmi"
+python3 mycowes.py run --preset standard --reference-root "$REF" \
   --sample sample01 --r1 R1.fastq.gz --r2 R2.fastq.gz --out output/sample01 \
   --nominal-pe-length 150 --threads 4 --samtools-threads 1
 ```
 
-Reference resources: v0.28, https://doi.org/10.5281/zenodo.23776490.
-Retain the `baseline_v028/` and `ONE_REP_TARGET_DEVELOPMENT/` directory layout.
+Build only the competitive index for the mode you use. For `fast`, follow its
+indexing/validation commands in [docs/advanced.md](docs/advanced.md) and run with
+`--preset fast`. The full FASTQ workflow also requires a separately prepared
+human index at `MYCOWES_HOST_MMI`; the microbial joint index does not replace it.
 
 There are two analysis modes. `standard` (the default) uses 67 target assemblies
 for competition and anchor assessment, 100 bp / MAPQ20 / NM0.08,
