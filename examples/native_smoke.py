@@ -116,14 +116,14 @@ def comparable_case(observed):
         for branch,rows in observed['branches'].items()}}
 
 
-def managed_quality(output):
+def managed_quality(output, preset='standard'):
     selection=json.loads((output/'reference_selection.json').read_text())
     manifest={r['key']:r['value'] for r in table(output/'run_manifest.tsv')}
     want={'min_aligned_bp':100,'min_mapq':20,'max_nm_rate':.08}
-    assert selection['preset']=='standard' and selection['quality_thresholds']==want
+    assert selection['preset']==preset and selection['quality_thresholds']==want
     assert selection['effective_min_aligned_bp']==100 and set(selection['config_files_sha256'])=={'default.env','relax2.env'}
     assert (int(manifest['effective_min_aligned_bp']),int(manifest['core_min_mapq']),float(manifest['core_max_nm_rate']))==(100,20,.08)
-    assert manifest['quality_preset']=='standard'
+    assert manifest['quality_preset']==preset
     return {'preset':selection['preset'],'configured':selection['quality_thresholds'],'effective_min_aligned_bp':100,
             'native_min_mapq':int(manifest['core_min_mapq']),'native_max_nm_rate':float(manifest['core_max_nm_rate']),
             'config_files_sha256':selection['config_files_sha256']}
@@ -175,6 +175,7 @@ def main():
     observations = {}
     effective_quality = {}
     equivalence = None
+    manuscript_equivalence = None
     input_digests = {}
     for name, spec in expected['cases'].items():
         case_dir = out / name
@@ -217,6 +218,22 @@ def main():
             equivalence={'status':'PASS','same_inputs':True,'default':comparable_case(observations[name]),
                          'explicit':comparable_case(explicit_result),'explicit_quality':managed_quality(case_dir/'run_explicit_standard'),
                          'comparison':'Exact filter counts and PRIMARY/STRICT branch records, excluding absolute file paths'}
+            multi=reference/'baseline_v028/01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.fa'
+            multi_index=multi.with_name('AB_CDE_JOINT.reference_qc_beta_v0.28.sr.mmi')
+            build=[tools['minimap2'],'-x','sr','-d',str(multi_index),str(multi)]
+            commands.append(build);run_command(build,case_dir/'manuscript_index.log')
+            manuscript=command.copy();manuscript[manuscript.index('--out')+1]=str(case_dir/'run_manuscript')
+            manuscript+=['--preset','manuscript','--risk-policy','legacy']
+            commands.append(manuscript);run_command(manuscript,case_dir/'run_manuscript.log',env)
+            observed=collect_case(case_dir/'run_manuscript');check_case(name,observed,spec)
+            selected=json.loads((case_dir/'run_manuscript/reference_selection.json').read_text())
+            assert selected['mode']=='MULTI_TARGET_V028'
+            assert selected['mapq_policy']=='assembly-top-ties-gap10'
+            assert selected['risk_policy']=='legacy'
+            assert comparable_case(observations[name])==comparable_case(observed)
+            manuscript_equivalence={'status':'PASS','quality':managed_quality(case_dir/'run_manuscript','manuscript'),
+                                    'synthetic_risk_policy':'legacy','reference_fixture':'synthetic multi-profile',
+                                    'mapq_policy':selected['mapq_policy']}
     versions = {}
     for name in ('minimap2', 'samtools', 'cutadapt'):
         text = subprocess.check_output([tools[name], '--version'], text=True).splitlines()
@@ -227,8 +244,9 @@ def main():
                'engine_sha256': engine_sha256,
                'expected_source_sha256': digest(ROOT / 'examples/expected_summary.json'),
                'observed': observations,
+               'software_version':(ROOT/'VERSION').read_text().strip(),'manuscript_preset':manuscript_equivalence,
                'managed_quality':effective_quality,'default_standard_equivalence':equivalence,
-               'scope': 'Actual tools and current code only; not a historical manuscript rerun.'}
+               'scope': 'Native synthetic example using the packaged analysis engine.'}
     (out / 'native_validation_summary.json').write_text(json.dumps(summary, indent=2) + '\n')
     print('PASS: ' + str(out / 'native_validation_summary.json'))
 

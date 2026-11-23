@@ -227,7 +227,7 @@ awk 'NR>1 {print $1}' "$GROUP" \
 # ------------------------------------------------------------
 
 "$PYTHON_BIN" \
-"$PKG/workflow/evidence_anchor_breadth_v0.2.py" \
+"$PKG/workflow/anchor_cache_entry.py" \
 --bam "$BAM" \
 --ab "$AB" \
 --r1 "$DR1" \

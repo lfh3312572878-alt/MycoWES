@@ -14,38 +14,11 @@ from datetime import datetime, timezone
 from workflow.reference_profiles import MODES, bindings, validate
 
 ROOT = Path(__file__).resolve().parent
-PRESETS = {'standard': (100, 20, 0.08), 'relax2': (60, 5, 0.12)}
+PRESETS = {'standard': (100, 20, 0.08), 'relax2': (60, 5, 0.12),
+           'manuscript': (100, 20, 0.08), 'fast': (100, 20, 0.08)}
 LEGACY_PRESETS = {'normal': 'standard', 'simple': 'relax2', 'hard': 'standard'}
 DIFFICULTIES = {name: PRESETS[preset] for name, preset in LEGACY_PRESETS.items()}
 REFERENCE_MODES = {'simple': MODES[0], 'normal': MODES[0], 'hard': MODES[1]}
-CPU_PROFILES = {
-    'benchmark': dict(CUTADAPT_THREADS=8, HOST_THREADS=32, MICROBIAL_THREADS=8, SAMTOOLS_THREADS=4),
-    'light': dict(CUTADAPT_THREADS=2, HOST_THREADS=2, MICROBIAL_THREADS=2, SAMTOOLS_THREADS=1),
-}
-SPECIAL_MODES = {'strict62': ('standard', 'hard', MODES[1]),
-                 'explore': ('relax2', 'simple', MODES[0])}
-
-
-def apply_special_mode(args):
-    if args.special_mode is None:
-        return
-    preset, difficulty, mode = SPECIAL_MODES[args.special_mode]
-    fixed = dict(preset=preset, difficulty=difficulty, reference_mode=mode,
-                 mapq_policy='native', risk_policy='legacy', bin_size=250, anchor_min_retention=0.90)
-    fixed.update(zip(('min_aligned_bp', 'min_mapq', 'max_nm_rate'), PRESETS[preset]))
-    for name, value in fixed.items():
-        if getattr(args, name) not in (None, value):
-            raise ValueError(f'--{name.replace("_", "-")} conflicts with special mode {args.special_mode}')
-        setattr(args, name, value)
-    if args.nominal_pe_length < PRESETS[preset][0]:
-        raise ValueError('Special mode requires nominal PE length >= its fixed aligned-length gate')
-
-
-def available_cpus():
-    try:
-        return len(os.sched_getaffinity(0))
-    except (AttributeError, OSError):
-        return os.cpu_count() or 1
 
 
 def resolve_run_settings(args):
@@ -53,9 +26,11 @@ def resolve_run_settings(args):
     if args.preset is not None and legacy is not None and args.preset != legacy:
         raise ValueError('--preset conflicts with the legacy --difficulty quality preset')
     preset = args.preset or legacy or 'standard'
-    mode = REFERENCE_MODES[args.difficulty or 'normal']
+    mode = MODES[1] if preset == 'manuscript' else REFERENCE_MODES[args.difficulty or 'normal']
+    if preset == 'fast' and args.difficulty == 'hard':
+        raise ValueError('--preset fast conflicts with multi-reference --difficulty hard')
     if args.reference_mode is not None and args.reference_mode != mode:
-        raise ValueError('Reference mode conflicts with preset; use --difficulty hard for multi-reference')
+        raise ValueError('Reference mode conflicts with preset; use --preset manuscript for multi-reference')
     values = tuple(default if override is None else override for default, override in
                    zip(PRESETS[preset], (args.min_aligned_bp, args.min_mapq, args.max_nm_rate)))
     length, mapq, nm = values
@@ -166,26 +141,26 @@ def main(argv=None):
             p.add_argument('--out', required=True)
             p.add_argument('--nominal-pe-length', type=int, default=100)
             p.add_argument('--host-depleted', action='store_true', help='Input already trimmed and both-mates host-unmapped')
-            p.add_argument('--cpu-profile', choices=tuple(CPU_PROFILES), default='benchmark',
-                           help='Threads for trim/host/microbe/samtools-extra: benchmark=8/32/8/4 (default), light=2/2/2/1; scientific settings unchanged')
-            p.add_argument('--special-mode', choices=tuple(SPECIAL_MODES), help=argparse.SUPPRESS)
             p.add_argument('--bin-size', type=int, default=250)
+            p.add_argument('--threads', type=int, help='Mapper and trimming threads (default 4)')
+            p.add_argument('--samtools-threads', type=int, help='Additional samtools threads (default 1)')
             p.add_argument('--anchor-min-retention', type=float, default=0.90)
-            p.add_argument('--preset', choices=tuple(PRESETS), help='standard (default)=100/20/0.08; relax2=60/5/0.12; no automatic fallback')
+            p.add_argument('--preset', choices=tuple(PRESETS), help='manuscript=67-target competition and anchor with manuscript policies; fast=single-representative competition; standard (default)=100/20/0.08; relax2=60/5/0.12')
             p.add_argument('--min-aligned-bp', type=int, help='Explicit configured length; effective length is min(this, nominal PE length)')
             p.add_argument('--min-mapq', type=int, help='Explicit per-mate MAPQ threshold (0..255)')
-            p.add_argument('--mapq-policy', choices=('native', 'assembly-ties-only', 'assembly-top-ties-gap10'), default='native')
+            p.add_argument('--mapq-policy', choices=('native', 'assembly-ties-only', 'assembly-top-ties-gap10'), help='Default: assembly-top-ties-gap10 for manuscript, native otherwise')
             p.add_argument('--max-nm-rate', type=float, help='Explicit finite, nonnegative normalized NM threshold')
             p.add_argument('--risk-policy', choices=('legacy', 'low-complexity-advisory', 'paired-high-cde-only', 'low-complexity-unique-pair', 'low-complexity-nonrisk100-pair', 'low-complexity-nonrisk200-pair', 'low-complexity-nonrisk180-pair'),
-                           default='legacy', help='Experimental risk exclusions; original any-risk policy remains the default')
+                           help='Default: low-complexity-nonrisk180-pair for manuscript, legacy otherwise')
             p.add_argument('--difficulty', choices=tuple(LEGACY_PRESETS),
                            help='Legacy aliases: normal=standard, simple=relax2; hard=standard with multi-reference')
     args = parser.parse_args(argv)
     try:
         mode = args.reference_mode
         if args.command == 'run':
-            apply_special_mode(args)
             preset, mode, (length, mapq, nm) = resolve_run_settings(args)
+            args.mapq_policy = args.mapq_policy or ('assembly-top-ties-gap10' if preset == 'manuscript' else 'native')
+            args.risk_policy = args.risk_policy or ('low-complexity-nonrisk180-pair' if preset == 'manuscript' else 'legacy')
         values = bindings(args.reference_root, mode)
         if args.command == 'reference':
             if args.validate:
@@ -209,15 +184,11 @@ def main(argv=None):
         if not host or not Path(host).is_file() or Path(host).stat().st_size == 0:
             raise ValueError('Set MYCOWES_HOST_MMI to the existing GRCh38 host index')
         env = dict(os.environ, **values)
-        threads = CPU_PROFILES[args.cpu_profile]
-        env.update({key: str(value) for key, value in threads.items()})
-        env['MYCOWES_CPU_PROFILE'] = args.cpu_profile
-        env['MYCOWES_SPECIAL_MODE'] = args.special_mode or 'NONE'
-        available = available_cpus()
-        if max(threads.values()) > available:
-            print(f'WARNING: CPU profile {args.cpu_profile} requests up to {max(threads.values())} worker threads '
-                  f'per tool; {available} CPUs detected. Consider --cpu-profile light. '
-                  'No automatic fallback; concurrent I/O and samtools add threads.', file=sys.stderr)
+        for option, variable in ((args.threads, 'THREADS'), (args.samtools_threads, 'SAMTOOLS_THREADS')):
+            if option is not None:
+                if option < (0 if variable == 'SAMTOOLS_THREADS' else 1):
+                    raise ValueError('Threads must be positive; additional samtools threads may be zero')
+                env[variable] = str(option)
         env.update(CORE_MIN_ALIGNED_BP=str(length), CORE_MIN_MAPQ=str(mapq), CORE_MAX_NM_RATE=str(nm))
         env['CORE_MAPQ_POLICY'] = args.mapq_policy
         env.update(DISPERSION_BIN_BP=str(args.bin_size), ANCHOR_MIN_RETENTION=str(args.anchor_min_retention),
@@ -238,10 +209,7 @@ def main(argv=None):
                   if k.endswith(('_FASTA', '_MMI', '_TAXONOMY', '_IDENTITY', '_MANIFEST', '_BED', '_DF2'))]
         selection['local_file_identities'] = [file_identity(p) for p in assets]
         selection['execution'] = {k: env.get(k) for k in ('DISPERSION_BIN_BP', 'ANCHOR_MIN_RETENTION',
-                                                        *threads, 'MINIMAP2', 'SAMTOOLS', 'CUTADAPT', 'PYTHON')}
-        selection['cpu_profile'] = args.cpu_profile
-        selection['special_mode'] = args.special_mode
-        selection['execution']['ANCHOR_THREADS'] = '2'
+                                                        'THREADS', 'SAMTOOLS_THREADS', 'MINIMAP2', 'SAMTOOLS', 'CUTADAPT', 'PYTHON')}
         selection['host_depleted'] = args.host_depleted
         selection['risk_policy'] = args.risk_policy
         selection['mapq_policy'] = args.mapq_policy

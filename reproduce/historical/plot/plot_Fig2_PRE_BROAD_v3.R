@@ -4,11 +4,23 @@ suppressPackageStartupMessages({
   library(scales)
 })
 
-root <- "/data/h011/project/analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1"
+args <- commandArgs(trailingOnly=TRUE)
+option <- function(name) {
+  index <- match(name, args)
+  if (is.na(index) || index == length(args)) stop(paste("Missing", name))
+  args[index + 1]
+}
+if ("--help" %in% args) {
+  cat("Usage: Rscript plot_Fig2_PRE_BROAD_v3.R --project-root DIR --ref-root DIR --out-dir DIR\n")
+  quit(status=0)
+}
+root <- file.path(option("--project-root"), "analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1")
+ref_root <- option("--ref-root")
+out_dir <- option("--out-dir")
 f2in <- file.path(root, "Figure2_PRE_BROAD")
 f5in <- file.path(root, "Figure5_PRE_BROAD")
-f2out <- file.path(root, "Figure2_PRE_BROAD_v3")
-f5out <- file.path(root, "Figure5_PRE_BROAD_v2")
+f2out <- file.path(out_dir, "Figure2_PRE_BROAD_v3")
+f5out <- file.path(out_dir, "Figure5_PRE_BROAD_v2")
 dir.create(f2out, recursive=TRUE, showWarnings=FALSE)
 
 read_tsv <- function(path) read.delim(path, check.names=FALSE, stringsAsFactors=FALSE)

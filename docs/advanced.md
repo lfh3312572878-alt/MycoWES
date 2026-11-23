@@ -2,6 +2,12 @@
 
 ## Competitive and anchor references
 
+Use `--preset manuscript` for 67-target competition/anchor with gap10/LC180;
+`--preset fast` uses the standard single-representative competition binding.
+Mapper/trimming threads can be set with `--threads`; additional samtools threads
+with `--samtools-threads`. The defaults remain 4 and 1.
+
+
 | Preset | Competitive target | Competitors | Anchor target | Quality gates |
 | --- | --- | --- | --- | --- |
 | standard default (legacy normal) | 18 representatives / 18 species / 118 contigs | 560 assemblies / 553 taxa / 7823 contigs | complete 67-assembly target FASTA | 100 bp / MAPQ20 / NM0.08 |
@@ -10,7 +16,7 @@
 
 `hard` changes target multiplicity, not the quality gates relative to normal. PRIMARY and STRICT are produced for every preset; STRICT is not a difficulty level. Actual assemblies per species follow metadata.
 
-Add `--preset relax2` or legacy `--difficulty hard` to the default command, using a new output directory. Relax2 requires nominal PE length at least 60. Explicit `--min-aligned-bp 100 --min-mapq 20 --max-nm-rate 0.08` reproduces standard quality settings. Threshold priority is explicit CLI value, then selected preset; inherited `CORE_*` variables are ignored by the public CLI. Length must be positive, MAPQ 0..255, and NM rate finite/nonnegative. Length is still capped at nominal PE length. Compatible legacy aliases may be supplied together with a preset; conflicting choices are rejected. Internal profile keys `ONE_REP_TARGET_DEVELOPMENT` and `MULTI_TARGET_V028` are retained for file compatibility; their paths are resolved in `workflow/reference_profiles.py`.
+Add `--preset relax2` or legacy `--difficulty hard` to the default command, using a new output directory. Relax2 requires nominal PE length at least 60. Explicit `--min-aligned-bp 100 --min-mapq 20 --max-nm-rate 0.08` reproduces standard quality settings. Threshold priority is explicit CLI value, then selected preset; inherited `CORE_*` variables are ignored by the public CLI. Length must be positive, MAPQ 0..255, and normalized edit distance NM/L_align finite/nonnegative; L_align counts query-aligned M/I/=/X CIGAR bases. Existing NM-rate CLI names are unchanged. Length is still capped at nominal PE length. Compatible legacy aliases may be supplied together with a preset; conflicting choices are rejected. Internal profile keys `ONE_REP_TARGET_DEVELOPMENT` and `MULTI_TARGET_V028` are retained for file compatibility; their paths are resolved in `workflow/reference_profiles.py`.
 
 ```bash
 minimap2 -x sr -d \
@@ -45,4 +51,5 @@ Record the source BAM identity and samtools version. Samtools restores sequencer
 
 `reproduce/historical/reference/build_one_rep_reference.py` accepts selection manifest, taxonomy, FASTA and output directory; it refuses existing output files. The supplied selection manifest's SHA256 matches the recorded profile hash and selects the same 18 accessions as its distributed taxonomy.
 
-Other historical drivers retain absolute project paths and additional dependencies. They are preserved for source review only and must not be launched unattended. The safe common entry is the saved-summary validator, not a queue restart.
+Historical drivers accept --project-root, --ref-root and --out-dir; see
+reproduce/README.md for their input layout and fixed historical designs.

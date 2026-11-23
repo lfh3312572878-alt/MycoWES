@@ -408,30 +408,6 @@ def main():
         if int(row["risk_any"]) == 0
     ]
 
-    arginini_rows = [
-        row
-        for row in annotated_rows
-        if species_label(row) == "Mycoplasmopsis_arginini"
-    ]
-
-    arginini_core = [
-        row
-        for row in arginini_rows
-        if int(row["exploratory_core_alignment"]) == 1
-    ]
-
-    arginini_risk_free_core = [
-        row
-        for row in arginini_core
-        if int(row["risk_any"]) == 0
-    ]
-
-    arginini_adapter_free_risk_free_core = [
-        row
-        for row in arginini_risk_free_core
-        if int(row.get("adapter_core_in_either", "0") or 0) == 0
-    ]
-
     summary_path = Path(
         f"{args.output_prefix}.fragment_risk_summary.tsv"
     )
@@ -495,26 +471,6 @@ def main():
         write_metric(
             "exploratory_core_risk_free",
             risk_free_core,
-        )
-
-        write_metric(
-            "M_arginini_all",
-            arginini_rows,
-        )
-
-        write_metric(
-            "M_arginini_exploratory_core",
-            arginini_core,
-        )
-
-        write_metric(
-            "M_arginini_exploratory_core_risk_free",
-            arginini_risk_free_core,
-        )
-
-        write_metric(
-            "M_arginini_core_risk_free_adapter_free",
-            arginini_adapter_free_risk_free_core,
         )
 
     category_path = Path(

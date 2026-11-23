@@ -15,12 +15,15 @@ import time
 import traceback
 from datetime import datetime, timezone
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from reproduction_paths import ROOTS as _paths
 
-PROJECT = Path("/data/h011/project")
+PROJECT = Path(str(_paths.project_root))
 PAPER = PROJECT / "analysis/MycoWES_MANUSCRIPT_PRE_BROAD_v1"
 EXEC = PAPER / "Fig3_Fig4_TXT_COMPLETION_EXEC_20261010_v2"
-RUNNER = EXEC / "scripts/confirmed_branches.py"
-OUT = Path(sys.argv[1]) if len(sys.argv) == 2 else None
+RUNNER = Path(__file__).with_name('confirmed_branches.py')
+OUT = _paths.out_dir
 WORK_LIMIT = 35 * 1024**3
 ARCH = ["FULL", "REMOVE_ONLY_COMPETITOR", "REMOVE_ONLY_CAPTURE_RISK", "REMOVE_ONLY_DEDUP",
         "REMOVE_ONLY_DISPERSION", "REMOVE_ONLY_ENHANCED_HOST", "CUMULATIVE_ALL_REMOVED"]

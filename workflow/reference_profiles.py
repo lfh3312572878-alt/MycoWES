@@ -8,6 +8,8 @@ def bindings(root, mode=MODES[0]):
     if mode not in MODES:
         raise ValueError(f'Unknown reference mode: {mode}')
     root = Path(root).expanduser().resolve()
+    if root.name == 'baseline_v028':
+        root = root.parent
     baseline = root / 'baseline_v028'
     microbe = baseline / '01_microbe'
     metadata = baseline / '06_metadata'

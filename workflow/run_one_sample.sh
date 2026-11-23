@@ -183,7 +183,7 @@ else
     rm -f "$TMP_R1" "$TMP_R2"
 
     "$CUTADAPT_BIN" \
-        -j "$CUTADAPT_THREADS" \
+        -j "$THREADS" \
         -e 0.10 \
         -O 5 \
         -n 2 \
@@ -387,7 +387,7 @@ if [ "$PN" -gt 0 ]; then
 else
     echo "PRIMARY=0 -> NO CANDIDATES"
     mkdir -p "$PRIMARY_OUT"
-    printf 'species\tanchor_status\tdispersion_tier\tcoordinate_dedup_fragments\nNO_SPECIES_EVIDENCE\tNOT_APPLICABLE\tNone\t0\n' > "$PRIMARY_OUT/07_species_dedup_dispersion_summary.tsv"
+    printf 'species\tanchor_status\tdispersion_tier\tcoordinate_dedup_fragments\ttotal_effective_bins\texpected_bins_uniform\tp_focal_artifact_null\nNO_SPECIES_EVIDENCE\tNOT_APPLICABLE\tNone\t0\tNA\tNA\tNA\n' > "$PRIMARY_OUT/07_species_dedup_dispersion_summary.tsv"
 fi
 
 # ============================================================
@@ -415,7 +415,7 @@ if [ "$SN" -gt 0 ]; then
 else
     echo "STRICT=0 -> NO CANDIDATES"
     mkdir -p "$STRICT_OUT"
-    printf 'species\tanchor_status\tdispersion_tier\tcoordinate_dedup_fragments\nNO_SPECIES_EVIDENCE\tNOT_APPLICABLE\tNone\t0\n' > "$STRICT_OUT/07_species_dedup_dispersion_summary.tsv"
+    printf 'species\tanchor_status\tdispersion_tier\tcoordinate_dedup_fragments\ttotal_effective_bins\texpected_bins_uniform\tp_focal_artifact_null\nNO_SPECIES_EVIDENCE\tNOT_APPLICABLE\tNone\t0\tNA\tNA\tNA\n' > "$STRICT_OUT/07_species_dedup_dispersion_summary.tsv"
 fi
 
 # ============================================================
@@ -434,13 +434,6 @@ input_stage	$([ "$HOST_DEPLETED" -eq 1 ] && echo GRCh38_PAIRED_BOTH_UNMAPPED || 
 r1	$R1
 r2	$R2
 config	$CONFIG
-cpu_profile	${MYCOWES_CPU_PROFILE:-benchmark}
-special_mode	${MYCOWES_SPECIAL_MODE:-NONE}
-cutadapt_threads	$CUTADAPT_THREADS
-host_mapper_threads	$HOST_THREADS
-microbial_mapper_threads	$MICROBIAL_THREADS
-samtools_additional_threads	$SAMTOOLS_THREADS
-anchor_mapper_threads	2
 nominal_pe_length	$NOMINAL_PE_LENGTH
 nominal_pe_length_source	$NOMINAL_PE_LENGTH_SOURCE
 core_min_aligned_bp	$CORE_MIN_ALIGNED_BP
