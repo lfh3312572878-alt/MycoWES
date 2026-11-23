@@ -1,11 +1,13 @@
 # Native validation
 
-MycoWES 1.0.0 was tested on Linux using real minimap2, samtools and Cutadapt.
-The deterministic synthetic example covers normal evidence, zero candidates,
-anchor failure, and spatial-grade boundaries. Default and explicit standard
-settings produce identical results. A multi-profile example tests manuscript
-reference/MAPQ wiring with an explicit legacy risk rule for its synthetic BED;
-the manuscript LC180 policy remains bound to the v0.28 BED.
+The deterministic synthetic example runs real minimap2, samtools and Cutadapt
+on Linux. It covers normal evidence, zero candidates, anchor failure and spatial
+grade boundaries. Its synthetic BED requires an explicit legacy risk override;
+it therefore checks default/standard/manuscript reference, MAPQ and quality
+wiring, but does not validate the full LC180 default. A separate fast run checks
+the single-representative/native binding and 60 bp / MAPQ5 / NM0.12 gates. CLI wiring unit tests verify that
+implicit standard, explicit standard and manuscript select gap10/LC180 without
+an override. LC180 interval loading retains the unchanged v0.28 BED identity gate.
 
 Run:
 ```bash

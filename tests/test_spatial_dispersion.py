@@ -31,13 +31,13 @@ class SpatialDispersion(unittest.TestCase):
     def test_selected_assembly_length_sets_denominator(self):
         self.assertEqual(spatial(5, 2, 3, 800001)['total_effective_bins'], 3201)
 
-    def test_release_presets_keep_default_reference(self):
+    def test_release_presets_select_published_default_and_optional_fast(self):
         base = dict(preset=None, difficulty=None, reference_mode=None,
                     min_aligned_bp=None, min_mapq=None, max_nm_rate=None)
         resolve = lambda **kw: mycowes.resolve_run_settings(SimpleNamespace(**dict(base, **kw)))
-        self.assertEqual(resolve(), ('standard', MODES[0], (100, 20, .08)))
-        self.assertEqual(resolve(preset='fast'), ('fast', MODES[0], (100, 20, .08)))
-        self.assertEqual(resolve(preset='manuscript'), ('manuscript', MODES[1], (100, 20, .08)))
+        self.assertEqual(resolve(), ('standard', MODES[1], (100, 20, .08)))
+        self.assertEqual(resolve(preset='fast'), ('fast', MODES[0], (60, 5, .12)))
+        self.assertEqual(resolve(preset='manuscript'), ('standard', MODES[1], (100, 20, .08)))
 
 
 if __name__ == '__main__':

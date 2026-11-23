@@ -1,11 +1,15 @@
 # Methods and parameters
 
-`--preset manuscript` selects 67 target assemblies, the shared competitor library,
-67 candidate anchor assemblies, and 100 bp / MAPQ20 / NM0.08 quality thresholds.
-`--preset fast` selects the single-representative competition profile (18 target
-representatives) with the same quality thresholds; its anchor candidate pool and
-risk resources remain shared with the multi-assembly profile. The default
-`standard` profile retains the single-representative competition binding.
+Two analysis modes are available. `standard` (the default) selects 67 target
+assemblies, the shared competitor library, 67 candidate anchor assemblies,
+100 bp / MAPQ20 / NM0.08, assembly-top-ties-gap10 and
+low-complexity-nonrisk180-pair. `fast` selects 18 target representatives for
+competition, the same 67-assembly anchor pool and risk resources,
+60 bp / MAPQ5 / NM0.12, native MAPQ and legacy risk rules.
+`manuscript` aliases standard; `relax2` and legacy `--difficulty simple` alias
+fast. Legacy normal/hard alias standard. Canonical standard/fast names are
+recorded per run. Explicit CLI quality thresholds override the selected mode.
+Fast and its aliases require nominal paired-end read length at least 60 bp.
 
 ## Competition and quality
 
@@ -20,13 +24,14 @@ or order rank. This support class is not a global guarantee that both mates
 uniquely identify the same species.
 
 Aligned length applies to both primary mates. The maximum of the two primary
-normalized edit distances, NM/L_align, is at most 0.08; L_align counts query bases
+normalized edit distances, NM/L_align, is at most 0.08 in standard or 0.12 in fast,
+unless explicitly overridden. L_align counts query bases
 in CIGAR M, I, = and X operations. CLI/output names containing `nm-rate` or
 `NM_rate` are retained for compatibility. Effective minimum aligned length is the
 smaller of the configured threshold and nominal read length. Proper-pair and
 soft-clipping are recorded, not additional gates.
 
-The manuscript `assembly-top-ties-gap10` policy also admits low native MAPQ
+The standard `assembly-top-ties-gap10` policy also admits low native MAPQ
 when top-scoring hits belong to one target species, tie across at least two
 assemblies with one top locus per assembly, and all reported competing-species
 or competitor hits are at least 10 AS below the best hit. Supplementary hits,
@@ -39,7 +44,7 @@ the native-MAPQ path. There is no universal 10-AS gap requirement for that path.
 
 ## Risk and deduplication
 
-The manuscript `low-complexity-nonrisk180-pair` rule retains an otherwise
+The standard `low-complexity-nonrisk180-pair` rule retains an otherwise
 quality-passing pair with low-complexity-only risk when both mates' unique best
 target species agree, both actually aligned mates have positive
 non-low-complexity support and their sum is at least

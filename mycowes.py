@@ -14,23 +14,22 @@ from datetime import datetime, timezone
 from workflow.reference_profiles import MODES, bindings, validate
 
 ROOT = Path(__file__).resolve().parent
-PRESETS = {'standard': (100, 20, 0.08), 'relax2': (60, 5, 0.12),
-           'manuscript': (100, 20, 0.08), 'fast': (100, 20, 0.08)}
-LEGACY_PRESETS = {'normal': 'standard', 'simple': 'relax2', 'hard': 'standard'}
+PRESETS = {'standard': (100, 20, 0.08), 'fast': (60, 5, 0.12)}
+PRESET_ALIASES = {'manuscript': 'standard', 'relax2': 'fast'}
+LEGACY_PRESETS = {'normal': 'standard', 'simple': 'fast', 'hard': 'standard'}
 DIFFICULTIES = {name: PRESETS[preset] for name, preset in LEGACY_PRESETS.items()}
-REFERENCE_MODES = {'simple': MODES[0], 'normal': MODES[0], 'hard': MODES[1]}
+REFERENCE_MODES = {'simple': MODES[0], 'normal': MODES[1], 'hard': MODES[1]}
 
 
 def resolve_run_settings(args):
+    requested = PRESET_ALIASES.get(args.preset, args.preset)
     legacy = LEGACY_PRESETS.get(args.difficulty)
-    if args.preset is not None and legacy is not None and args.preset != legacy:
+    if requested is not None and legacy is not None and requested != legacy:
         raise ValueError('--preset conflicts with the legacy --difficulty quality preset')
-    preset = args.preset or legacy or 'standard'
-    mode = MODES[1] if preset == 'manuscript' else REFERENCE_MODES[args.difficulty or 'normal']
-    if preset == 'fast' and args.difficulty == 'hard':
-        raise ValueError('--preset fast conflicts with multi-reference --difficulty hard')
+    preset = requested or legacy or 'standard'
+    mode = MODES[1] if preset == 'standard' else MODES[0]
     if args.reference_mode is not None and args.reference_mode != mode:
-        raise ValueError('Reference mode conflicts with preset; use --preset manuscript for multi-reference')
+        raise ValueError('Reference mode conflicts with preset; standard uses 67-target competition; fast uses 18 representatives (manuscript/relax2 are aliases)')
     values = tuple(default if override is None else override for default, override in
                    zip(PRESETS[preset], (args.min_aligned_bp, args.min_mapq, args.max_nm_rate)))
     length, mapq, nm = values
@@ -130,7 +129,7 @@ def main(argv=None):
     sub = parser.add_subparsers(dest='command', required=True)
     for command in ('reference', 'run'):
         p = sub.add_parser(command)
-        p.add_argument('--reference-mode', choices=MODES, default=MODES[0] if command == 'reference' else None)
+        p.add_argument('--reference-mode', choices=MODES, default=MODES[1] if command == 'reference' else None)
         p.add_argument('--reference-root', default=os.environ.get('MYCOWES_REFERENCE_ROOT', str(ROOT / 'resources/reference')))
         if command == 'reference':
             p.add_argument('--validate', action='store_true')
@@ -145,30 +144,30 @@ def main(argv=None):
             p.add_argument('--threads', type=int, help='Mapper and trimming threads (default 4)')
             p.add_argument('--samtools-threads', type=int, help='Additional samtools threads (default 1)')
             p.add_argument('--anchor-min-retention', type=float, default=0.90)
-            p.add_argument('--preset', choices=tuple(PRESETS), help='manuscript=67-target competition and anchor with manuscript policies; fast=single-representative competition; standard (default)=100/20/0.08; relax2=60/5/0.12')
+            p.add_argument('--preset', choices=(*PRESETS, *PRESET_ALIASES), help='Two modes: standard (default)=67-target competition/anchor, 100/20/0.08 and gap10/LC180; fast=18-target competition/67-target anchor, 60/5/0.12 and native MAPQ/legacy risk. Compatibility aliases: manuscript=standard, relax2=fast')
             p.add_argument('--min-aligned-bp', type=int, help='Explicit configured length; effective length is min(this, nominal PE length)')
             p.add_argument('--min-mapq', type=int, help='Explicit per-mate MAPQ threshold (0..255)')
-            p.add_argument('--mapq-policy', choices=('native', 'assembly-ties-only', 'assembly-top-ties-gap10'), help='Default: assembly-top-ties-gap10 for manuscript, native otherwise')
+            p.add_argument('--mapq-policy', choices=('native', 'assembly-ties-only', 'assembly-top-ties-gap10'), help='Default: assembly-top-ties-gap10 for standard, native for fast')
             p.add_argument('--max-nm-rate', type=float, help='Explicit finite, nonnegative normalized NM threshold')
             p.add_argument('--risk-policy', choices=('legacy', 'low-complexity-advisory', 'paired-high-cde-only', 'low-complexity-unique-pair', 'low-complexity-nonrisk100-pair', 'low-complexity-nonrisk200-pair', 'low-complexity-nonrisk180-pair'),
-                           help='Default: low-complexity-nonrisk180-pair for manuscript, legacy otherwise')
+                           help='Default: low-complexity-nonrisk180-pair for standard, legacy for fast')
             p.add_argument('--difficulty', choices=tuple(LEGACY_PRESETS),
-                           help='Legacy aliases: normal=standard, simple=relax2; hard=standard with multi-reference')
+                           help='Legacy aliases: normal/hard=standard (67-target competition, gap10/LC180); simple=fast (60/5/0.12)')
     args = parser.parse_args(argv)
     try:
         mode = args.reference_mode
         if args.command == 'run':
             preset, mode, (length, mapq, nm) = resolve_run_settings(args)
-            args.mapq_policy = args.mapq_policy or ('assembly-top-ties-gap10' if preset == 'manuscript' else 'native')
-            args.risk_policy = args.risk_policy or ('low-complexity-nonrisk180-pair' if preset == 'manuscript' else 'legacy')
+            args.mapq_policy = args.mapq_policy or ('assembly-top-ties-gap10' if preset == 'standard' else 'native')
+            args.risk_policy = args.risk_policy or ('low-complexity-nonrisk180-pair' if preset == 'standard' else 'legacy')
         values = bindings(args.reference_root, mode)
         if args.command == 'reference':
             if args.validate:
                 validate(values)
             print(json.dumps({'mode': args.reference_mode, 'assets': values, 'validated': args.validate}, indent=2))
             return 0
-        if preset == 'relax2' and args.nominal_pe_length < 60:
-            raise ValueError('RELAX2 profile requires nominal PE length >=60 to preserve its 60 bp gate')
+        if preset == 'fast' and args.nominal_pe_length < 60:
+            raise ValueError('FAST mode requires nominal PE length >=60 to preserve its 60 bp gate')
         validate(values)
         if args.nominal_pe_length <= 0:
             raise ValueError('--nominal-pe-length must be positive')
@@ -193,7 +192,7 @@ def main(argv=None):
         env['CORE_MAPQ_POLICY'] = args.mapq_policy
         env.update(DISPERSION_BIN_BP=str(args.bin_size), ANCHOR_MIN_RETENTION=str(args.anchor_min_retention),
                    MYCOWES_MANAGED_RUN='1', MYCOWES_PRESET=preset, MYCOWES_RISK_POLICY=args.risk_policy)
-        config = ROOT / 'config' / ('relax2.env' if preset == 'relax2' else 'default.env')
+        config = ROOT / 'config' / ('relax2.env' if preset == 'fast' else 'default.env')
         output = Path(args.out).resolve()
         selection = {'mode': mode, 'assets': values, 'host_index': str(Path(host).resolve()),
                      'config_sha256': hashlib.sha256(config.read_bytes()).hexdigest(),

@@ -82,7 +82,7 @@ def make_reference(directory, target_seq, competitor_seq, anchor_seq):
     (directory / 'SYNTHETIC_ONLY.txt').write_text(
         'Generated random DNA. No human, patient, microbial database or sequencing data.\n'
         'Internal profile IDs satisfy the resolver contract; they do not certify v0.28 content.\n')
-    return single / 'ONE_REP_TARGET.AB_CDE_JOINT.fa'
+    return microbe / 'AB_CDE_JOINT.reference_qc_beta_v0.28.fa'
 
 
 def table(path):
@@ -119,12 +119,16 @@ def comparable_case(observed):
 def managed_quality(output, preset='standard'):
     selection=json.loads((output/'reference_selection.json').read_text())
     manifest={r['key']:r['value'] for r in table(output/'run_manifest.tsv')}
-    want={'min_aligned_bp':100,'min_mapq':20,'max_nm_rate':.08}
+    values=(60,5,.12) if preset=='fast' else (100,20,.08)
+    want=dict(zip(('min_aligned_bp','min_mapq','max_nm_rate'),values))
     assert selection['preset']==preset and selection['quality_thresholds']==want
-    assert selection['effective_min_aligned_bp']==100 and set(selection['config_files_sha256'])=={'default.env','relax2.env'}
-    assert (int(manifest['effective_min_aligned_bp']),int(manifest['core_min_mapq']),float(manifest['core_max_nm_rate']))==(100,20,.08)
+    assert selection['effective_min_aligned_bp']==values[0] and set(selection['config_files_sha256'])=={'default.env','relax2.env'}
+    assert (int(manifest['effective_min_aligned_bp']),int(manifest['core_min_mapq']),float(manifest['core_max_nm_rate']))==values
     assert manifest['quality_preset']==preset
-    return {'preset':selection['preset'],'configured':selection['quality_thresholds'],'effective_min_aligned_bp':100,
+    assert selection['mode']==('ONE_REP_TARGET_DEVELOPMENT' if preset=='fast' else 'MULTI_TARGET_V028')
+    assert selection['mapq_policy']==('native' if preset=='fast' else 'assembly-top-ties-gap10')
+    assert selection['risk_policy']=='legacy'
+    return {'preset':selection['preset'],'configured':selection['quality_thresholds'],'effective_min_aligned_bp':values[0],
             'native_min_mapq':int(manifest['core_min_mapq']),'native_max_nm_rate':float(manifest['core_max_nm_rate']),
             'config_files_sha256':selection['config_files_sha256']}
 
@@ -176,12 +180,13 @@ def main():
     effective_quality = {}
     equivalence = None
     manuscript_equivalence = None
+    fast_equivalence = None
     input_digests = {}
     for name, spec in expected['cases'].items():
         case_dir = out / name
         reference = case_dir / 'reference'
         joint = make_reference(reference, target, competitor, wrong_anchor if name == 'anchor_fail' else target)
-        index = joint.with_name('ONE_REP_TARGET.AB_CDE_JOINT.sr.mmi')
+        index = joint.with_suffix('.sr.mmi')
         command = [tools['minimap2'], '-x', 'sr', '-d', str(index), str(joint)]
         commands.append(command)
         run_command(command, case_dir / 'joint_index.log')
@@ -200,7 +205,10 @@ def main():
             input_digests[str(path.relative_to(out))] = digest(path)
         command = [sys.executable, str(ROOT / 'mycowes.py'), 'run', '--sample', name,
                    '--r1', str(r1), '--r2', str(r2), '--out', str(case_dir / 'run'),
-                   '--reference-root', str(reference), '--nominal-pe-length', '150']
+                   '--reference-root', str(reference), '--nominal-pe-length', '150',
+                   # The toy BED cannot satisfy the unchanged v0.28 BED identity gate.
+                   # This explicit override tests native reference/MAPQ wiring, not LC180.
+                   '--risk-policy', 'legacy']
         if 'bin_size' in spec:
             command += ['--bin-size', str(spec['bin_size'])]
         commands.append(command)
@@ -218,12 +226,8 @@ def main():
             equivalence={'status':'PASS','same_inputs':True,'default':comparable_case(observations[name]),
                          'explicit':comparable_case(explicit_result),'explicit_quality':managed_quality(case_dir/'run_explicit_standard'),
                          'comparison':'Exact filter counts and PRIMARY/STRICT branch records, excluding absolute file paths'}
-            multi=reference/'baseline_v028/01_microbe/AB_CDE_JOINT.reference_qc_beta_v0.28.fa'
-            multi_index=multi.with_name('AB_CDE_JOINT.reference_qc_beta_v0.28.sr.mmi')
-            build=[tools['minimap2'],'-x','sr','-d',str(multi_index),str(multi)]
-            commands.append(build);run_command(build,case_dir/'manuscript_index.log')
             manuscript=command.copy();manuscript[manuscript.index('--out')+1]=str(case_dir/'run_manuscript')
-            manuscript+=['--preset','manuscript','--risk-policy','legacy']
+            manuscript+=['--preset','manuscript']
             commands.append(manuscript);run_command(manuscript,case_dir/'run_manuscript.log',env)
             observed=collect_case(case_dir/'run_manuscript');check_case(name,observed,spec)
             selected=json.loads((case_dir/'run_manuscript/reference_selection.json').read_text())
@@ -231,9 +235,25 @@ def main():
             assert selected['mapq_policy']=='assembly-top-ties-gap10'
             assert selected['risk_policy']=='legacy'
             assert comparable_case(observations[name])==comparable_case(observed)
-            manuscript_equivalence={'status':'PASS','quality':managed_quality(case_dir/'run_manuscript','manuscript'),
+            manuscript_equivalence={'status':'PASS','quality':managed_quality(case_dir/'run_manuscript','standard'),
                                     'synthetic_risk_policy':'legacy','reference_fixture':'synthetic multi-profile',
-                                    'mapq_policy':selected['mapq_policy']}
+                                    'mapq_policy':selected['mapq_policy'],
+                                    'full_default_lc180_validated':False}
+            single=reference/'ONE_REP_TARGET_DEVELOPMENT/ONE_REP_TARGET.AB_CDE_JOINT.fa'
+            single_index=single.with_suffix('.sr.mmi')
+            build=[tools['minimap2'],'-x','sr','-d',str(single_index),str(single)]
+            commands.append(build);run_command(build,case_dir/'fast_index.log')
+            fast=command.copy();fast[fast.index('--out')+1]=str(case_dir/'run_fast')
+            fast+=['--preset','fast']
+            commands.append(fast);run_command(fast,case_dir/'run_fast.log',env)
+            fast_result=collect_case(case_dir/'run_fast');check_case(name,fast_result,spec)
+            fast_selected=json.loads((case_dir/'run_fast/reference_selection.json').read_text())
+            assert fast_selected['mode']=='ONE_REP_TARGET_DEVELOPMENT'
+            assert fast_selected['mapq_policy']=='native' and fast_selected['risk_policy']=='legacy'
+            assert comparable_case(observations[name])==comparable_case(fast_result)
+            fast_equivalence={'status':'PASS','quality':managed_quality(case_dir/'run_fast','fast'),
+                              'comparison':'Same synthetic one-target results; fast uses 60/5/.12 and native/legacy',
+                              'reference_fixture':'synthetic single-representative profile'}
     versions = {}
     for name in ('minimap2', 'samtools', 'cutadapt'):
         text = subprocess.check_output([tools[name], '--version'], text=True).splitlines()
@@ -246,7 +266,9 @@ def main():
                'observed': observations,
                'software_version':(ROOT/'VERSION').read_text().strip(),'manuscript_preset':manuscript_equivalence,
                'managed_quality':effective_quality,'default_standard_equivalence':equivalence,
-               'scope': 'Native synthetic example using the packaged analysis engine.'}
+               'fast_fixture_comparison':fast_equivalence,
+               'synthetic_risk_policy_override':'legacy', 'full_default_lc180_validated':False,
+               'scope': 'Native synthetic example with explicit legacy risk for the toy BED; full LC180 default is not validated.'}
     (out / 'native_validation_summary.json').write_text(json.dumps(summary, indent=2) + '\n')
     print('PASS: ' + str(out / 'native_validation_summary.json'))
 

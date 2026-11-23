@@ -32,7 +32,7 @@ class Functionality(unittest.TestCase):
             summary.write_text('species\tdispersion_tier\nunit_fixture\tweak\n')
         return subprocess.CompletedProcess(command, 0)
 
-    def make_assets(self, root, mode=MODES[0]):
+    def make_assets(self, root, mode=MODES[1]):
         values = bindings(root, mode)
         for key, value in values.items():
             if key.endswith(('_FASTA', '_MMI', '_TAXONOMY', '_IDENTITY', '_MANIFEST', '_BED', '_DF2')):
@@ -41,7 +41,7 @@ class Functionality(unittest.TestCase):
         Path(values['MYCOWES_MICROBIAL_IDENTITY']).write_text('profile_id\t' + values['MYCOWES_MICROBIAL_PROFILE_ID'] + '\n')
         return values
 
-    def test_default_is_one_representative(self):
+    def test_low_level_binding_default_stays_compatible(self):
         self.assertEqual(bindings('x'), bindings('x', MODES[0]))
         self.assertIn('ONE_REP_TARGET', bindings('x')['MYCOWES_JOINT_FASTA'])
 
@@ -93,10 +93,17 @@ class Functionality(unittest.TestCase):
     def test_explicit_preset_resolution_and_conflicts(self):
         base=dict(preset=None,difficulty=None,reference_mode=None,min_aligned_bp=None,min_mapq=None,max_nm_rate=None)
         resolve=lambda **kw:mycowes.resolve_run_settings(SimpleNamespace(**dict(base,**kw)))
-        self.assertEqual(resolve(),('standard',MODES[0],(100,20,.08)))
-        self.assertEqual(resolve(preset='relax2'),('relax2',MODES[0],(60,5,.12)))
+        self.assertEqual(resolve(),('standard',MODES[1],(100,20,.08)))
+        self.assertEqual(resolve(preset='standard'),('standard',MODES[1],(100,20,.08)))
+        self.assertEqual(resolve(preset='manuscript'),('standard',MODES[1],(100,20,.08)))
+        self.assertEqual(resolve(difficulty='normal'),('standard',MODES[1],(100,20,.08)))
+        self.assertEqual(resolve(preset='manuscript',difficulty='normal'),('standard',MODES[1],(100,20,.08)))
+        self.assertEqual(resolve(preset='manuscript',difficulty='hard'),('standard',MODES[1],(100,20,.08)))
+        self.assertEqual(resolve(preset='relax2'),('fast',MODES[0],(60,5,.12)))
         self.assertEqual(resolve(difficulty='hard'),('standard',MODES[1],(100,20,.08)))
-        self.assertEqual(resolve(preset='relax2',difficulty='simple')[2],(60,5,.12))
+        self.assertEqual(resolve(preset='relax2',difficulty='simple'),('fast',MODES[0],(60,5,.12)))
+        self.assertEqual(resolve(preset='fast',difficulty='simple'),('fast',MODES[0],(60,5,.12)))
+        self.assertEqual(set(mycowes.PRESETS), {'standard', 'fast'})
         for difficulty,preset in [('simple','standard'),('normal','relax2'),('hard','relax2')]:
             with self.assertRaisesRegex(ValueError,'conflicts'):resolve(preset=preset,difficulty=difficulty)
         for name,value in [('min_aligned_bp',0),('min_aligned_bp',-1),('min_mapq',-1),('min_mapq',256),
@@ -105,10 +112,11 @@ class Functionality(unittest.TestCase):
         self.assertEqual(resolve(min_aligned_bp=90,min_mapq=0,max_nm_rate=0)[2],(90,0,0))
 
     def test_cli_preset_and_overrides_have_recorded_effective_values(self):
-        cases=[([], 'standard',(100,20,.08)),(['--preset','relax2'],'relax2',(60,5,.12)),
-               (['--preset','relax2','--min-aligned-bp','90','--min-mapq','12','--max-nm-rate','0.09'],'relax2',(90,12,.09))]
+        cases=[([], 'standard',(100,20,.08)),(['--preset','fast'],'fast',(60,5,.12)),
+               (['--preset','relax2'],'fast',(60,5,.12)),
+               (['--preset','fast','--min-aligned-bp','90','--min-mapq','12','--max-nm-rate','0.09'],'fast',(90,12,.09))]
         with tempfile.TemporaryDirectory() as t:
-            root=Path(t);host=root/'host.mmi';host.write_text('test');self.make_assets(root)
+            root=Path(t);host=root/'host.mmi';host.write_text('test');self.make_assets(root);self.make_assets(root,MODES[0])
             r1,r2=root/'R1.fq',root/'R2.fq'
             for r in (r1,r2):r.write_text('@test\nACGT\n+\nIIII\n')
             for i,(flags,preset,thresholds) in enumerate(cases):
@@ -122,7 +130,7 @@ class Functionality(unittest.TestCase):
                 self.assertEqual(selection['preset'],preset);self.assertEqual(selection['effective_min_aligned_bp'],thresholds[0])
                 self.assertEqual(selection['quality_thresholds'],dict(zip(('min_aligned_bp','min_mapq','max_nm_rate'),thresholds)))
                 self.assertEqual(set(selection['config_files_sha256']),{'default.env','relax2.env'})
-                self.assertTrue(run.call_args.args[0][run.call_args.args[0].index('--config')+1].endswith('relax2.env' if preset=='relax2' else 'default.env'))
+                self.assertTrue(run.call_args.args[0][run.call_args.args[0].index('--config')+1].endswith('relax2.env' if preset=='fast' else 'default.env'))
 
     def test_conflicting_reference_mode_fails_before_output(self):
         with contextlib.redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):
@@ -145,6 +153,64 @@ class Functionality(unittest.TestCase):
             self.assertEqual(selection['mode'],MODES[1])
             self.assertEqual(selection['software_version'],'MycoWES 1.0.0')
 
+    def test_implicit_standard_and_manuscript_bind_full_published_settings(self):
+        """Inspect the real CLI-to-engine arguments; the analysis subprocess is mocked."""
+        cases = [((), 'standard', MODES[1], (100, 20, .08), 'assembly-top-ties-gap10', 'low-complexity-nonrisk180-pair'),
+                 (('--preset', 'standard'), 'standard', MODES[1], (100, 20, .08), 'assembly-top-ties-gap10', 'low-complexity-nonrisk180-pair'),
+                 (('--preset', 'manuscript'), 'standard', MODES[1], (100, 20, .08), 'assembly-top-ties-gap10', 'low-complexity-nonrisk180-pair'),
+                 (('--difficulty', 'normal'), 'standard', MODES[1], (100, 20, .08), 'assembly-top-ties-gap10', 'low-complexity-nonrisk180-pair'),
+                 (('--difficulty', 'hard'), 'standard', MODES[1], (100, 20, .08), 'assembly-top-ties-gap10', 'low-complexity-nonrisk180-pair'),
+                 (('--preset', 'fast'), 'fast', MODES[0], (60, 5, .12), 'native', 'legacy'),
+                 (('--preset', 'relax2'), 'fast', MODES[0], (60, 5, .12), 'native', 'legacy'),
+                 (('--difficulty', 'simple'), 'fast', MODES[0], (60, 5, .12), 'native', 'legacy')]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for mode in MODES:
+                self.make_assets(root, mode)
+            host = root/'host.mmi'; host.write_text('unit-fixture-only')
+            for mate in ('R1', 'R2'):
+                (root/(mate+'.fq')).write_text('@unit\nACGT\n+\nIIII\n')
+            publication_bindings = []
+            for index, (flags, preset, mode, quality, mapq, risk) in enumerate(cases):
+                with self.subTest(flags=flags):
+                    output = root/('run'+str(index))
+                    args = ['run', '--sample', 'unit', '--r1', str(root/'R1.fq'), '--r2', str(root/'R2.fq'),
+                            '--out', str(output), '--reference-root', str(root), *flags]
+                    with patch.dict(os.environ, {'MYCOWES_HOST_MMI': str(host), 'CORE_MAPQ_POLICY': 'native',
+                                                 'MYCOWES_RISK_POLICY': 'legacy'}), \
+                         patch.object(mycowes.subprocess, 'run', side_effect=self.mock_complete_engine) as engine:
+                        self.assertEqual(mycowes.main(args), 0)
+                    selected = json.loads((output/'reference_selection.json').read_text())
+                    env = engine.call_args.kwargs['env']
+                    self.assertEqual((selected['preset'], selected['mode']), (preset, mode))
+                    self.assertEqual(selected['assets'], bindings(root, mode))
+                    self.assertEqual((env['CORE_MAPQ_POLICY'], env['MYCOWES_RISK_POLICY']), (mapq, risk))
+                    self.assertEqual((selected['mapq_policy'], selected['risk_policy']), (mapq, risk))
+                    self.assertEqual(tuple(env[k] for k in ('CORE_MIN_ALIGNED_BP', 'CORE_MIN_MAPQ', 'CORE_MAX_NM_RATE')),
+                                     tuple(map(str, quality)))
+                    if index < 3:
+                        publication_bindings.append((selected['assets'], selected['quality_thresholds'], mapq, risk))
+            self.assertEqual(publication_bindings[0], publication_bindings[1])
+            self.assertEqual(publication_bindings[0], publication_bindings[2])
+
+    def test_fast_and_relax2_alias_keep_nominal_read_length_guard(self):
+        for preset in ('fast', 'relax2'):
+            with self.subTest(preset=preset), tempfile.TemporaryDirectory() as directory:
+                output = Path(directory)/'must_not_start'
+                with patch.object(mycowes.subprocess, 'run') as engine, \
+                     contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                    mycowes.main(['run', '--sample', 'unit', '--r1', 'missing', '--r2', 'missing',
+                                  '--out', str(output), '--preset', preset, '--nominal-pe-length', '59'])
+                engine.assert_not_called()
+                self.assertFalse(output.exists())
+
+    def test_reference_command_defaults_to_full_target_profile(self):
+        with tempfile.TemporaryDirectory() as directory, contextlib.redirect_stdout(io.StringIO()) as stdout:
+            self.assertEqual(mycowes.main(['reference', '--reference-root', directory]), 0)
+        selected = json.loads(stdout.getvalue())
+        self.assertEqual(selected['mode'], MODES[1])
+        self.assertEqual(selected['assets'], bindings(directory, MODES[1]))
+
     def test_invalid_thread_arguments_do_not_start_engine(self):
         with tempfile.TemporaryDirectory() as t:
             p=Path(t);self.make_assets(p);host=p/'host.mmi';host.write_text('test')
@@ -165,7 +231,7 @@ class Functionality(unittest.TestCase):
     def test_cli_reference_is_same_resolver(self):
         with contextlib.redirect_stdout(io.StringIO()) as out:
             self.assertEqual(mycowes.main(['reference', '--reference-root', 'folder with spaces']), 0)
-        self.assertEqual(json.loads(out.getvalue())['assets'], bindings('folder with spaces'))
+        self.assertEqual(json.loads(out.getvalue())['assets'], bindings('folder with spaces', MODES[1]))
 
     def test_run_binds_both_modes_without_changing_host(self):
         with tempfile.TemporaryDirectory() as t:
@@ -195,7 +261,7 @@ class Functionality(unittest.TestCase):
             args=['run','--sample','synthetic','--r1',str(p/'r1'),'--r2',str(p/'r2'),'--out',str(p/'out'),'--reference-root',str(p)]
             with patch.dict(os.environ, {'MYCOWES_HOST_MMI':str(host)}), patch.object(mycowes.subprocess,'run',side_effect=self.mock_complete_engine):
                 mycowes.main(args)
-                with contextlib.redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):mycowes.main(args+['--difficulty','hard'])
+                with contextlib.redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):mycowes.main(args+['--preset','fast'])
 
     def test_no_reference_or_analysis_payload(self):
         forbidden={'.fa','.fasta','.bed','.mmi','.bam','.fastq','.fq','.xlsx','.png','.pdf','.docx','.log','.pyc'}

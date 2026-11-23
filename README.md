@@ -13,7 +13,7 @@ awk and util-linux. Runtime Python uses only the standard library.
 conda env create -f environment.yml
 conda activate mycowes
 export MYCOWES_HOST_MMI=/path/to/hg38.sr.mmi
-python3 mycowes.py run --preset manuscript --reference-root /path/to/reference \
+python3 mycowes.py run --preset standard --reference-root /path/to/reference \
   --sample sample01 --r1 R1.fastq.gz --r2 R2.fastq.gz --out output/sample01 \
   --nominal-pe-length 150 --threads 4 --samtools-threads 1
 ```
@@ -21,13 +21,16 @@ python3 mycowes.py run --preset manuscript --reference-root /path/to/reference \
 Reference resources: v0.28, https://doi.org/10.5281/zenodo.23776490.
 Retain the `baseline_v028/` and `ONE_REP_TARGET_DEVELOPMENT/` directory layout.
 
-`manuscript` selects 67 target assemblies for competition and anchor assessment,
-100 bp / MAPQ20 / NM0.08, assembly-top-ties-gap10, and
-low-complexity-nonrisk180-pair. `fast` uses 18 target representatives in competition
-with the shared 67-assembly anchor pool. The default `standard` preserves the
-single-representative binding, native MAPQ and legacy risk rules. All presets use
-the same complete competitor library, jointly indexed with the selected targets
-for a single competitive alignment. Explicit settings are saved per run.
+There are two analysis modes. `standard` (the default) uses 67 target assemblies
+for competition and anchor assessment, 100 bp / MAPQ20 / NM0.08,
+assembly-top-ties-gap10 and low-complexity-nonrisk180-pair. `fast` uses 18 target
+representatives for competition, the shared 67-assembly anchor pool,
+60 bp / MAPQ5 / NM0.12, native MAPQ and legacy risk rules.
+`manuscript` is a compatibility alias of standard; `relax2` and the legacy
+`--difficulty simple` select fast. Legacy normal/hard select standard.
+Run records store the canonical mode standard or fast. Both modes use the same
+complete competitor library, jointly indexed with the selected targets for a
+single competitive alignment. Explicit settings are saved per run.
 
 Initial candidates and quality-filtered evidence are distinct stages. Paired
 target support uses a shared taxonomic lowest common ancestor, not a global

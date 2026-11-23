@@ -2,21 +2,36 @@
 
 ## Competitive and anchor references
 
-Use `--preset manuscript` for 67-target competition/anchor with gap10/LC180;
-`--preset fast` uses the standard single-representative competition binding.
-Mapper/trimming threads can be set with `--threads`; additional samtools threads
-with `--samtools-threads`. The defaults remain 4 and 1.
+The default standard mode uses 67-target competition/anchor with gap10/LC180.
+Fast explicitly selects 18-target competition with the shared 67-target anchor
+pool, native MAPQ and legacy risk rules. Mapper/trimming threads can be set
+with `--threads`; additional samtools threads with `--samtools-threads`.
+The defaults remain 4 and 1.
 
-
-| Preset | Competitive target | Competitors | Anchor target | Quality gates |
+| Mode | Competitive target | Competitors | Anchor target | Quality gates |
 | --- | --- | --- | --- | --- |
-| standard default (legacy normal) | 18 representatives / 18 species / 118 contigs | 560 assemblies / 553 taxa / 7823 contigs | complete 67-assembly target FASTA | 100 bp / MAPQ20 / NM0.08 |
-| relax2 (legacy simple) | same 18 representatives | same complete set | same 67-assembly target FASTA | 60 bp / MAPQ5 / NM0.12 |
-| legacy hard | 67 assemblies / 18 species / 783 contigs | same complete set | same 67-assembly target FASTA | 100 bp / MAPQ20 / NM0.08 |
+| standard (default) | 67 assemblies / 18 species / 783 contigs | 560 assemblies / 553 taxa / 7823 contigs | complete 67-assembly target FASTA | 100 bp / MAPQ20 / NM0.08; gap10/LC180 |
+| fast | 18 representatives / 18 species / 118 contigs | same complete set | same 67-assembly target FASTA | 60 bp / MAPQ5 / NM0.12; native/legacy |
 
-`hard` changes target multiplicity, not the quality gates relative to normal. PRIMARY and STRICT are produced for every preset; STRICT is not a difficulty level. Actual assemblies per species follow metadata.
+`manuscript` is a compatibility alias for standard; `relax2` and legacy
+`--difficulty simple` select fast. Legacy normal/hard select standard. These
+aliases are accepted explicitly and recorded as canonical standard/fast modes.
+PRIMARY and STRICT are produced for either mode; STRICT is not a difficulty
+level. Actual assemblies per species follow metadata.
 
-Add `--preset relax2` or legacy `--difficulty hard` to the default command, using a new output directory. Relax2 requires nominal PE length at least 60. Explicit `--min-aligned-bp 100 --min-mapq 20 --max-nm-rate 0.08` reproduces standard quality settings. Threshold priority is explicit CLI value, then selected preset; inherited `CORE_*` variables are ignored by the public CLI. Length must be positive, MAPQ 0..255, and normalized edit distance NM/L_align finite/nonnegative; L_align counts query-aligned M/I/=/X CIGAR bases. Existing NM-rate CLI names are unchanged. Length is still capped at nominal PE length. Compatible legacy aliases may be supplied together with a preset; conflicting choices are rejected. Internal profile keys `ONE_REP_TARGET_DEVELOPMENT` and `MULTI_TARGET_V028` are retained for file compatibility; their paths are resolved in `workflow/reference_profiles.py`.
+Use `--preset fast` for the 18-representative, relaxed quality configuration,
+using a new output directory. Fast and its aliases require nominal PE length
+at least 60. Threshold priority is explicit CLI value, then selected mode;
+inherited `CORE_*` variables are ignored by the public CLI. Explicit
+`--min-aligned-bp 100 --min-mapq 20 --max-nm-rate 0.08` overrides quality gates
+but does not change the selected reference, MAPQ or risk policy. Length must
+be positive, MAPQ 0..255, and normalized edit distance NM/L_align finite and
+nonnegative; L_align counts query-aligned M/I/=/X CIGAR bases. Existing NM-rate
+CLI names are unchanged. Length is still capped at nominal PE length.
+Compatible legacy aliases may be supplied together with a preset; conflicting
+canonical modes are rejected. Internal profile keys `ONE_REP_TARGET_DEVELOPMENT`
+and `MULTI_TARGET_V028` retain file compatibility; their paths are resolved in
+`workflow/reference_profiles.py`.
 
 ```bash
 minimap2 -x sr -d \

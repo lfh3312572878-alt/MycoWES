@@ -2,6 +2,14 @@
 
 ## v1.0.0
 
+- Default configuration correction, 2026-11-24: align implicit/default standard,
+  explicit standard and manuscript with 67-target competition, 67-target anchor
+  assessment and gap10/LC180. Keep fast and relax2 as explicit 18-target options.
+  Merge relax2 into fast: two canonical modes, standard and fast (60/5/0.12).
+  Keep manuscript/relax2 as documented aliases for standard/fast; legacy
+  normal/hard and simple resolve to standard and fast, respectively.
+  Workflow implementations, reference data and evidence tiers are unchanged.
+
 - Documentation clarification, 2026-11-23: distinguish initial candidates, paired
   taxonomic-LCA support, per-mate quality/rescue and later species assignment;
   define the joint index, species-local anchor failure, c_max and NM/L_align.

@@ -32,7 +32,7 @@ class RiskCliWiring(unittest.TestCase):
         directory = tempfile.TemporaryDirectory()
         self.addCleanup(directory.cleanup)
         self.root = Path(directory.name)
-        self.assets = mycowes.bindings(self.root)
+        self.assets = mycowes.bindings(self.root, mycowes.MODES[1])
         for key, value in self.assets.items():
             if key.endswith(('_FASTA', '_MMI', '_TAXONOMY', '_IDENTITY', '_MANIFEST', '_BED', '_DF2')):
                 path = Path(value)
@@ -52,7 +52,7 @@ class RiskCliWiring(unittest.TestCase):
                 '--host-depleted', *flags]
 
     def test_default_and_explicit_policies_reach_environment_and_identity(self):
-        cases = [((), 'legacy'), (('--risk-policy', 'legacy'), 'legacy'),
+        cases = [((), 'low-complexity-nonrisk180-pair'), (('--risk-policy', 'legacy'), 'legacy'),
                  (('--risk-policy', 'low-complexity-advisory'), 'low-complexity-advisory'),
                  (('--risk-policy', 'paired-high-cde-only'), 'paired-high-cde-only'),
                  (('--risk-policy', 'low-complexity-unique-pair'), 'low-complexity-unique-pair'),
@@ -89,9 +89,9 @@ class RiskCliWiring(unittest.TestCase):
             state = (output / 'run_state.json').read_bytes()
             engine.reset_mock()
             with contextlib.redirect_stdout(io.StringIO()):
-                self.assertEqual(mycowes.main(self.arguments(output, ('--risk-policy', 'legacy'))), 0)
+                self.assertEqual(mycowes.main(self.arguments(output, ('--risk-policy', 'low-complexity-nonrisk180-pair'))), 0)
             engine.assert_not_called()
-            for policy in ('low-complexity-advisory', 'paired-high-cde-only', 'low-complexity-unique-pair', 'low-complexity-nonrisk100-pair', 'low-complexity-nonrisk200-pair', 'low-complexity-nonrisk180-pair'):
+            for policy in ('legacy', 'low-complexity-advisory', 'paired-high-cde-only', 'low-complexity-unique-pair', 'low-complexity-nonrisk100-pair', 'low-complexity-nonrisk200-pair'):
                 with self.subTest(policy=policy), contextlib.redirect_stderr(io.StringIO()), \
                      self.assertRaises(SystemExit) as failure:
                     mycowes.main(self.arguments(output, ('--risk-policy', policy)))
