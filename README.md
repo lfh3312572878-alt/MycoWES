@@ -10,7 +10,7 @@ Repository: https://github.com/lfh3312572878-alt/MycoWES
 
 Reference identifier: https://doi.org/10.5281/zenodo.23776490
 
-This release candidate is maintained on the private `remediation/20261109` branch. Its runtime engine is fixed at [commit 802200ba32e01fbb0a8e86ccb2fd304d97b31ca8](https://github.com/lfh3312572878-alt/MycoWES/commit/802200ba32e01fbb0a8e86ccb2fd304d97b31ca8). The reference dataset v0.28 is a Zenodo draft with a reserved DOI, separate from the software version. Publication and review access are managed by the authors.
+This release candidate is maintained on the `remediation/20261109` branch. Its runtime engine is fixed at [commit 802200ba32e01fbb0a8e86ccb2fd304d97b31ca8](https://github.com/lfh3312572878-alt/MycoWES/commit/802200ba32e01fbb0a8e86ccb2fd304d97b31ca8). The reference dataset v0.28 is a Zenodo draft with a reserved DOI, separate from the software version. Publication and review access are managed by the authors.
 
 No code license has been selected. The copyright holder must supply the applicable license before public distribution; the reference record's CC BY metadata does not license this code. See [resource provenance and redistribution](resources/README_v028.md).
 

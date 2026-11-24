@@ -20,4 +20,4 @@ In that table, historical output directories without an absolute prefix are unde
 
 This revision implements input validation, effective parameter delivery and run/output integrity. Default references, ordered exact-sequence grouping and scientific grade boundaries are retained. Historical analyses and their saved outputs are unchanged.
 
-The release candidate remains on a private branch. The reference dataset v0.28 is a Zenodo draft with reserved DOI 10.5281/zenodo.23776490, not a software DOI. Copyright license, publication and third-party access are managed separately by the authors.
+The release candidate remains on the `remediation/20261109` branch. The reference dataset v0.28 is a Zenodo draft with reserved DOI 10.5281/zenodo.23776490, not a software DOI. Copyright license, publication and third-party access are managed separately by the authors.
